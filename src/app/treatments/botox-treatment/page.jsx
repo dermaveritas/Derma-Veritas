@@ -174,15 +174,6 @@ export default function BotoxTreatmentSection() {
 
               {/* Buttons */}
               <div className="mt-10 flex justify-center md:justify-start gap-4 flex-wrap">
-                {/* VIEW RESULTS */}
-                <button
-                  onClick={scrollToBeforeAfter}
-                  className="relative px-8 py-4 text-sm font-bold uppercase text-white bg-[#272728] rounded-lg tracking-wider"
-                >
-                  VIEW RESULTS
-                  <span className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent h-[35%] top-0 left-0 pointer-events-none" />
-                </button>
-
                 {/* VIEW PRICES - Updated to call scrollToPricing */}
                 <button
                   onClick={scrollToPricing}

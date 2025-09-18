@@ -2,12 +2,18 @@
 
 import { useStore } from "@/store/zustand";
 import { Button } from "@/components/ui/button";
-import { Star, ChevronDown, CheckCircle, Clock, AlertTriangle, RotateCcw } from "lucide-react";
+import {
+  Star,
+  ChevronDown,
+  CheckCircle,
+  Clock,
+  AlertTriangle,
+  RotateCcw,
+} from "lucide-react";
 import { FaPoundSign } from "react-icons/fa";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import ConsultationSection from "@/components/consultation-section";
-import BeforeAfterSection from "@/components/before-after-section";
 import ReviewsSection from "@/components/reviews-section";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";
@@ -16,7 +22,6 @@ import Footer from "@/components/Footer";
 export default function PrescriptionHairTreatments() {
   const [openIndex, setOpenIndex] = useState(null);
   const pricingSectionRef = useRef(null);
-  const beforeAfterSectionRef = useRef(null);
   const { bookingOpen, setBookingOpen } = useStore();
 
   const treatmentData = [
@@ -58,42 +63,39 @@ export default function PrescriptionHairTreatments() {
   const faqs = [
     {
       question: "What are prescription hair treatments?",
-      answer: "Prescription Hair Treatments are clinically tailored therapies designed to support hair growth, scalp health, and long-term hair maintenance. These treatments are prescribed only after consultation with our clinical pharmacist or doctor, ensuring they are safe, effective, and suitable for your individual needs.",
+      answer:
+        "Prescription Hair Treatments are clinically tailored therapies designed to support hair growth, scalp health, and long-term hair maintenance. These treatments are prescribed only after consultation with our clinical pharmacist or doctor, ensuring they are safe, effective, and suitable for your individual needs.",
     },
     {
       question: "How long until I see results?",
-      answer: "Results vary by individual, but most patients see gradual improvement in hair thickness, volume, and strength within 3-6 months of consistent use. Ongoing benefits are achieved with consistent use and medical supervision.",
+      answer:
+        "Results vary by individual, but most patients see gradual improvement in hair thickness, volume, and strength within 3-6 months of consistent use. Ongoing benefits are achieved with consistent use and medical supervision.",
     },
     {
       question: "Are there any side effects?",
-      answer: "As medically supervised treatments, side effects are rare and carefully monitored. Our clinical team will discuss any potential risks during your consultation and provide ongoing monitoring to ensure your safety.",
+      answer:
+        "As medically supervised treatments, side effects are rare and carefully monitored. Our clinical team will discuss any potential risks during your consultation and provide ongoing monitoring to ensure your safety.",
     },
     {
       question: "How often will I need follow-up appointments?",
-      answer: "Treatment schedules vary and are customized to your needs. This is an advanced therapy that may require regular monitoring and follow-up care to ensure best results and safety.",
+      answer:
+        "Treatment schedules vary and are customized to your needs. This is an advanced therapy that may require regular monitoring and follow-up care to ensure best results and safety.",
     },
     {
       question: "Can these treatments be combined with other procedures?",
-      answer: "Yes, prescription hair treatments can be combined with in-clinic procedures for enhanced results. Our clinical team will create a personalized plan that may include combination therapies for optimal outcomes.",
+      answer:
+        "Yes, prescription hair treatments can be combined with in-clinic procedures for enhanced results. Our clinical team will create a personalized plan that may include combination therapies for optimal outcomes.",
     },
     {
       question: "Who is eligible for these treatments?",
-      answer: "A full consultation is required to confirm eligibility and create a personalized treatment plan. Our clinical team will assess your individual needs and medical history to determine the most suitable approach for you.",
+      answer:
+        "A full consultation is required to confirm eligibility and create a personalized treatment plan. Our clinical team will assess your individual needs and medical history to determine the most suitable approach for you.",
     },
   ];
 
   const scrollToPricing = () => {
     if (pricingSectionRef.current) {
       pricingSectionRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
-  const scrollToBeforeAfter = () => {
-    if (beforeAfterSectionRef.current) {
-      beforeAfterSectionRef.current.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
@@ -127,20 +129,13 @@ export default function PrescriptionHairTreatments() {
 
               {/* Description */}
               <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 mt-6">
-                Clinically tailored therapies designed to support hair growth, 
-                scalp health, and long-term hair maintenance under medical supervision.
+                Clinically tailored therapies designed to support hair growth,
+                scalp health, and long-term hair maintenance under medical
+                supervision.
               </p>
 
               {/* Buttons */}
               <div className="mt-10 flex justify-center md:justify-start gap-4 flex-wrap">
-                <button
-                  onClick={scrollToBeforeAfter}
-                  className="relative px-8 py-4 text-sm font-bold uppercase text-white bg-[#272728] rounded-lg tracking-wider"
-                >
-                  VIEW RESULTS
-                  <span className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent h-[35%] top-0 left-0 pointer-events-none" />
-                </button>
-
                 <button
                   onClick={() => setBookingOpen(true)}
                   className="relative px-8 py-4 text-sm font-bold uppercase text-[#272728] bg-white border-2 border-[#272728] rounded-lg tracking-wider hover:bg-[#272728] hover:text-white transition-colors"
@@ -155,8 +150,8 @@ export default function PrescriptionHairTreatments() {
             <div className="relative flex items-center justify-center">
               <div className="rounded-3xl overflow-hidden bg-gray-200 aspect-[4/5] w-full max-w-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1590159629920-41fe0f5c4f12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhhaXIlMjB0cmVhdG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=80"
-                  alt="Professional hair treatment consultation"
+                  src="/wellness/Hair_Revitalizing_Vertical.jpg"
+                  alt="Professional prescription hair treatment consultation"
                   className="w-full h-full object-cover"
                 />
 
@@ -306,10 +301,11 @@ export default function PrescriptionHairTreatments() {
               About Prescription Hair Treatments
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our prescription hair treatments are clinically tailored therapies designed 
-              to support hair growth, scalp health, and long-term hair maintenance. These 
-              treatments are prescribed only after consultation with our clinical pharmacist 
-              or doctor, ensuring they are safe, effective, and suitable for your individual needs.
+              Our prescription hair treatments are clinically tailored therapies
+              designed to support hair growth, scalp health, and long-term hair
+              maintenance. These treatments are prescribed only after
+              consultation with our clinical pharmacist or doctor, ensuring they
+              are safe, effective, and suitable for your individual needs.
             </p>
           </div>
 
@@ -351,7 +347,8 @@ export default function PrescriptionHairTreatments() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Available in various forms such as topical solutions, oral therapies, or injections
+                  Available in various forms such as topical solutions, oral
+                  therapies, or injections
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -359,7 +356,8 @@ export default function PrescriptionHairTreatments() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Regular monitoring and follow-up care to ensure best results and safety
+                  Regular monitoring and follow-up care to ensure best results
+                  and safety
                 </li>
               </ul>
             </div>
@@ -373,10 +371,12 @@ export default function PrescriptionHairTreatments() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Expected Results
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mt-12 text-left">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Short-Term</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Short-Term
+              </h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -392,9 +392,11 @@ export default function PrescriptionHairTreatments() {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Long-Term</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Long-Term
+              </h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
@@ -411,18 +413,44 @@ export default function PrescriptionHairTreatments() {
               </ul>
             </div>
           </div>
-          
+
           <p className="mt-8 text-gray-600">
-            Best results are achieved when combined with a healthy lifestyle and supportive in-clinic treatments
+            Best results are achieved when combined with a healthy lifestyle and
+            supportive in-clinic treatments
           </p>
         </div>
       </section>
 
-      <div ref={beforeAfterSectionRef}>
-        <BeforeAfterSection />
-      </div>
+      {/* New Prescription Hair Information Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          <div className="rounded-2xl overflow-hidden bg-gray-100">
+            <img
+              src="/wellness/Hair_Revitalizing.jpg"
+              alt="Prescription hair treatment results"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              About Prescription Hair Treatments
+            </h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Clinically tailored therapies designed to support hair growth,
+              scalp health, and long-term hair maintenance under medical
+              supervision.
+            </p>
+            <ul className="text-gray-600 space-y-2">
+              <li>• Available in topical, oral, or injection forms</li>
+              <li>• Results develop over 3–6 months</li>
+              <li>• Regular monitoring and follow-up care</li>
+              <li>• Medically supervised for safety and efficacy</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-      <ConsultationSection 
+      <ConsultationSection
         title="Consultation & Suitability"
         description="A full consultation is required to confirm eligibility and create a personalized treatment plan. Our clinical team will guide you through your options, provide ongoing monitoring, and adjust your prescription as needed for optimal results."
       />
@@ -448,14 +476,16 @@ export default function PrescriptionHairTreatments() {
 
               <div className="text-gray-600 leading-relaxed space-y-4">
                 <p>
-                  All prescription hair treatments are customized to your specific needs 
-                  and require an initial consultation with our clinical team. Pricing varies 
-                  based on the treatment form (topical, oral, or injections) and the duration 
-                  of your personalized treatment plan.
+                  All prescription hair treatments are customized to your
+                  specific needs and require an initial consultation with our
+                  clinical team. Pricing varies based on the treatment form
+                  (topical, oral, or injections) and the duration of your
+                  personalized treatment plan.
                 </p>
                 <p>
-                  During your consultation, we will provide a detailed breakdown of costs 
-                  and payment options. We believe in transparent pricing with no hidden fees.
+                  During your consultation, we will provide a detailed breakdown
+                  of costs and payment options. We believe in transparent
+                  pricing with no hidden fees.
                 </p>
               </div>
             </div>
@@ -478,29 +508,31 @@ export default function PrescriptionHairTreatments() {
                 <div className="divide-y divide-gray-200">
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Initial Consultation:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £XX
-                    </span>
+                    <span className="text-lg font-bold text-gray-900">£XX</span>
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Follow-up Appointments:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £XX
+                    <span className="text-gray-700">
+                      Follow-up Appointments:
                     </span>
+                    <span className="text-lg font-bold text-gray-900">£XX</span>
                   </div>
                   <div className="py-3">
                     <p className="text-gray-600 text-sm">
-                      *Treatment costs vary based on prescribed therapy and are discussed during consultation
+                      *Treatment costs vary based on prescribed therapy and are
+                      discussed during consultation
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
-                <h3 className="font-semibold text-gray-900 mb-2">Comprehensive Care</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  Comprehensive Care
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Our pricing includes ongoing monitoring and adjustment of your treatment plan 
-                  to ensure optimal results and your safety throughout the process.
+                  Our pricing includes ongoing monitoring and adjustment of your
+                  treatment plan to ensure optimal results and your safety
+                  throughout the process.
                 </p>
               </div>
             </div>

@@ -197,7 +197,7 @@ export default function HairRevitalizingTreatmentSection() {
             <div className="relative flex items-center justify-center">
               <div className="rounded-3xl overflow-hidden bg-gray-200 aspect-[4/5] w-full max-w-lg">
                 <img
-                  src="/wellness/Hair+ Revitalizing Treatment Vertical.jpg"
+                  src="/wellness/Hair_Revitalizing_Vertical.jpg"
                   alt="Professional hair revitalizing treatment being administered"
                   className="w-full h-full object-cover"
                 />
@@ -425,7 +425,7 @@ export default function HairRevitalizingTreatmentSection() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="rounded-2xl overflow-hidden bg-gray-100">
             <img
-              src="/wellness/Hair+ Revitalizing Treatment Horizental.jpg"
+              src="/wellness/Hair_Revitalizing.jpg"
               alt="Hair+ revitalizing results"
               className="w-full h-full object-cover"
             />

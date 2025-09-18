@@ -15,7 +15,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Play, CheckCircle, Clock, TrendingUp, Heart, Shield } from "lucide-react";
+import {
+  Play,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Heart,
+  Shield,
+} from "lucide-react";
 import BeforeAfterSection from "@/components/before-after-section";
 import Footer from "@/components/Footer";
 import ClubMembership from "@/components/ClubMembership";
@@ -161,21 +168,12 @@ export default function WeightLossModulatorSection() {
 
               {/* Description */}
               <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 mt-6">
-                Achieve your weight management goals with our clinically supervised 
-                Weight Loss Modulator Injections at Derma Veritas.
+                Achieve your weight management goals with our clinically
+                supervised Weight Loss Modulator Injections at Derma Veritas.
               </p>
 
               {/* Buttons */}
               <div className="mt-10 flex justify-center md:justify-start gap-4 flex-wrap">
-                {/* VIEW RESULTS */}
-                <button
-                  onClick={scrollToBeforeAfter}
-                  className="relative px-8 py-4 text-sm font-bold uppercase text-white bg-[#272728] rounded-lg tracking-wider"
-                >
-                  VIEW RESULTS
-                  <span className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent h-[35%] top-0 left-0 pointer-events-none" />
-                </button>
-
                 {/* VIEW PRICES */}
                 <button
                   onClick={scrollToPricing}
@@ -230,7 +228,9 @@ export default function WeightLossModulatorSection() {
                 return (
                   <div key={index} className="text-center md:text-left">
                     <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                      {IconComponent && <IconComponent className="w-5 h-5 text-gray-600" />}
+                      {IconComponent && (
+                        <IconComponent className="w-5 h-5 text-gray-600" />
+                      )}
                       <span className="text-gray-600 text-sm font-light">
                         {card.heading}
                       </span>
@@ -250,7 +250,9 @@ export default function WeightLossModulatorSection() {
                 return (
                   <div key={index} className="text-center md:text-left">
                     <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                      {IconComponent && <IconComponent className="w-5 h-5 text-gray-600" />}
+                      {IconComponent && (
+                        <IconComponent className="w-5 h-5 text-gray-600" />
+                      )}
                       <span className="text-gray-600 text-sm font-light">
                         {card.heading}
                       </span>
@@ -282,10 +284,12 @@ export default function WeightLossModulatorSection() {
               What are Weight Loss Modulator Injections?
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Weight Loss Modulator Injections are a professional therapy designed to support weight
-              management, metabolic balance, and overall wellbeing. This treatment is tailored to
-              your individual needs and prescribed only after consultation with our clinical pharmacist or
-              doctor, ensuring safety and suitability for your health profile.
+              Weight Loss Modulator Injections are a professional therapy
+              designed to support weight management, metabolic balance, and
+              overall wellbeing. This treatment is tailored to your individual
+              needs and prescribed only after consultation with our clinical
+              pharmacist or doctor, ensuring safety and suitability for your
+              health profile.
             </p>
           </div>
 
@@ -323,15 +327,18 @@ export default function WeightLossModulatorSection() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Typically administered weekly or bi-weekly, depending on clinical guidance
+                  Typically administered weekly or bi-weekly, depending on
+                  clinical guidance
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  A structured course usually involves 4–8 sessions for optimal results
+                  A structured course usually involves 4–8 sessions for optimal
+                  results
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  All treatments are carried out under the guidance of our clinical team
+                  All treatments are carried out under the guidance of our
+                  clinical team
                 </li>
               </ul>
             </div>
@@ -346,11 +353,11 @@ export default function WeightLossModulatorSection() {
             Consultation & Prescription
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-8">
-            All treatments are carried out under the guidance of our clinical team. A full consultation is
-            required to confirm eligibility, customise your treatment plan, and ensure the highest level
-            of care.
+            All treatments are carried out under the guidance of our clinical
+            team. A full consultation is required to confirm eligibility,
+            customise your treatment plan, and ensure the highest level of care.
           </p>
-          <Button 
+          <Button
             onClick={() => setBookingOpen(true)}
             className="bg-[#272728] hover:bg-[#3a3a3b] text-white px-8 py-4 text-lg font-medium"
           >
@@ -361,7 +368,7 @@ export default function WeightLossModulatorSection() {
 
       {/* Before & After Section */}
       <div ref={beforeAfterSectionRef}>
-        <BeforeAfterSection 
+        <BeforeAfterSection
           title="Weight Loss Modulator Results"
           description="See the transformative results our patients have achieved with our Weight Loss Modulator Injection therapy."
         />
@@ -443,9 +450,7 @@ export default function WeightLossModulatorSection() {
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Initial Consultation:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £XX
-                    </span>
+                    <span className="text-lg font-bold text-gray-900">£XX</span>
                   </div>
                 </div>
               </div>
@@ -506,4 +511,4 @@ export default function WeightLossModulatorSection() {
       <MediaCoverage />
     </>
   );
-}   
+}
