@@ -116,7 +116,7 @@ export default function AboutPage() {
           {/* Image */}
           <div className="order-2 md:order-1 px-4 md:px-8">
             <Image
-              src="/images/professional-aesthetic-consultation-modern-clinic-.png"
+              src="/Doctor_Image.png"
               alt="Dr Mofasher Nawaz at awards ceremony"
               width={600}
               height={700}
