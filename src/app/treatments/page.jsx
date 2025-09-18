@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, Filter, ChevronDown, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useStore } from "@/store/zustand";
 import ConsultationSection from "@/components/consultation-section";
 
@@ -400,8 +401,14 @@ export default function TreatmentsPage() {
       <div className="relative bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
           <div className="flex flex-col items-center justify-center text-center">
-            <div className="w-24 h-24 bg-gray-800 rounded-2xl flex items-center justify-center mb-12">
-              <span className="text-white text-3xl font-bold">DV</span>
+            <div className="mb-12">
+              <Image
+                src="/logo_black.png"
+                alt="DermaVeritas Logo"
+                width={96}
+                height={96}
+                className="mx-auto"
+              />
             </div>
 
             <h1 className="text-5xl lg:text-7xl font-light text-center mb-8">
