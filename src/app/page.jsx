@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ShieldCheck, BadgeCheck } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import TreatmentSlider from "@/components/TreatmentSlider";
 import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
@@ -23,12 +23,30 @@ import { BookingModal } from "@/components/booking-modal";
 export default function Home() {
   const [expandedSections, setExpandedSections] = useState({});
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const { bookingOpen, setBookingOpen } = useStore();
 
   // get router instance for navigation
   const router = useRouter();
+
+  // Hero background images array - replace with your actual image paths
+  const heroImages = [
+    "hero/Image_1.jpg",
+    "hero/Image_2.jpg",
+    "hero/Image_3.PNG",
+  ];
+
+  // Auto-cycle through images with smooth transition
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        (prevIndex + 1) % heroImages.length
+      );
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const toggleSection = (section) => {
     setExpandedSections((prev) => ({
@@ -43,9 +61,6 @@ export default function Home() {
 
   const handleProductClick = () => {
     router.push("/shop");
-  };
-  const handleVideoLoad = () => {
-    setVideoLoaded(true);
   };
 
   // Define CSS variables for section styling
@@ -79,18 +94,44 @@ export default function Home() {
       {/* Hero Section */}
       <main className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 w-full h-full bg-black">
-          <iframe
-            className={`absolute inset-0 w-full h-full object-cover pointer-events-none ${
-              videoLoaded ? "opacity-100" : "opacity-0"
-            } transition-opacity duration-500`}
-            src="https://www.youtube.com/embed/0T9C5RcoLMo?autoplay=1&mute=1&loop=1&playlist=0T9C5RcoLMo&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&start=0&end=0&version=3&enablejsapi=1"
-            title="Background Video"
-            frameBorder="0"
-            allow="autoplay; encrypted-media"
-            onLoad={handleVideoLoad}
-          />
+          {/* Image Carousel */}
+          <div className="relative w-full h-full">
+            {heroImages.map((image, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                  index === currentImageIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                }`}
+              >
+                <img
+                  src={image}
+                  alt={`Hero background ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                />
+              </div>
+            ))}
+            
+            {/* Smooth overlay gradient for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-5" />
+          </div>
+          
+          {/* Optional: Add slide indicators */}
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+            {heroImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex
+                    ? 'bg-white scale-110'
+                    : 'bg-white/50 hover:bg-white/75'
+                }`}
+              />
+            ))}
+          </div>
         </div>
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 pt-40">
           <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-12 max-w-4xl">
             Derma Veritas <br />
@@ -199,13 +240,15 @@ export default function Home() {
           </div>
           <div className="relative lg:order-1">
             <img
-              src="/owner.png"
+              src="/Doctor_Image.png"
               alt="Dr Mofasher Nawaz"
               className="w-full h-auto rounded-lg"
             />
             <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg">
-              <h3 className="font-semibold text-gray-900">Dr Mofasher Nawaz</h3>
-              <p className="text-sm text-gray-600">Owner & Founder</p>
+              <h3 className="font-semibold text-gray-900">
+                Dr Mofasher Nawaz & Mr. A. Singh
+              </h3>
+              <p className="text-sm text-gray-600">Founder & Co-Founder</p>
             </div>
           </div>
         </div>

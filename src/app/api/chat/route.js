@@ -86,7 +86,6 @@ Key Website Pages:
 - Packages: /packages
 - Membership: /packages/membership
 - About Us: /about
-- Meet the Team: /team
 - Contact: /contact
 - Refer a Friend: /refer-a-friend
 
