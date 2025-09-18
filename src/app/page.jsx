@@ -244,7 +244,7 @@ export default function Home() {
               alt="Dr Mofasher Nawaz"
               className="w-full h-auto rounded-lg"
             />
-            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg">
+            <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg">
               <h3 className="font-semibold text-gray-900">
                 Dr Mofasher Nawaz & Mr. A. Singh
               </h3>
