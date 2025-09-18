@@ -78,7 +78,7 @@ export default function ConsultationSection() {
         <div className="text-center mt-16">
           <button
             onClick={() => setBookingOpen(true)}
-            className="inline-block px-6 py-3 bg-transparent border border-gray-300 text-black rounded-full font-medium hover:bg-gray-100 transition-colors"
+            className="inline-block px-6 py-3 bg-black border border-gray-300 text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
           >
             Book a consultation
           </button>

@@ -125,34 +125,34 @@ export default function Home() {
       </main>
 
       {/* CTA Section */}
-      <section className="py-20 px-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-8 lg:px-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl shadow-xl p-12 lg:p-12 text-white">
-            <div className="text-center space-y-6">
+          <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl sm:rounded-2xl shadow-xl p-6 sm:p-8 lg:p-12 text-white">
+            <div className="text-center space-y-4 sm:space-y-6">
               <div>
-                <h3 className="text-2xl font-semibold mb-3">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">
                   Start Your Transformation
                 </h3>
-                <p className="text-gray-300">
+                <p className="text-gray-300 text-sm sm:text-base">
                   Book a complimentary consultation with our specialists today.
                 </p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <Button
                   onClick={() => setBookingOpen(true)}
-                  className="bg-white text-black hover:bg-gray-100 font-semibold py-3 px-6 transition-all duration-200 shadow-lg hover:shadow-xl rounded-lg"
+                  className="bg-white text-black hover:bg-gray-100 font-semibold py-3 px-6 sm:py-3 sm:px-6 transition-all duration-200 shadow-lg hover:shadow-xl rounded-lg text-sm sm:text-base"
                 >
                   BOOK CONSULTATION
                 </Button>
 
-                <div className="flex items-center justify-center gap-6 text-sm">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
                   <div className="flex items-center gap-2">
-                    <ShieldCheck className="w-4 h-4" />
+                    <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>No hidden fees</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <BadgeCheck className="w-4 h-4" />
+                    <BadgeCheck className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>Expert care</span>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ export default function Home() {
           <div className="text-center mt-16">
             <a
               href="/treatments"
-              className="inline-block px-6 py-3 bg-transparent border border-gray-300 text-black rounded-full font-medium hover:bg-gray-100 transition-colors"
+              className="inline-block px-6 py-3 bg-black border border-gray-300 text-white rounded-full font-medium hover:bg-gray-800 transition-colors"
             >
               View All Treatments
             </a>
