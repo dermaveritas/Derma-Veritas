@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/zustand";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function PackagesPage() {
   const { bookingOpen, setBookingOpen } = useStore();

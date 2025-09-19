@@ -6,7 +6,6 @@ import {
   useBulkDeleteProducts,
 } from "../../../hooks/useProduct";
 import ProductForm from "./_components/ProductForm";
-import LoadingSpinner from "./_components/LoadingSpinner";
 import EmptyState from "./_components/EmptyState";
 import ProductCard from "./_components/ProductCard";
 import { toast } from "sonner";

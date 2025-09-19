@@ -1,12 +1,8 @@
 "use client";
 
 import { useStore } from "@/store/zustand";
-import { Button } from "@/components/ui/button";
 import { CheckCircle, ChevronDown } from "lucide-react";
 import { useState, useRef } from "react";
-import { motion } from "framer-motion";
-import BeforeAfterSection from "@/components/before-after-section";
-import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";

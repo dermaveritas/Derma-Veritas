@@ -1,7 +1,5 @@
 "use client";
 
-import { BookingModal } from "@/components/booking-modal";
-import { Button } from "@/components/ui/button";
 import { useStore } from "@/store/zustand";
 import { useCreateMembershipCheckout } from "@/hooks/useUser";
 import { motion } from "framer-motion";
@@ -11,7 +9,6 @@ import { toast } from "sonner";
 import { useAuth } from "@/store/FirebaseAuthProvider";
 
 export default function ClubMembershipPage() {
-  const { setBookingOpen } = useStore();
   const { user } = useAuth();
   const router = useRouter();
   const [loadingPlan, setLoadingPlan] = useState(null);

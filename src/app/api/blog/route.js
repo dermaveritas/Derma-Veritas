@@ -10,9 +10,6 @@ import {
   limit,
   startAfter,
 } from "firebase/firestore";
-import { writeFile, mkdir } from "fs/promises";
-import path from "path";
-import { existsSync } from "fs";
 
 // GET - Fetch blogs with filtering
 export async function GET(request) {
@@ -135,10 +132,10 @@ export async function POST(request) {
       try {
         const imageData = JSON.parse(coverImageUrl);
         coverImage = imageData.url;
-        console.log('Parsed cover image URL:', coverImage);
+        console.log("Parsed cover image URL:", coverImage);
       } catch (e) {
-        console.error('Error parsing cover image URL:', e);
-        console.log('Raw coverImageUrl value:', coverImageUrl);
+        console.error("Error parsing cover image URL:", e);
+        console.log("Raw coverImageUrl value:", coverImageUrl);
         // Fallback if it's just a string URL
         coverImage = coverImageUrl;
       }
@@ -156,7 +153,7 @@ export async function POST(request) {
       updatedAt: new Date(),
     };
 
-    console.log('Creating blog with data:', blogData);
+    console.log("Creating blog with data:", blogData);
 
     const docRef = await addDoc(collection(db, "blogs"), blogData);
 

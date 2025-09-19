@@ -6,7 +6,6 @@ import { Search, Filter, ChevronDown, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useStore } from "@/store/zustand";
-import ConsultationSection from "@/components/consultation-section";
 
 // Function to generate slug from treatment name
 const generateSlug = (name) => {

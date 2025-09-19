@@ -1,7 +1,6 @@
 "use client";
 
 import { useStore } from "@/store/zustand";
-import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useRef } from "react";
@@ -19,8 +18,6 @@ import {
   AlertTriangle,
   KeyRound as Pound,
 } from "lucide-react";
-
-import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
 
 export default function GummySmileTreatmentSection() {

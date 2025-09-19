@@ -2,7 +2,6 @@
 
 import { useStore } from "@/store/zustand";
 
-import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useRef } from "react";
 

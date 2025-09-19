@@ -1,16 +1,11 @@
 "use client";
 
 import { useStore } from "@/store/zustand";
-import { Button } from "@/components/ui/button";
 import { ChevronDown, CheckCircle, Clock, AlertTriangle } from "lucide-react";
 import { FaPoundSign } from "react-icons/fa";
 import { useState, useRef } from "react";
-import { motion } from "framer-motion";
-import BeforeAfterSection from "@/components/before-after-section";
-import Footer from "@/components/Footer";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";
-import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
 
 export default function ExoNadPeelingSection() {

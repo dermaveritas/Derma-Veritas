@@ -1,7 +1,6 @@
 "use client";
 
 import { useStore } from "@/store/zustand";
-import { Button } from "@/components/ui/button";
 import {
   Star,
   ChevronDown,
@@ -12,7 +11,6 @@ import {
 } from "lucide-react";
 import { FaPoundSign } from "react-icons/fa";
 import { useState, useRef } from "react";
-import { motion } from "framer-motion";
 import ConsultationSection from "@/components/consultation-section";
 import ReviewsSection from "@/components/reviews-section";
 import ClubMembership from "@/components/ClubMembership";

@@ -4,11 +4,8 @@ import { Star } from "lucide-react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useRef } from "react";
 import BeforeAfterSection from "@/components/before-after-section";
-import Footer from "@/components/Footer";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";
-import MobileMenuDrawer from "@/components/MobileMenuDrawer";
-import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
 import Link from "next/link";
 

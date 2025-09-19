@@ -6,18 +6,13 @@ import { useState, useEffect } from "react";
 import TreatmentSlider from "@/components/TreatmentSlider";
 import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
-import BeforeAfterSection from "@/components/before-after-section";
-import TechnologiesBrandsSection from "@/components/technologies-brands-section";
 import RecentBlogsSection from "@/components/recent-blogs-section";
 import Simplicity from "@/components/simplicity";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";
 import GallerySection from "@/components/GallerySection";
-import Chatwindow from "@/components/Chatwindow";
 import { useRouter } from "next/navigation";
-
 import { useStore } from "@/store/zustand";
-
 import { BookingModal } from "@/components/booking-modal";
 
 export default function Home() {

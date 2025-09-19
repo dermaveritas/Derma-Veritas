@@ -1,15 +1,10 @@
 "use client";
 
 import { useStore } from "@/store/zustand";
-import { Button } from "@/components/ui/button";
-
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useRef } from "react";
-
-import Footer from "@/components/Footer";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";
-import MobileMenuDrawer from "@/components/MobileMenuDrawer";
 import {
   Eye,
   CheckCircle,
@@ -20,8 +15,6 @@ import {
   AlertTriangle,
   KeyRound as Pound,
 } from "lucide-react";
-
-import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
 
 export default function RFMicroneedlingSection() {

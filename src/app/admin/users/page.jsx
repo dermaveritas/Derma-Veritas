@@ -21,7 +21,6 @@ import {
   UserX,
   Eye,
   Users,
-  UserPlus,
   TrendingUp,
   Calendar,
   PoundSterling,
@@ -33,12 +32,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { UserDetailsModal } from "@/app/admin/users/_components/UserDetailsModal";
 
 export default function UsersPage() {
@@ -80,7 +74,10 @@ export default function UsersPage() {
     banned: users.filter((u) => u.isBanned).length,
     withReferrals: users.filter((u) => u.referralCount > 0).length,
     totalReferrals: users.reduce((sum, u) => sum + (u.referralCount || 0), 0),
-    totalRewards: users.reduce((sum, u) => sum + (u.totalRewardsEarned || 0), 0),
+    totalRewards: users.reduce(
+      (sum, u) => sum + (u.totalRewardsEarned || 0),
+      0
+    ),
     usersWhoUsedCodes: users.filter((u) => u.usedReferralCodesCount > 0).length,
   };
 
@@ -133,8 +130,12 @@ export default function UsersPage() {
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-gray-600 mx-auto mb-4"></div>
-          <div className="text-xl font-semibold text-gray-700 mb-2">Loading Users...</div>
-          <div className="text-gray-500">Please wait while we fetch the data</div>
+          <div className="text-xl font-semibold text-gray-700 mb-2">
+            Loading Users...
+          </div>
+          <div className="text-gray-500">
+            Please wait while we fetch the data
+          </div>
         </div>
       </div>
     );
@@ -167,7 +168,9 @@ export default function UsersPage() {
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 min-w-[120px] text-center border border-white/20">
-              <div className="text-2xl sm:text-3xl font-bold">{stats.total}</div>
+              <div className="text-2xl sm:text-3xl font-bold">
+                {stats.total}
+              </div>
               <div className="text-sm text-gray-300">Total Users</div>
             </div>
           </div>
@@ -179,7 +182,9 @@ export default function UsersPage() {
             <div className="flex items-center justify-between mb-2">
               <Users className="w-8 h-8 text-gray-700" />
             </div>
-            <div className="text-2xl font-bold text-gray-900">{stats.total}</div>
+            <div className="text-2xl font-bold text-gray-900">
+              {stats.total}
+            </div>
             <div className="text-sm text-gray-600">Total Users</div>
           </div>
 
@@ -187,7 +192,9 @@ export default function UsersPage() {
             <div className="flex items-center justify-between mb-2">
               <UserCheck className="w-8 h-8 text-green-600" />
             </div>
-            <div className="text-2xl font-bold text-green-600">{stats.active}</div>
+            <div className="text-2xl font-bold text-green-600">
+              {stats.active}
+            </div>
             <div className="text-sm text-gray-600">Active Users</div>
           </div>
 
@@ -195,7 +202,9 @@ export default function UsersPage() {
             <div className="flex items-center justify-between mb-2">
               <UserX className="w-8 h-8 text-red-600" />
             </div>
-            <div className="text-2xl font-bold text-red-600">{stats.banned}</div>
+            <div className="text-2xl font-bold text-red-600">
+              {stats.banned}
+            </div>
             <div className="text-sm text-gray-600">Banned Users</div>
           </div>
 
@@ -203,7 +212,9 @@ export default function UsersPage() {
             <div className="flex items-center justify-between mb-2">
               <TrendingUp className="w-8 h-8 text-orange-600" />
             </div>
-            <div className="text-2xl font-bold text-orange-600">{stats.withReferrals}</div>
+            <div className="text-2xl font-bold text-orange-600">
+              {stats.withReferrals}
+            </div>
             <div className="text-sm text-gray-600">Active Referrers</div>
           </div>
 
@@ -211,7 +222,9 @@ export default function UsersPage() {
             <div className="flex items-center justify-between mb-2">
               <Calendar className="w-8 h-8 text-indigo-600" />
             </div>
-            <div className="text-2xl font-bold text-indigo-600">{stats.totalReferrals}</div>
+            <div className="text-2xl font-bold text-indigo-600">
+              {stats.totalReferrals}
+            </div>
             <div className="text-sm text-gray-600">Total Referrals</div>
           </div>
 
@@ -219,7 +232,9 @@ export default function UsersPage() {
             <div className="flex items-center justify-between mb-2">
               <PoundSterling className="w-8 h-8 text-green-600" />
             </div>
-            <div className="text-2xl font-bold text-green-600">£{stats.totalRewards.toFixed(2)}</div>
+            <div className="text-2xl font-bold text-green-600">
+              £{stats.totalRewards.toFixed(2)}
+            </div>
             <div className="text-sm text-gray-600">Total Rewards</div>
           </div>
         </div>
@@ -273,16 +288,36 @@ export default function UsersPage() {
             <Table>
               <TableHeader>
                 <TableRow className="bg-gray-100">
-                  <TableHead className="font-semibold text-gray-900 py-4">User</TableHead>
-                  <TableHead className="font-semibold text-gray-900 hidden sm:table-cell">Email</TableHead>
-                  <TableHead className="font-semibold text-gray-900">Role</TableHead>
-                  <TableHead className="font-semibold text-gray-900">Status</TableHead>
-                  <TableHead className="font-semibold text-gray-900 hidden md:table-cell">Referrals Made</TableHead>
-                  <TableHead className="font-semibold text-gray-900 hidden md:table-cell">Codes Used</TableHead>
-                  <TableHead className="font-semibold text-gray-900 hidden lg:table-cell">Rewards Earned</TableHead>
-                  <TableHead className="font-semibold text-gray-900 hidden lg:table-cell">Joined</TableHead>
-                  <TableHead className="font-semibold text-gray-900 hidden lg:table-cell">Plan</TableHead>
-                  <TableHead className="font-semibold text-gray-900 text-right">Actions</TableHead>
+                  <TableHead className="font-semibold text-gray-900 py-4">
+                    User
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900 hidden sm:table-cell">
+                    Email
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900">
+                    Role
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900">
+                    Status
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900 hidden md:table-cell">
+                    Referrals Made
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900 hidden md:table-cell">
+                    Codes Used
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900 hidden lg:table-cell">
+                    Rewards Earned
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900 hidden lg:table-cell">
+                    Joined
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900 hidden lg:table-cell">
+                    Plan
+                  </TableHead>
+                  <TableHead className="font-semibold text-gray-900 text-right">
+                    Actions
+                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -290,7 +325,9 @@ export default function UsersPage() {
                   <TableRow>
                     <TableCell colSpan={9} className="text-center py-12">
                       <div className="text-gray-500">
-                        {searchTerm || roleFilter !== "all" || statusFilter !== "all"
+                        {searchTerm ||
+                        roleFilter !== "all" ||
+                        statusFilter !== "all"
                           ? "No users found matching your criteria"
                           : "No users found"}
                       </div>
@@ -298,7 +335,10 @@ export default function UsersPage() {
                   </TableRow>
                 ) : (
                   users.map((user) => (
-                    <TableRow key={user.id} className="hover:bg-gray-100 transition-colors duration-200">
+                    <TableRow
+                      key={user.id}
+                      className="hover:bg-gray-100 transition-colors duration-200"
+                    >
                       <TableCell className="py-4">
                         <div className="flex items-center space-x-3">
                           <Avatar className="h-10 w-10">
@@ -320,11 +360,15 @@ export default function UsersPage() {
                       </TableCell>
 
                       <TableCell className="hidden sm:table-cell">
-                        <div className="text-sm text-gray-900">{user.email}</div>
+                        <div className="text-sm text-gray-900">
+                          {user.email}
+                        </div>
                       </TableCell>
 
                       <TableCell>
-                        <Badge className={`${getRoleBadgeColor(user.role)} border`}>
+                        <Badge
+                          className={`${getRoleBadgeColor(user.role)} border`}
+                        >
                           {user.role || "user"}
                         </Badge>
                       </TableCell>
@@ -381,7 +425,10 @@ export default function UsersPage() {
                             £{(user.totalRewardsEarned || 0).toFixed(2)}
                           </span>
                           {user.pendingRewards > 0 && (
-                            <Badge variant="outline" className="text-xs bg-yellow-50 text-yellow-600 border-yellow-200">
+                            <Badge
+                              variant="outline"
+                              className="text-xs bg-yellow-50 text-yellow-600 border-yellow-200"
+                            >
                               {user.pendingRewards} pending
                             </Badge>
                           )}
@@ -393,7 +440,10 @@ export default function UsersPage() {
                       </TableCell>
 
                       <TableCell className="hidden lg:table-cell">
-                        <Badge variant="outline" className="text-xs border border-gray-300">
+                        <Badge
+                          variant="outline"
+                          className="text-xs border border-gray-300"
+                        >
                           {user.plan || "Free"}
                         </Badge>
                       </TableCell>
@@ -401,19 +451,30 @@ export default function UsersPage() {
                       <TableCell className="text-right">
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
-                            <Button variant="ghost" className="h-8 w-8 p-0 hover:bg-gray-100">
+                            <Button
+                              variant="ghost"
+                              className="h-8 w-8 p-0 hover:bg-gray-100"
+                            >
                               <MoreHorizontal className="h-4 w-4" />
                             </Button>
                           </DropdownMenuTrigger>
                           <DropdownMenuContent align="end" className="w-48">
-                            <DropdownMenuItem onClick={() => handleViewDetails(user.id)}>
+                            <DropdownMenuItem
+                              onClick={() => handleViewDetails(user.id)}
+                            >
                               <Eye className="mr-2 h-4 w-4" />
                               View Details
                             </DropdownMenuItem>
                             <DropdownMenuItem
-                              onClick={() => handleToggleBan(user.id, user.isBanned)}
+                              onClick={() =>
+                                handleToggleBan(user.id, user.isBanned)
+                              }
                               disabled={toggleBanMutation.isPending}
-                              className={user.isBanned ? "text-green-600" : "text-red-600"}
+                              className={
+                                user.isBanned
+                                  ? "text-green-600"
+                                  : "text-red-600"
+                              }
                             >
                               {user.isBanned ? (
                                 <>

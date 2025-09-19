@@ -7,16 +7,12 @@ import {
 } from "@/hooks/useOrder";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
   Search,
   Filter,
   ShoppingBag,
   PoundSterling,
   Package,
-  TrendingUp,
-  Calendar,
-  Clock,
   CheckCircle,
 } from "lucide-react";
 import { toast } from "sonner";
@@ -225,9 +221,7 @@ export default function OrdersPage() {
           <div className="flex items-center justify-between mb-2">
             <ShoppingBag className="w-8 h-8 text-gray-700" />
           </div>
-          <div className="text-2xl font-bold text-gray-900">
-            {stats.total}
-          </div>
+          <div className="text-2xl font-bold text-gray-900">{stats.total}</div>
           <div className="text-sm text-gray-600">Total Orders</div>
         </div>
 

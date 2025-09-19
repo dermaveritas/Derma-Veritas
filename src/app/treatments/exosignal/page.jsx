@@ -1,9 +1,7 @@
 "use client";
 
 import { useStore } from "@/store/zustand";
-import { Button } from "@/components/ui/button";
 import {
-  Star,
   ChevronDown,
   CheckCircle,
   Clock,

@@ -1,23 +1,8 @@
 "use client";
 
 import { useStore } from "@/store/zustand";
-import { Button } from "@/components/ui/button";
-
-import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useRef } from "react";
-import ClinicsModal from "@/components/ClinicsModal";
-import PriceCard from "@/components/pricecard/price-card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Play } from "lucide-react";
-import BeforeAfterSection from "@/components/before-after-section";
-import Footer from "@/components/Footer";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";
 import MobileMenuDrawer from "@/components/MobileMenuDrawer";
@@ -31,8 +16,6 @@ import {
   AlertTriangle,
   KeyRound as Pound,
 } from "lucide-react";
-
-import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
 
 export default function LaserHairRemovalSection() {
