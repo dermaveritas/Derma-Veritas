@@ -421,10 +421,10 @@ export default function PrescriptionHairTreatments() {
         </div>
       </section>
 
-      {/* New Prescription Hair Information Section */}
+      {/* Before & After Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <div className="rounded-2xl overflow-hidden bg-gray-100">
+          <div className="rounded-2xl overflow-hidden bg-gray-100 h-80">
             <img
               src="/wellness/Hair_Revitalizing.jpg"
               alt="Prescription hair treatment results"

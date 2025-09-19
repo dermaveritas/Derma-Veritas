@@ -1127,100 +1127,64 @@ export function BookingModal({
                     <SelectValue placeholder="Choose your desired treatment" />
                   </SelectTrigger>
                   <SelectContent className="max-h-80">
-                    {/* Injectables */}
+                    {/* Non-surgical Enhancement */}
                     <SelectItem
-                      value="header-injectables"
+                      value="header-non-surgical-enhancement"
                       disabled
                       className="font-bold text-gray-800 bg-gray-50"
                     >
-                      💉 Injectables
+                      ✨ Non-surgical Enhancement
                     </SelectItem>
-                    <SelectItem value="anti-wrinkle-treatment" className="pl-6">
-                      Anti-Wrinkle Treatment
-                    </SelectItem>
-                    <SelectItem
-                      value="non-surgical-rhinoplasty"
-                      className="pl-6"
-                    >
-                      Non Surgical Rhinoplasty
+                    <SelectItem value="endolift" className="pl-6">
+                      Endolift
                     </SelectItem>
                     <SelectItem value="8-point-facelift" className="pl-6">
                       8 Point Facelift
                     </SelectItem>
-                    <SelectItem
-                      value="nctf-skin-revitalisation"
-                      className="pl-6"
-                    >
-                      NCTF Skin Revitalisation
-                    </SelectItem>
-                    <SelectItem
-                      value="harmonyca-dermal-filler"
-                      className="pl-6"
-                    >
-                      HArmonyCa Dermal Filler
-                    </SelectItem>
-                    <SelectItem value="dermal-fillers" className="pl-6">
-                      Dermal Fillers
-                    </SelectItem>
-                    <SelectItem value="lip-fillers" className="pl-6">
-                      Lip Fillers
-                    </SelectItem>
-                    <SelectItem value="chin-fillers" className="pl-6">
-                      Chin Fillers
-                    </SelectItem>
-                    <SelectItem value="tear-trough-filler" className="pl-6">
-                      Tear Trough Filler
-                    </SelectItem>
-                    <SelectItem value="cheek-fillers" className="pl-6">
-                      Cheek Fillers
-                    </SelectItem>
-                    <SelectItem value="profhilo" className="pl-6">
-                      Profhilo
-                    </SelectItem>
-                    <SelectItem
-                      value="fat-dissolving-injections"
-                      className="pl-6"
-                    >
-                      Fat Dissolving Injections
-                    </SelectItem>
-                    <SelectItem value="hand-rejuvenation" className="pl-6">
-                      Hand Rejuvenation
-                    </SelectItem>
-                    <SelectItem
-                      value="polynucleotides-hair-loss-treatment"
-                      className="pl-6"
-                    >
-                      Polynucleotides Hair Loss Treatment
-                    </SelectItem>
-                    <SelectItem
-                      value="polynucleotides-skin-rejuvenation-treatment"
-                      className="pl-6"
-                    >
-                      Polynucleotides Skin Rejuvenation Treatment
-                    </SelectItem>
-                    <SelectItem value="skin-boosters" className="pl-6">
-                      Skin Boosters
-                    </SelectItem>
-                    <SelectItem value="skinfill-bacio" className="pl-6">
-                      Skinfill™ Bacio
+                    <SelectItem value="ablative" className="pl-6">
+                      Ablative CO2 Resurfacing
                     </SelectItem>
 
-                    {/* Skincare */}
+                    {/* Skin Perfecting */}
                     <SelectItem
-                      value="header-skincare"
+                      value="header-skin-perfecting"
                       disabled
                       className="font-bold text-gray-800 bg-gray-50 mt-2"
                     >
-                      ✨ Skincare
-                    </SelectItem>
-                    <SelectItem value="microneedling" className="pl-6">
-                      Microneedling
-                    </SelectItem>
-                    <SelectItem value="skinpen-microneedling" className="pl-6">
-                      RF Microneedling
+                      🌿 Skin Perfecting
                     </SelectItem>
                     <SelectItem value="co2-laser" className="pl-6">
-                      Co2 Laser
+                      Fractional CO2 Resurfacing
+                    </SelectItem>
+                    <SelectItem value="skinpen-microneedling" className="pl-6">
+                      Radio Frequency Microneedling
+                    </SelectItem>
+                    <SelectItem value="profusion-hydrafacial" className="pl-6">
+                      Pro Fusion
+                    </SelectItem>
+
+                    {/* Age Defying */}
+                    <SelectItem
+                      value="header-age-defying"
+                      disabled
+                      className="font-bold text-gray-800 bg-gray-50 mt-2"
+                    >
+                      ⏳ Age Defying
+                    </SelectItem>
+                    <SelectItem value="v-hacker" className="pl-6">
+                      V Hacker
+                    </SelectItem>
+                    <SelectItem value="iv-drips" className="pl-6">
+                      Bio Hacking Formula
+                    </SelectItem>
+                    <SelectItem value="iv-drips" className="pl-6">
+                      Exosomes
+                    </SelectItem>
+                    <SelectItem value="anti-wrinkle-treatment" className="pl-6">
+                      Anti- wrinkle
+                    </SelectItem>
+                    <SelectItem value="iv-drips" className="pl-6">
+                      PRP
                     </SelectItem>
                     <SelectItem
                       value="polynucleotides-skin-rejuvenation-treatment"
@@ -1228,95 +1192,62 @@ export function BookingModal({
                     >
                       Polynucleotide
                     </SelectItem>
-                    <SelectItem value="endolift" className="pl-6">
-                      Endolift
-                    </SelectItem>
-                    <SelectItem value="exo" className="pl-6">
-                      EXO–NAD Skin Longevity Peeling
-                    </SelectItem>
-                    <SelectItem value="prescription-skincare" className="pl-6">
-                      Prescription Skincare
-                    </SelectItem>
 
-                    {/* Wellness */}
+                    {/* Facial Contouring */}
                     <SelectItem
-                      value="header-wellness"
+                      value="header-facial-contouring"
                       disabled
                       className="font-bold text-gray-800 bg-gray-50 mt-2"
                     >
-                      🌿 Wellness
+                      💎 Facial Contouring
                     </SelectItem>
-                    <SelectItem value="iv-drips" className="pl-6">
-                      Exosome Therapy
+                    <SelectItem value="dermal-fillers" className="pl-6">
+                      Fillers
                     </SelectItem>
-                    <SelectItem value="iv-drips" className="pl-6">
-                      PRP Therapy
+                    <SelectItem value="profhilo" className="pl-6">
+                      Profhilo
                     </SelectItem>
-                    <SelectItem value="v-hacker" className="pl-6">
-                      V-Hacker
+                    <SelectItem value="skinfill-bacio" className="pl-6">
+                      Skin Fill Bacio
+                    </SelectItem>
+
+                    {/* Hair Enhancements */}
+                    <SelectItem
+                      value="header-hair-enhancements"
+                      disabled
+                      className="font-bold text-gray-800 bg-gray-50 mt-2"
+                    >
+                      💇 Hair Enhancements
                     </SelectItem>
                     <SelectItem value="revitalizing" className="pl-6">
-                      Hair+ Revitalizing
-                    </SelectItem>
-                    <SelectItem value="weight-loss" className="pl-6">
-                      Weight Loss
-                    </SelectItem>
-
-                    {/* Laser Treatments */}
-                    <SelectItem
-                      value="header-laser"
-                      disabled
-                      className="font-bold text-gray-800 bg-gray-50 mt-2"
-                    >
-                      🔥 Laser Treatments
+                      Hair + revitalizing formula
                     </SelectItem>
                     <SelectItem
-                      value="quad-laser-hair-removal"
+                      value="polynucleotides-hair-loss-treatment"
                       className="pl-6"
                     >
-                      Quad Laser Hair Removal
-                    </SelectItem>
-                    <SelectItem value="ablative" className="pl-6">
-                      Ablative
-                    </SelectItem>
-
-                    {/* Hair Treatments */}
-                    <SelectItem
-                      value="header-hair"
-                      disabled
-                      className="font-bold text-gray-800 bg-gray-50 mt-2"
-                    >
-                      💇 Hair Treatments
-                    </SelectItem>
-                    <SelectItem value="revitalizing" className="pl-6">
-                      Hair+ Revitalizing
+                      Hair polynucleotide
                     </SelectItem>
                     <SelectItem value="exosignal" className="pl-6">
-                      ExoSignal™ Hair
+                      EXO SIGNAL
                     </SelectItem>
                     <SelectItem value="prescription-hair" className="pl-6">
-                      Prescription Hair
+                      Prescriptions treatment s
                     </SelectItem>
 
-                    {/* Packages */}
+                    {/* Others */}
                     <SelectItem
-                      value="header-packages"
+                      value="header-others"
                       disabled
                       className="font-bold text-gray-800 bg-gray-50 mt-2"
                     >
-                      📦 Packages
+                      🧩 Others
                     </SelectItem>
-                    <SelectItem value="profusion-hydrafacial-package" className="pl-6">
-                      ProFusion HydraFacial Packages
+                    <SelectItem value="weight-loss" className="pl-6">
+                      Weight Loss modulators
                     </SelectItem>
-                    <SelectItem value="lift-reshape-package" className="pl-6">
-                      Lift & Reshape Package
-                    </SelectItem>
-                    <SelectItem value="correct-rejuvenate-package" className="pl-6">
-                      Correct & Rejuvenate Package
-                    </SelectItem>
-                    <SelectItem value="restore-prevent-package" className="pl-6">
-                      Restore & Prevent Hair Loss Package
+                    <SelectItem value="prescription-skincare" className="pl-6">
+                      Skin Tx and care
                     </SelectItem>
                   </SelectContent>
                 </Select>

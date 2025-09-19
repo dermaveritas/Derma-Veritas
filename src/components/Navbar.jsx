@@ -29,62 +29,132 @@ export default function Navbar() {
 
   // Treatment categories
   const treatmentCategories = {
-    injectables: {
-      title: "Injectables",
+    "non-surgical-enhancement": {
+      title: "Non-surgical Enhancement",
       treatments: [
-        "Anti-Wrinkle Treatment",
-        "Non Surgical Rhinoplasty",
-        "8 Point Facelift",
-        "NCTF Skin Revitalisation",
-        "HArmonyCa Dermal Filler",
-        "Dermal Fillers",
-        "Lip Fillers",
-        "Chin Fillers",
-        "Tear Trough Filler",
-        "Cheek Fillers",
-        "Profhilo",
-        "Fat Dissolving Injections",
-        "Hand Rejuvenation",
-        "Polynucleotides Hair Loss Treatment",
-        "Polynucleotides Skin Rejuvenation Treatment",
-        "Skin Boosters",
-        "Skinfill™ Bacio",
+        { name: "Endolift", slug: "endolift", href: "/treatments/endolift" },
+        {
+          name: "Eight point facelift",
+          slug: "8-point-facelift",
+          href: "/menu/injectables/8-point-facelift",
+        },
+        {
+          name: "Ablative co2 resurfacing",
+          slug: "ablative",
+          href: "/treatments/ablative",
+        },
       ],
     },
-    skincare: {
-      title: "Skincare",
+    "skin-perfecting": {
+      title: "Skin Perfecting",
       treatments: [
-        { name: "Microneedling", slug: "microneedling" },
-        { name: "RF Microneedling", slug: "rf-microneedling" },
-        { name: "Co2 Laser", slug: "co2" },
-        { name: "Endolift", slug: "endolift" },
-        { name: "EXO–NAD Skin Longevity Peeling", slug: "exo-nad" },
-        { name: "Prescription Skincare", slug: "prescriptionskincare" },
+        {
+          name: "Fractional co2 resurfacing",
+          slug: "co2",
+          href: "/treatments/co2",
+        },
+        {
+          name: "Radio frequency Microneedling",
+          slug: "rf-microneedling",
+          href: "/treatments/rf-microneedling",
+        },
+        {
+          name: "Pro Fusion",
+          slug: "profusion",
+          href: "/treatments/profusion",
+        },
       ],
     },
-    wellness: {
-      title: "Wellness",
+    "age-defying": {
+      title: "Age Defying",
       treatments: [
-        { name: "Exosome Therapy", slug: "exosome-therapy" },
-        { name: "PRP Therapy", slug: "prp-therapy" },
-        { name: "V-Hacker", slug: "v-hacker" },
-        { name: "Weight Loss", slug: "weightloss" },
+        { name: "V hacker", slug: "v-hacker", href: "/treatments/v-hacker" },
+        {
+          name: "Bio Hacking Formula",
+          slug: "bio-hacking",
+          href: "/treatments/exosome-therapy",
+        },
+        {
+          name: "Exosomes",
+          slug: "exosome-therapy",
+          href: "/treatments/exosome-therapy",
+        },
+        {
+          name: "Anti- wrinkle",
+          slug: "anti-wrinkle-treatment",
+          href: "/menu/injectables/anti-wrinkle-treatment",
+        },
+        { name: "PRP", slug: "prp-therapy", href: "/treatments/prp-therapy" },
+        {
+          name: "Polynucleotide",
+          slug: "polynucleotide",
+          href: "/treatments/polynucleotide",
+        },
       ],
     },
-    laser: {
-      title: "Laser Treatments",
+    "facial-contouring": {
+      title: "Facial Contouring",
       treatments: [
-        { name: "Quad Laser Hair Removal", slug: "quad-laser-hair-removal" },
-        { name: "Ablative", slug: "ablative" },
+        {
+          name: "Fillers",
+          slug: "dermal-fillers",
+          href: "/menu/injectables/dermal-fillers",
+        },
+        {
+          name: "Profhilo",
+          slug: "profhilo",
+          href: "/menu/injectables/profhilo",
+        },
+        {
+          name: "Skin Fill Bacio",
+          slug: "skinfill-bacio",
+          href: "/menu/injectables/skinfill-bacio",
+        },
       ],
     },
-    hair: {
-      title: "Hair Treatments",
+    "hair-enhancements": {
+      title: "Hair Enhancements",
       treatments: [
-        { name: "Hair+ Revitalizing", slug: "hair-revitalizing" },
-        { name: "ExoSignal™ Hair", slug: "exosignal" },
-        { name: "Prescription Hair", slug: "prescriptionhair" },
-        { name: "Polynucleotide Hair Treatment", slug: "polynucleotide" },
+        {
+          name: "Hair PRP",
+          slug: "prp-therapy",
+          href: "/treatments/prp-therapy",
+        },
+        {
+          name: "Hair polynucleotide",
+          slug: "polynucleotides-hair-loss-treatment",
+          href: "/menu/injectables/polynucleotides-hair-loss-treatment",
+        },
+        {
+          name: "EXO SIGNAL",
+          slug: "exosignal",
+          href: "/treatments/exosignal",
+        },
+        {
+          name: "Hair + revitalizing formula",
+          slug: "hair-revitalizing",
+          href: "/treatments/hair-revitalizing",
+        },
+        {
+          name: "Prescriptions treatment s",
+          slug: "prescriptionhair",
+          href: "/treatments/prescriptionhair",
+        },
+      ],
+    },
+    others: {
+      title: "Others",
+      treatments: [
+        {
+          name: "Weight Loss modulators",
+          slug: "weightloss",
+          href: "/treatments/weightloss",
+        },
+        {
+          name: "Skin Tx and care",
+          slug: "prescriptionskincare",
+          href: "/treatments/prescriptionskincare",
+        },
       ],
     },
   };
@@ -136,8 +206,7 @@ export default function Navbar() {
     {
       icon: <Gift className="w-5 h-5 text-black" />,
       title: "Refer & Earn",
-      content:
-        "Earn 5% cash reward when your friend completes their treatment",
+      content: "Earn 5% cash reward when your friend completes their treatment",
       cta: "Learn More",
       link: "/refer-a-friend",
     },
@@ -313,7 +382,13 @@ export default function Navbar() {
               </button>
 
               {/* Main Dropdown Menu */}
-              <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-xl rounded-md py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div
+                className={`absolute top-full left-0 mt-1 w-64 bg-white shadow-xl rounded-md py-2 z-50 transition-all duration-200 ${
+                  isClickedTreatments
+                    ? "opacity-100 visible"
+                    : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+                }`}
+              >
                 {Object.entries(treatmentCategories).map(([key, category]) => (
                   <div key={key} className="relative group/item">
                     <div
@@ -327,7 +402,13 @@ export default function Navbar() {
                     </div>
 
                     {/* Nested Dropdown */}
-                    <div className="absolute left-full top-0 ml-2 w-72 bg-white shadow-xl rounded-md py-2 z-50 opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition-all duration-200">
+                    <div
+                      className={`absolute left-full top-0 ml-2 w-72 bg-white shadow-xl rounded-md py-2 z-50 transition-all duration-200 ${
+                        clickedCategory === key
+                          ? "opacity-100 visible"
+                          : "opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible"
+                      }`}
+                    >
                       <div className="px-4 py-2 border-b border-gray-100">
                         <h3 className="font-bold text-gray-800 text-sm uppercase">
                           {category.title}
@@ -335,18 +416,8 @@ export default function Navbar() {
                       </div>
                       <div className="max-h-96 overflow-y-auto">
                         {category.treatments.map((treatment, index) => {
-                          const treatmentName =
-                            typeof treatment === "string"
-                              ? treatment
-                              : treatment.name;
-                          const treatmentSlug =
-                            typeof treatment === "string"
-                              ? slugify(treatment)
-                              : treatment.slug;
-                          const href =
-                            key === "injectables"
-                              ? `/menu/injectables/${treatmentSlug}`
-                              : `/treatments/${treatmentSlug}`;
+                          const treatmentName = treatment.name;
+                          const href = treatment.href;
 
                           return (
                             <Link

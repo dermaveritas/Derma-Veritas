@@ -23,7 +23,6 @@ import {
   Heart,
   Shield,
 } from "lucide-react";
-import BeforeAfterSection from "@/components/before-after-section";
 import Footer from "@/components/Footer";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";
@@ -367,12 +366,32 @@ export default function WeightLossModulatorSection() {
       </section>
 
       {/* Before & After Section */}
-      <div ref={beforeAfterSectionRef}>
-        <BeforeAfterSection
-          title="Weight Loss Modulator Results"
-          description="See the transformative results our patients have achieved with our Weight Loss Modulator Injection therapy."
-        />
-      </div>
+      <section ref={beforeAfterSectionRef} className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          <div className="rounded-2xl overflow-hidden bg-gray-100 h-80">
+            <img
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+              alt="Weight Loss Modulator treatment results"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              About Weight Loss Modulator Injections
+            </h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Professional therapy designed to support weight management,
+              metabolic balance, and overall wellbeing.
+            </p>
+            <ul className="text-gray-600 space-y-2">
+              <li>• Supports gradual fat reduction</li>
+              <li>• Promotes better metabolic function</li>
+              <li>• Weekly or bi-weekly sessions</li>
+              <li>• 4–8 session course for optimal results</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <ConsultationSection />
 

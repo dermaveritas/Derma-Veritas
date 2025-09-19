@@ -8,9 +8,9 @@ export const metadata = {
   title: "DermaVeritas",
   description: "Skin Clinic & Wellness",
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/logo_white.png',
+    shortcut: '/logo_white.png',
+    apple: '/logo_white.png',
   },
 };
 

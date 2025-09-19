@@ -1,22 +1,8 @@
 "use client";
 
-import { useStore } from "@/store/zustand";
-import { Button } from "@/components/ui/button";
-
 import { Star } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState, useRef } from "react";
-import ClinicsModal from "@/components/ClinicsModal";
-import PriceCard from "@/components/pricecard/price-card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Play } from "lucide-react";
 import BeforeAfterSection from "@/components/before-after-section";
 import Footer from "@/components/Footer";
 import ClubMembership from "@/components/ClubMembership";
@@ -24,18 +10,12 @@ import MediaCoverage from "@/components/MediaCoverage";
 import MobileMenuDrawer from "@/components/MobileMenuDrawer";
 import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
+import Link from "next/link";
 
 export default function DermalFillersSection() {
   const [expandedSections, setExpandedSections] = useState({});
   const [openIndex, setOpenIndex] = useState(null);
   const beforeAfterSectionRef = useRef(null);
-
-  const scrollToBeforeAfter = () => {
-    beforeAfterSectionRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
 
   const faqs = [
     {
@@ -78,6 +58,7 @@ export default function DermalFillersSection() {
       price: "£250",
       volume: "0.5–1.0 ml",
       image: "/images/lip-filler.jpg",
+      href: "/menu/injectables/lip-fillers"
     },
     {
       name: "Cheek Contouring",
@@ -86,6 +67,7 @@ export default function DermalFillersSection() {
       price: "£250",
       volume: "0.5–1.0 ml",
       image: "/images/cheek-filler.jpg",
+      href: "/menu/injectables/cheek-fillers"
     },
     {
       name: "Jawline Sculpting",
@@ -93,6 +75,7 @@ export default function DermalFillersSection() {
       price: "£450",
       volume: "3.0 ml",
       image: "/images/jawline-filler.jpg",
+      href: "/menu/injectables/dermal-fillers"
     },
     {
       name: "Tear Trough",
@@ -101,6 +84,7 @@ export default function DermalFillersSection() {
       price: "£450",
       volume: "Variable",
       image: "/images/tear-trough.jpg",
+      href: "/menu/injectables/tear-trough-filler"
     },
     {
       name: "Non-Surgical Rhinoplasty",
@@ -108,6 +92,7 @@ export default function DermalFillersSection() {
       price: "£450",
       volume: "Variable",
       image: "/images/nose-filler.jpg",
+      href: "/menu/injectables/non-surgical-rhinoplasty"
     },
     {
       name: "Russian Lip Technique",
@@ -115,6 +100,7 @@ export default function DermalFillersSection() {
       price: "£350",
       volume: "Variable",
       image: "/images/russian-lips.jpg",
+      href: "/menu/injectables/lip-fillers"
     },
   ];
 
@@ -359,9 +345,11 @@ export default function DermalFillersSection() {
                     </div>
                   </div>
 
-                  <button className="w-full py-2 border border-[#272728] text-[#272728] hover:bg-[#272728] hover:text-white transition-colors">
-                    LEARN MORE
-                  </button>
+                  <Link href={area.href}>
+                    <button className="w-full py-2 border border-[#272728] text-[#272728] hover:bg-[#272728] hover:text-white transition-colors">
+                      LEARN MORE
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}

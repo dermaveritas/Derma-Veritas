@@ -404,7 +404,7 @@ export default function CO2LaserTreatmentSection() {
 
       <section ref={beforeAfterSectionRef} className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <div className="rounded-2xl overflow-hidden bg-gray-100">
+          <div className="rounded-2xl overflow-hidden bg-gray-100 h-80">
             <img
               src="/skin_care/CO2  Horizental.jpg"
               alt="CO₂ laser treatment results"

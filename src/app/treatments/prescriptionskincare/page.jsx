@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import { FaPoundSign } from "react-icons/fa";
 import { useState, useRef } from "react";
-import BeforeAfterSection from "@/components/before-after-section";
 import ClubMembership from "@/components/ClubMembership";
 import MediaCoverage from "@/components/MediaCoverage";
 import ConsultationSection from "@/components/consultation-section";
@@ -182,24 +181,6 @@ export default function PrescriptionSkincareSection() {
                   alt="Professional skincare consultation"
                   className="w-full h-full object-cover"
                 />
-
-                {/* Review Badge */}
-                <div className="absolute bottom-6 right-6 bg-white rounded-full px-4 py-3 shadow-lg flex items-center gap-2">
-                  <div className="w-5 h-5 bg-blue-500 rounded-sm flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">G</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                  <span className="text-gray-600 text-sm font-medium">
-                    Read Reviews
-                  </span>
-                </div>
               </div>
             </div>
           </div>
@@ -404,9 +385,33 @@ export default function PrescriptionSkincareSection() {
         </div>
       </section>
 
-      <div ref={beforeAfterSectionRef}>
-        <BeforeAfterSection />
-      </div>
+      {/* Before & After Section */}
+      <section ref={beforeAfterSectionRef} className="py-16 px-4 bg-white">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          <div className="rounded-2xl overflow-hidden bg-gray-100 h-80">
+            <img
+              src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8c2tpbmNhcmUlMjBwcm9kdWN0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+              alt="Prescription skincare treatment results"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+              About Prescription Skincare Treatments
+            </h3>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Clinically guided therapies tailored to target specific skin
+              concerns such as acne, hyperpigmentation, and sensitivity.
+            </p>
+            <ul className="text-gray-600 space-y-2">
+              <li>• Higher concentrations of active ingredients</li>
+              <li>• Results develop over 4-8 weeks</li>
+              <li>• Personalized treatment plans</li>
+              <li>• Medical-grade formulations for optimal results</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <ConsultationSection />
 

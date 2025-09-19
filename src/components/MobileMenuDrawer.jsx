@@ -165,52 +165,104 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
   };
 
   // Menu data - Updated to match navbar exactly
-  const injectablesLinks = [
-    "Anti-Wrinkle Treatment",
-    "Non Surgical Rhinoplasty",
-    "8 Point Facelift",
-    "NCTF Skin Revitalisation",
-    "HArmonyCa Dermal Filler",
-    "Dermal Fillers",
-    "Lip Fillers",
-    "Chin Fillers",
-    "Tear Trough Filler",
-    "Cheek Fillers",
-    "Profhilo",
-    "Fat Dissolving Injections",
-    "Hand Rejuvenation",
-    "Polynucleotides Hair Loss Treatment",
-    "Polynucleotides Skin Rejuvenation Treatment",
-    "Skin Boosters",
-    "Skinfill™ Bacio",
+  const nonSurgicalEnhancementLinks = [
+    { name: "Endolift", slug: "endolift", href: "/treatments/endolift" },
+    {
+      name: "Eight point facelift",
+      slug: "8-point-facelift",
+      href: "/menu/injectables/8-point-facelift",
+    },
+    {
+      name: "Ablative co2 resurfacing",
+      slug: "ablative",
+      href: "/treatments/ablative",
+    },
   ];
 
-  const skincareLinks = [
-    { name: "Microneedling", slug: "microneedling" },
-    { name: "RF Microneedling", slug: "rf-microneedling" },
-    { name: "Co2 Laser", slug: "co2" },
-    { name: "Endolift", slug: "endolift" },
-    { name: "EXO–NAD Skin Longevity Peeling", slug: "exo-nad" },
-    { name: "Prescription Skincare", slug: "prescriptionskincare" },
+  const skinPerfectingLinks = [
+    {
+      name: "Fractional co2 resurfacing",
+      slug: "co2",
+      href: "/treatments/co2",
+    },
+    {
+      name: "Radio frequency Microneedling",
+      slug: "rf-microneedling",
+      href: "/treatments/rf-microneedling",
+    },
+    { name: "Pro Fusion", slug: "profusion", href: "/treatments/profusion" },
   ];
 
-  const wellnessLinks = [
-    { name: "Exosome Therapy", slug: "exosome-therapy" },
-    { name: "PRP Therapy", slug: "prp-therapy" },
-    { name: "V-Hacker", slug: "v-hacker" },
-    { name: "Weight Loss", slug: "weightloss" },
+  const ageDefyingLinks = [
+    { name: "V hacker", slug: "v-hacker", href: "/treatments/v-hacker" },
+    {
+      name: "Bio Hacking Formula",
+      slug: "bio-hacking",
+      href: "/treatments/exosome-therapy",
+    },
+    {
+      name: "Exosomes",
+      slug: "exosome-therapy",
+      href: "/treatments/exosome-therapy",
+    },
+    {
+      name: "Anti- wrinkle",
+      slug: "anti-wrinkle-treatment",
+      href: "/menu/injectables/anti-wrinkle-treatment",
+    },
+    { name: "PRP", slug: "prp-therapy", href: "/treatments/prp-therapy" },
+    {
+      name: "Polynucleotide",
+      slug: "polynucleotide",
+      href: "/treatments/polynucleotide",
+    },
   ];
 
-  const laserLinks = [
-    { name: "Quad Laser Hair Removal", slug: "quad-laser-hair-removal" },
-    { name: "Ablative", slug: "ablative" },
+  const facialContouringLinks = [
+    {
+      name: "Fillers",
+      slug: "dermal-fillers",
+      href: "/menu/injectables/dermal-fillers",
+    },
+    { name: "Profhilo", slug: "profhilo", href: "/menu/injectables/profhilo" },
+    {
+      name: "Skin Fill Bacio",
+      slug: "skinfill-bacio",
+      href: "/menu/injectables/skinfill-bacio",
+    },
   ];
 
-  const hairLinks = [
-    { name: "Hair+ Revitalizing", slug: "hair-revitalizing" },
-    { name: "ExoSignal™ Hair", slug: "exosignal" },
-    { name: "Prescription Hair", slug: "prescriptionhair" },
-    { name: "Polynucleotide Hair Treatment", slug: "polynucleotide" },
+  const hairEnhancementsLinks = [
+    { name: "Hair PRP", slug: "prp-therapy", href: "/treatments/prp-therapy" },
+    {
+      name: "Hair polynucleotide",
+      slug: "polynucleotides-hair-loss-treatment",
+      href: "/menu/injectables/polynucleotides-hair-loss-treatment",
+    },
+    { name: "EXO SIGNAL", slug: "exosignal", href: "/treatments/exosignal" },
+    {
+      name: "Hair + revitalizing formula",
+      slug: "hair-revitalizing",
+      href: "/treatments/hair-revitalizing",
+    },
+    {
+      name: "Prescriptions treatment s",
+      slug: "prescriptionhair",
+      href: "/treatments/prescriptionhair",
+    },
+  ];
+
+  const othersLinks = [
+    {
+      name: "Weight Loss modulators",
+      slug: "weightloss",
+      href: "/treatments/weightloss",
+    },
+    {
+      name: "Skin Tx and care",
+      slug: "prescriptionskincare",
+      href: "/treatments/prescriptionskincare",
+    },
   ];
 
   const slugify = (str) =>
@@ -243,27 +295,16 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="pl-4 overflow-hidden"
           >
-            {links.map((item) =>
-              type === "injectables" ? (
-                <Link
-                  key={item}
-                  href={`/menu/injectables/${slugify(item)}`}
-                  className="block py-2 text-base text-black hover:text-gray-600 cursor-pointer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item}
-                </Link>
-              ) : (
-                <Link
-                  key={item.name}
-                  href={item.slug ? `/treatments/${item.slug}` : item.path}
-                  className="block py-2 text-base text-black hover:text-gray-600 cursor-pointer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              )
-            )}
+            {links.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="block py-2 text-base text-black hover:text-gray-600 cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
@@ -294,27 +335,16 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="pl-4 mt-2 overflow-hidden"
           >
-            {links.map((item) =>
-              type === "injectables" ? (
-                <Link
-                  key={item}
-                  href={`/menu/injectables/${slugify(item)}`}
-                  className="block py-2 text-lg font-light text-black hover:text-gray-600 transition-colors cursor-pointer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item}
-                </Link>
-              ) : (
-                <Link
-                  key={item.name}
-                  href={item.slug ? `/treatments/${item.slug}` : item.path}
-                  className="block py-2 text-lg font-light text-black hover:text-gray-600 transition-colors cursor-pointer"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              )
-            )}
+            {links.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="block py-2 text-lg font-light text-black hover:text-gray-600 transition-colors cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
@@ -367,34 +397,40 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                     Treatments
                   </h3>
                   <MobileDropdown
-                    label="Injectables"
-                    section="Injectables"
-                    links={injectablesLinks}
-                    type="injectables"
+                    label="Non-surgical Enhancement"
+                    section="NonSurgicalEnhancement"
+                    links={nonSurgicalEnhancementLinks}
+                    type="treatments"
                   />
                   <MobileDropdown
-                    label="Skincare"
-                    section="Skincare"
-                    links={skincareLinks}
-                    type="skincare"
+                    label="Skin Perfecting"
+                    section="SkinPerfecting"
+                    links={skinPerfectingLinks}
+                    type="treatments"
                   />
                   <MobileDropdown
-                    label="Wellness"
-                    section="Wellness"
-                    links={wellnessLinks}
-                    type="wellness"
+                    label="Age Defying"
+                    section="AgeDefying"
+                    links={ageDefyingLinks}
+                    type="treatments"
                   />
                   <MobileDropdown
-                    label="Laser Treatments"
-                    section="Laser"
-                    links={laserLinks}
-                    type="laser"
+                    label="Facial Contouring"
+                    section="FacialContouring"
+                    links={facialContouringLinks}
+                    type="treatments"
                   />
                   <MobileDropdown
-                    label="Hair Treatments"
-                    section="Hair"
-                    links={hairLinks}
-                    type="hair"
+                    label="Hair Enhancements"
+                    section="HairEnhancements"
+                    links={hairEnhancementsLinks}
+                    type="treatments"
+                  />
+                  <MobileDropdown
+                    label="Others"
+                    section="Others"
+                    links={othersLinks}
+                    type="treatments"
                   />
                 </div>
 
@@ -643,38 +679,45 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                       {activeSubmenu === "treatments" && (
                         <>
                           <DesktopDropdown
-                            label="Injectables"
-                            section="Injectables"
-                            links={injectablesLinks}
-                            type="injectables"
+                            label="Non-surgical Enhancement"
+                            section="NonSurgicalEnhancement"
+                            links={nonSurgicalEnhancementLinks}
+                            type="treatments"
                           />
 
                           <DesktopDropdown
-                            label="Skincare"
-                            section="Skincare"
-                            links={skincareLinks}
-                            type="skincare"
+                            label="Skin Perfecting"
+                            section="SkinPerfecting"
+                            links={skinPerfectingLinks}
+                            type="treatments"
                           />
 
                           <DesktopDropdown
-                            label="Wellness"
-                            section="Wellness"
-                            links={wellnessLinks}
-                            type="wellness"
+                            label="Age Defying"
+                            section="AgeDefying"
+                            links={ageDefyingLinks}
+                            type="treatments"
                           />
 
                           <DesktopDropdown
-                            label="Laser Treatments"
-                            section="Laser"
-                            links={laserLinks}
-                            type="laser"
+                            label="Facial Contouring"
+                            section="FacialContouring"
+                            links={facialContouringLinks}
+                            type="treatments"
                           />
 
                           <DesktopDropdown
-                            label="Hair Treatments"
-                            section="Hair"
-                            links={hairLinks}
-                            type="hair"
+                            label="Hair Enhancements"
+                            section="HairEnhancements"
+                            links={hairEnhancementsLinks}
+                            type="treatments"
+                          />
+
+                          <DesktopDropdown
+                            label="Others"
+                            section="Others"
+                            links={othersLinks}
+                            type="treatments"
                           />
                         </>
                       )}

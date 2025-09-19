@@ -46,8 +46,9 @@ export default function AboutPage() {
             About Us
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-            Dr. Mofasher Nawaz and Mr. A. Singh is a leading cosmetic
-            specialist, and the owner and founder of Derma Veritas.
+            With years of dermatology experience, Dr. Mofasher Nawaz and Mr. A.
+            Singh lead our clinic with one goal: safe treatments and natural
+            outcomes.{" "}
           </p>
         </div>
       </div>
@@ -117,7 +118,7 @@ export default function AboutPage() {
           <div className="order-2 md:order-1 px-4 md:px-8">
             <Image
               src="/Doctor_Image.png"
-              alt="Dr Mofasher Nawaz at awards ceremony"
+              alt="Dr Mofasher Nawaz"
               width={600}
               height={700}
               className="rounded-lg shadow-lg w-full h-auto"
@@ -130,32 +131,55 @@ export default function AboutPage() {
               <div className="flex items-center gap-4 mb-4">
                 <div className="h-px bg-muted-foreground/30 flex-1 max-w-12"></div>
                 <span className="text-sm text-muted-foreground font-medium">
-                  Dr. Mofasher Nawaz and Mr. A. Singh.
+                  Meet Our Team
                 </span>
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">
-                Renowned in the industry as a "Master Injector" and for his
-                skills in the area of advanced aesthetic techniques.
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-balance">
+                Led by Experienced Medical Professionals
               </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                At Derma Veritas, all injectors are meticulously trained by Dr.
-                Mofasher Nawaz and Mr. A. Singh. to ensure the highest level of
-                quality and precision in our treatments. Dr. Mofasher Nawaz and
-                Mr. A. Singh., with over <strong>27 years</strong> of experience
-                in the aesthetics industry, exudes a genuine passion for his
-                work and a strong dedication to providing exceptional treatments
-                and procedures.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                During his illustrious 24-year career at the NHS, Dr. Mofasher
-                Nawaz and Mr. A. Singh. specialised in Rhinology and
-                Rhinoplasty. Over the past decade, he has played a pioneering
-                role in co-developing the{" "}
-                <strong>Non-Surgical Rhinoplasty</strong> procedure, often
-                referred to as the <strong>"15-minute nose job"</strong>. This
-                innovative approach has garnered widespread acclaim for its
-                effectiveness and convenience.
-              </p>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    Dr. Mofasher Nawaz
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2 font-medium">
+                    Specialty Registrar in Medicine | Medical Doctor (DV) |
+                    Anaesthetics Trainer
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Dr. Mofasher works in the hospital environment as a
+                    Specialty Registrar in Medicine and has built extensive
+                    experience in anaesthetics over more than 6 years. He has a
+                    strong background in advanced procedures, patient safety,
+                    and clinical training, having taught many medical
+                    professionals in anaesthetics practice. At our clinic, Dr.
+                    Mofasher applies this dual expertise in medicine and
+                    anaesthetics to deliver safe, effective, and patient-focused
+                    treatments tailored to individual needs.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    Mr. A. Singh
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2 font-medium">
+                    GP Pharmacist | ACP | Advanced Anaesthetics Practitioner |
+                    Operational Director (DV)
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Mr. Singh is a clinical pharmacist and advanced clinical
+                    practitioner with extensive experience in general practice
+                    prescribing and advanced patient care. He also has expertise
+                    in cosmetic procedures and a deep understanding of
+                    pharmacology in treating dermatological conditions in the
+                    community. At the clinic, he is dedicated to providing
+                    high-quality, professional treatments that focus on safety,
+                    comfort, and natural results.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

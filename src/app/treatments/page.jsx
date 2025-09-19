@@ -16,92 +16,165 @@ const generateSlug = (name) => {
     .replace(/[^a-z0-9-]/g, "");
 };
 
-// Updated treatment categories based on your menu drawer
+// Function to get correct href for each treatment
+const getTreatmentHref = (treatmentName) => {
+  const treatmentMap = {
+    Endolift: "/treatments/endolift",
+    "Eight Point Facelift": "/menu/injectables/8-point-facelift",
+    "Ablative CO2 Resurfacing": "/treatments/ablative",
+    "Fractional CO2 Resurfacing": "/treatments/co2",
+    "Radio Frequency Microneedling": "/treatments/rf-microneedling",
+    "Pro Fusion": "/treatments/profusion",
+    "V Hacker": "/treatments/v-hacker",
+    "Bio Hacking Formula": "/treatments/exosome-therapy",
+    Exosomes: "/treatments/exosome-therapy",
+    "Anti-Wrinkle": "/menu/injectables/anti-wrinkle-treatment",
+    PRP: "/treatments/prp-therapy",
+    Polynucleotide: "/treatments/polynucleotide",
+    Fillers: "/menu/injectables/dermal-fillers",
+    Profhilo: "/menu/injectables/profhilo",
+    "Skin Fill Bacio": "/menu/injectables/skinfill-bacio",
+    "Hair PRP": "/treatments/prp-therapy",
+    "Hair Polynucleotide":
+      "/menu/injectables/polynucleotides-hair-loss-treatment",
+    "EXO SIGNAL": "/treatments/exosignal",
+    "Hair + Revitalizing Formula": "/treatments/hair-revitalizing",
+    "Prescription Hair Treatments": "/treatments/prescriptionhair",
+    "Weight Loss Modulators": "/treatments/weightloss",
+    "Skin Tx and Care": "/treatments/prescriptionskincare",
+  };
+
+  return treatmentMap[treatmentName] || "#";
+};
+
+// Updated treatment categories based on navbar treatments
 const treatmentCategories = [
   {
-    id: "injectables",
-    name: "Injectables",
+    id: "non-surgical-enhancement",
+    name: "Non-surgical Enhancement",
     treatments: [
       {
         id: 1,
-        name: "Anti-Wrinkle Treatment",
+        name: "Endolift",
+        description:
+          "Minimally invasive laser treatment for skin tightening and lifting.",
+        image:
+          "https://img.freepik.com/free-photo/overhead-view-pen-spiral-notebook-stethoscope-grey-background_23-2148129623.jpg?semt=ais_hybrid&w=740&q=80",
+      },
+      {
+        id: 2,
+        name: "Eight Point Facelift",
+        description:
+          "A non-surgical facelift technique that uses dermal fillers to restore volume and lift the face.",
+        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
+      },
+      {
+        id: 3,
+        name: "Ablative CO2 Resurfacing",
+        description:
+          "Advanced CO2 laser treatment for skin resurfacing and rejuvenation.",
+        image:
+          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
+      },
+    ],
+  },
+  {
+    id: "skin-perfecting",
+    name: "Skin Perfecting",
+    treatments: [
+      {
+        id: 4,
+        name: "Fractional CO2 Resurfacing",
+        description:
+          "Advanced CO2 laser treatment for skin resurfacing and rejuvenation.",
+        image:
+          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
+      },
+      {
+        id: 5,
+        name: "Radio Frequency Microneedling",
+        description:
+          "Combine microneedling with radio frequency for enhanced skin tightening and rejuvenation.",
+        image:
+          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+      },
+      {
+        id: 6,
+        name: "Pro Fusion",
+        description:
+          "Advanced skin treatment for enhanced facial contours and volume.",
+        image:
+          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+      },
+    ],
+  },
+  {
+    id: "age-defying",
+    name: "Age Defying",
+    treatments: [
+      {
+        id: 7,
+        name: "V Hacker",
+        description:
+          "Innovative treatment for targeted body contouring and fat reduction.",
+        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
+      },
+      {
+        id: 8,
+        name: "Bio Hacking Formula",
+        description:
+          "Advanced regenerative therapy using exosomes to promote healing and rejuvenation.",
+        image:
+          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
+      },
+      {
+        id: 9,
+        name: "Exosomes",
+        description:
+          "Advanced regenerative therapy using exosomes to promote healing and rejuvenation.",
+        image:
+          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
+      },
+      {
+        id: 10,
+        name: "Anti-Wrinkle",
         description:
           "Reduce the appearance of fine lines and wrinkles with our advanced anti-wrinkle treatments.",
         image:
           "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
       },
       {
-        id: 2,
-        name: "Non Surgical Rhinoplasty",
+        id: 11,
+        name: "PRP",
         description:
-          "Reshape and enhance your nose without surgery with our filler-based rhinoplasty.",
+          "Platelet-rich plasma therapy for skin rejuvenation and healing.",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
       },
       {
-        id: 3,
-        name: "8 Point Facelift",
+        id: 12,
+        name: "Polynucleotide",
         description:
-          "A non-surgical facelift technique that uses dermal fillers to restore volume and lift the face.",
-        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
-      },
-      {
-        id: 4,
-        name: "NCTF Skin Revitalisation",
-        description:
-          "A cocktail of vitamins, minerals, amino acids and antioxidants to rejuvenate your skin.",
+          "Polynucleotide treatments for skin regeneration and revitalization.",
         image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
       },
+    ],
+  },
+  {
+    id: "facial-contouring",
+    name: "Facial Contouring",
+    treatments: [
       {
-        id: 5,
-        name: "HArmonyCa Dermal Filler",
-        description:
-          "A revolutionary dermal filler that provides both immediate volume and collagen stimulation.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-      {
-        id: 6,
-        name: "Dermal Fillers",
+        id: 13,
+        name: "Fillers",
         description:
           "Restore volume and enhance facial contours with our premium dermal fillers.",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRalrdoQZBQZTJVkZjIf34lWjfB1hyyfRyeFV_ndZaxRiO8cjnQvrcGwvVBUJ4BluGd2bQ&usqp=CAU",
       },
       {
-        id: 7,
-        name: "Lip Fillers",
-        description:
-          "Achieve fuller, more defined lips with our expert lip augmentation treatments.",
-        image:
-          "https://img.freepik.com/free-photo/overhead-view-pen-spiral-notebook-stethoscope-grey-background_23-2148129623.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-      {
-        id: 8,
-        name: "Chin Fillers",
-        description:
-          "Enhance your chin profile and balance your facial features with chin fillers.",
-        image:
-          "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
-      },
-      {
-        id: 9,
-        name: "Tear Trough Filler",
-        description:
-          "Reduce under-eye hollows and dark circles with our specialized tear trough treatment.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
-      },
-      {
-        id: 10,
-        name: "Cheek Fillers",
-        description:
-          "Restore volume to your cheeks and achieve a more youthful contour.",
-        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
-      },
-      {
-        id: 11,
+        id: 14,
         name: "Profhilo",
         description:
           "An innovative skin remodelling treatment that improves skin quality and elasticity.",
@@ -109,55 +182,8 @@ const treatmentCategories = [
           "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
       },
       {
-        id: 12,
-        name: "Fat Dissolving Injections",
-        description:
-          "Target and reduce stubborn fat areas with our effective fat dissolving treatments.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-      {
-        id: 13,
-        name: "Hand Rejuvenation",
-        description:
-          "Restore a youthful appearance to your hands with our specialized treatments.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRalrdoQZBQZTJVkZjIf34lWjfB1hyyfRyeFV_ndZaxRiO8cjnQvrcGwvVBUJ4BluGd2bQ&usqp=CAU",
-      },
-      {
-        id: 14,
-        name: "Polynucleotides Hair Loss Treatment",
-        description:
-          "Stimulate hair growth and improve hair density with our advanced polynucleotide therapy.",
-        image:
-          "https://img.freepik.com/free-photo/overhead-view-pen-spiral-notebook-stethoscope-grey-background_23-2148129623.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-      {
         id: 15,
-        name: "Polynucleotides Skin Rejuvenation Treatment",
-        description:
-          "Revitalize your skin with polynucleotides for improved texture, tone, and elasticity.",
-        image:
-          "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
-      },
-      {
-        id: 16,
-        name: "Anti Wrinkle Treatment",
-        description:
-          "Professional Anti Wrinkle treatments to smooth wrinkles and fine lines.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
-      },
-      {
-        id: 17,
-        name: "Skin Boosters",
-        description:
-          "Hydrate and revitalize your skin with our skin booster treatments.",
-        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
-      },
-      {
-        id: 18,
-        name: "Skinfill™ Bacio",
+        name: "Skin Fill Bacio",
         description:
           "Advanced skinfill treatment for enhanced facial contours and volume.",
         image:
@@ -166,158 +192,70 @@ const treatmentCategories = [
     ],
   },
   {
-    id: "skincare",
-    name: "Skincare",
+    id: "hair-enhancements",
+    name: "Hair Enhancements",
     treatments: [
       {
-        id: 19,
-        name: "Chemical Peels",
+        id: 16,
+        name: "Hair PRP",
         description:
-          "Revitalize your skin with our professional-grade chemical peels for a radiant complexion.",
+          "Platelet-rich plasma therapy for hair growth and rejuvenation.",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
       },
       {
-        id: 20,
-        name: "Microneedling",
+        id: 17,
+        name: "Hair Polynucleotide",
         description:
-          "Stimulate collagen production and improve skin texture with our microneedling treatments.",
-        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
-      },
-      {
-        id: 21,
-        name: "RF Microneedling",
-        description:
-          "Combine microneedling with radio frequency for enhanced skin tightening and rejuvenation.",
-        image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-      {
-        id: 22,
-        name: "Co2 Laser",
-        description:
-          "Advanced CO2 laser treatment for skin resurfacing and rejuvenation.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-      {
-        id: 23,
-        name: "Polynucleotide",
-        description:
-          "Polynucleotide treatments for skin regeneration and revitalization.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRalrdoQZBQZTJVkZjIf34lWjfB1hyyfRyeFV_ndZaxRiO8cjnQvrcGwvVBUJ4BluGd2bQ&usqp=CAU",
-      },
-      {
-        id: 24,
-        name: "Endolift",
-        description:
-          "Minimally invasive laser treatment for skin tightening and lifting.",
+          "Stimulate hair growth and improve hair density with our advanced polynucleotide therapy.",
         image:
           "https://img.freepik.com/free-photo/overhead-view-pen-spiral-notebook-stethoscope-grey-background_23-2148129623.jpg?semt=ais_hybrid&w=740&q=80",
       },
       {
-        id: 25,
-        name: "EXO–NAD Skin Longevity Peeling",
-        description:
-          "Advanced peeling treatment for skin longevity and rejuvenation.",
-        image:
-          "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
-      },
-    ],
-  },
-  {
-    id: "wellness",
-    name: "Wellness",
-    treatments: [
-      {
-        id: 26,
-        name: "Exosome Therapy",
-        description:
-          "Advanced regenerative therapy using exosomes to promote healing and rejuvenation.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-      {
-        id: 27,
-        name: "PRP Therapy",
-        description:
-          "Platelet-rich plasma therapy for skin rejuvenation and healing.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
-      },
-      {
-        id: 28,
-        name: "V-Hacker",
-        description:
-          "Innovative treatment for targeted body contouring and fat reduction.",
-        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
-      },
-      {
-        id: 29,
-        name: "Hair+ Revitalizing",
-        description:
-          "Comprehensive hair revitalizing treatment for healthier, stronger hair.",
-        image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-    ],
-  },
-  {
-    id: "laser",
-    name: "Laser Treatments",
-    treatments: [
-      {
-        id: 30,
-        name: "Quad Laser Hair Removal",
-        description:
-          "Advanced laser technology for effective and permanent hair removal.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
-      },
-    ],
-  },
-  {
-    id: "hair",
-    name: "Hair Treatments",
-    treatments: [
-      {
-        id: 31,
-        name: "Hair+ Revitalizing",
-        description:
-          "Comprehensive hair revitalizing treatment for healthier, stronger hair.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRalrdoQZBQZTJVkZjIf34lWjfB1hyyfRyeFV_ndZaxRiO8cjnQvrcGwvVBUJ4BluGd2bQ&usqp=CAU",
-      },
-      {
-        id: 32,
-        name: "ExoSignal™ Hair",
+        id: 18,
+        name: "EXO SIGNAL",
         description:
           "Advanced hair treatment using exosome technology for hair growth and revitalization.",
         image:
           "https://img.freepik.com/free-photo/overhead-view-pen-spiral-notebook-stethoscope-grey-background_23-2148129623.jpg?semt=ais_hybrid&w=740&q=80",
       },
+      {
+        id: 19,
+        name: "Hair + Revitalizing Formula",
+        description:
+          "Comprehensive hair revitalizing treatment for healthier, stronger hair.",
+        image:
+          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+      },
+      {
+        id: 20,
+        name: "Prescription Hair Treatments",
+        description:
+          "Clinically tailored therapies designed to support hair growth, scalp health, and long-term hair maintenance.",
+        image:
+          "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
+      },
     ],
   },
   {
-    id: "minor-ops",
-    name: "Minor Ops",
+    id: "others",
+    name: "Others",
     treatments: [
       {
-        id: 33,
-        name: "Mole Removal",
+        id: 21,
+        name: "Weight Loss Modulators",
         description:
-          "Safe and effective removal of unwanted moles with minimal scarring.",
+          "Professional therapy designed to support weight management, metabolic balance, and overall wellbeing.",
         image:
           "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
       },
       {
-        id: 34,
-        name: "Skin Tag Removal",
+        id: 22,
+        name: "Skin Tx and Care",
         description:
-          "Quick and painless removal of skin tags for smoother skin.",
+          "Clinically guided therapies tailored to target specific skin concerns such as acne, hyperpigmentation, and sensitivity.",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
+          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
       },
     ],
   },
@@ -645,9 +583,7 @@ export default function TreatmentsPage() {
                           transition={{ duration: 0.2 }}
                         >
                           <Link
-                            href={`/menu/injectables/${generateSlug(
-                              treatment.name
-                            )}`}
+                            href={getTreatmentHref(treatment.name)}
                             className="flex items-center text-gray-800 hover:text-gray-600 font-medium"
                           >
                             Learn more

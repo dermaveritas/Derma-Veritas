@@ -40,9 +40,7 @@ export default function Home() {
   // Auto-cycle through images with smooth transition
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % heroImages.length
-      );
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
     }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
@@ -61,6 +59,10 @@ export default function Home() {
 
   const handleProductClick = () => {
     router.push("/shop");
+  };
+
+  const handleReferAFriendClick = () => {
+    router.push("/refer-a-friend");
   };
 
   // Define CSS variables for section styling
@@ -100,22 +102,24 @@ export default function Home() {
               <div
                 key={index}
                 className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-                  index === currentImageIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  index === currentImageIndex
+                    ? "opacity-100 z-10"
+                    : "opacity-0 z-0"
                 }`}
               >
                 <img
                   src={image}
                   alt={`Hero background ${index + 1}`}
                   className="w-full h-full object-cover"
-                  loading={index === 0 ? 'eager' : 'lazy'}
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
               </div>
             ))}
-            
+
             {/* Smooth overlay gradient for better text readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-5" />
           </div>
-          
+
           {/* Optional: Add slide indicators */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
             {heroImages.map((_, index) => (
@@ -124,8 +128,8 @@ export default function Home() {
                 onClick={() => setCurrentImageIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentImageIndex
-                    ? 'bg-white scale-110'
-                    : 'bg-white/50 hover:bg-white/75'
+                    ? "bg-white scale-110"
+                    : "bg-white/50 hover:bg-white/75"
                 }`}
               />
             ))}
@@ -158,6 +162,15 @@ export default function Home() {
               onClick={handleProductClick}
             >
               <span className="relative z-10">Our Products</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-gray-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-white/60 to-gray-200/80 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-bottom-left"></div>
+            </button>
+            {/* Refer A Friend Button */}
+            <button
+              className="relative px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 rounded-lg text-white font-medium tracking-wide overflow-hidden group transition-all duration-300 hover:bg-white/15 hover:shadow-2xl hover:border-white/40"
+              onClick={handleReferAFriendClick}
+            >
+              <span className="relative z-10">Refer A Friend</span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-gray-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-white/60 to-gray-200/80 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-bottom-left"></div>
             </button>
