@@ -176,7 +176,7 @@ export default function RFMicroneedlingSection() {
             <div className="relative flex items-center justify-center">
               <div className="rounded-3xl overflow-hidden bg-gray-200 aspect-[4/5] w-full max-w-lg">
                 <img
-                  src="/skin_care/RF Microneedling Vertical.jpg"
+                  src="/skin_care/RF Microneedling Vertical.jpeg"
                   alt="RF Microneedling treatment for skin rejuvenation"
                   className="w-full h-full object-cover"
                 />
@@ -484,7 +484,7 @@ export default function RFMicroneedlingSection() {
                       Single Treatment – Full Face:
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £450 + VAT
+                      £450  
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
@@ -492,7 +492,7 @@ export default function RFMicroneedlingSection() {
                       Single Treatment – Scars & Stretch Marks (One Area):
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £350 + VAT
+                      £350  
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
@@ -500,7 +500,7 @@ export default function RFMicroneedlingSection() {
                       3 Sessions – Full Face:
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,250 + VAT
+                      £1,250  
                     </span>
                   </div>
                 </div>
@@ -601,7 +601,7 @@ export default function RFMicroneedlingSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
+       
     </>
   );
 }

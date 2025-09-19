@@ -552,7 +552,6 @@ export default function BotoxTreatmentSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

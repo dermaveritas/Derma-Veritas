@@ -15,9 +15,10 @@ export default function ProFusionHydraFacialPage() {
     {
       name: "Lift & Reshape",
       duration: "10-12 week program",
-      price: "£2,500 + VAT",
+      price: "£2,500  ",
       packagePrice: "Complete package",
-      description: "Non-surgical face lifting and contouring for early signs of aging",
+      description:
+        "Non-surgical face lifting and contouring for early signs of aging",
       benefits: [
         "1x Endolift Treatment – Non-surgical face lifting for jawline/cheeks",
         "3x RF Microneedling Sessions – Stimulates collagen and tightens skin",
@@ -147,11 +148,12 @@ export default function ProFusionHydraFacialPage() {
               What is the Lift & Reshape Package?
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our Lift & Reshape package is a comprehensive non-surgical solution designed to
-              address early signs of aging, sagging skin, and facial contouring needs. This
-              expertly curated program combines cutting-edge technologies including Endolift,
-              RF Microneedling, Profhilo, and dermal fillers to deliver natural-looking lifting
-              and reshaping results without surgery.
+              Our Lift & Reshape package is a comprehensive non-surgical
+              solution designed to address early signs of aging, sagging skin,
+              and facial contouring needs. This expertly curated program
+              combines cutting-edge technologies including Endolift, RF
+              Microneedling, Profhilo, and dermal fillers to deliver
+              natural-looking lifting and reshaping results without surgery.
             </p>
           </div>
 
@@ -191,7 +193,8 @@ export default function ProFusionHydraFacialPage() {
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Comprehensive approach combining multiple advanced technologies
+                  Comprehensive approach combining multiple advanced
+                  technologies
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -227,8 +230,9 @@ export default function ProFusionHydraFacialPage() {
               Lift & Reshape Package
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Our comprehensive non-surgical solution for facial lifting and contouring,
-              combining multiple advanced technologies for optimal results.
+              Our comprehensive non-surgical solution for facial lifting and
+              contouring, combining multiple advanced technologies for optimal
+              results.
             </p>
           </div>
 
@@ -300,16 +304,18 @@ export default function ProFusionHydraFacialPage() {
               >
                 {faq.question}
                 <ChevronDown
-                  className={`h-5 w-5 text-gray-600 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
-                    }`}
+                  className={`h-5 w-5 text-gray-600 transition-transform duration-300 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openIndex === index
                     ? "max-h-40 opacity-100"
                     : "max-h-0 opacity-0"
-                  }`}
+                }`}
               >
                 <div className="pb-4 text-gray-600">{faq.answer}</div>
               </div>

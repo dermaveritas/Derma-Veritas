@@ -65,14 +65,15 @@ export default function AboutPage() {
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            At Derma Veritas, our team consists of highly trained medical
-            professionals with extensive experience in both hospital and
-            clinical settings.
+            With over a decade of combined expertise, Dr. Mofasher Nawaz and Mr.
+            Apardeep Singh bring advanced skills, precision, and a commitment to
+            excellence in every aspect of aesthetic medicine.
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            We combine medical expertise with aesthetic precision to deliver
-            safe, effective treatments tailored to your unique needs and goals.
+            Both are passionate educators who have trained hundreds of medical
+            professionals in advanced aesthetic techniques, helping to raise
+            standards across the industry.
           </p>
         </div>
 
@@ -91,16 +92,16 @@ export default function AboutPage() {
           </div>
 
           <h3 className="text-2xl lg:text-3xl font-light text-gray-800 mb-8 leading-tight">
-            Patient-Centered Care with Natural Results
+            A Vision for Excellence in Aesthetics
           </h3>
 
           <ul className="space-y-5 text-gray-700">
             {[
-              "We prioritize your safety and satisfaction above all else",
-              "Our treatments enhance your natural beauty, not mask it",
-              "We believe in education and transparency throughout your journey",
-              "Hospital-grade standards ensure the highest level of care",
-              "We create a welcoming environment where you feel comfortable",
+              "Over a decade of combined expertise in NHS and aesthetic medicine",
+              "Passionate educators who have trained hundreds of medical professionals",
+              "Commitment to raising standards across the aesthetics industry",
+              "Creating a center of excellence that shapes future training and development",
+              "Combining medical expertise with innovation for outstanding patient results",
             ].map((benefit, index) => (
               <li key={index} className="flex items-start gap-4">
                 <div className="w-2 h-2 bg-gray-800 rounded-full mt-3 flex-shrink-0"></div>
@@ -135,48 +136,38 @@ export default function AboutPage() {
                 </span>
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6 text-balance">
-                Led by Experienced Medical Professionals
+                Leading Practitioners with a Vision for Excellence
               </h2>
 
               <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Dr. Mofasher Nawaz
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 font-medium">
-                    Specialty Registrar in Medicine | Medical Doctor (DV) |
-                    Anaesthetics Trainer
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Dr. Mofasher works in the hospital environment as a
-                    Specialty Registrar in Medicine and has built extensive
-                    experience in anaesthetics over more than 6 years. He has a
-                    strong background in advanced procedures, patient safety,
-                    and clinical training, having taught many medical
-                    professionals in anaesthetics practice. At our clinic, Dr.
-                    Mofasher applies this dual expertise in medicine and
-                    anaesthetics to deliver safe, effective, and patient-focused
-                    treatments tailored to individual needs.
+                <div className="mb-8">
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    Dr. Mofasher Nawaz and Mr. Apardeep Singh are highly
+                    experienced medical professionals with strong backgrounds in
+                    both the NHS and the aesthetics field. With over a decade of
+                    combined expertise, they bring advanced skills, precision,
+                    and a commitment to excellence in every aspect of aesthetic
+                    medicine.
                   </p>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Mr. A. Singh
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 font-medium">
-                    GP Pharmacist | ACP | Advanced Anaesthetics Practitioner |
-                    Operational Director (DV)
-                  </p>
+                <div className="mb-8">
                   <p className="text-muted-foreground leading-relaxed">
-                    Mr. Singh is a clinical pharmacist and advanced clinical
-                    practitioner with extensive experience in general practice
-                    prescribing and advanced patient care. He also has expertise
-                    in cosmetic procedures and a deep understanding of
-                    pharmacology in treating dermatological conditions in the
-                    community. At the clinic, he is dedicated to providing
-                    high-quality, professional treatments that focus on safety,
-                    comfort, and natural results.
+                    Both are passionate educators who have trained hundreds of
+                    medical professionals in advanced aesthetic techniques,
+                    helping to raise standards across the industry. As the
+                    leading practitioners at Derma Veritas, they aim to combine
+                    medical expertise with innovation, ensuring patients receive
+                    safe, high-quality, and effective treatments.
+                  </p>
+                </div>
+
+                <div className="mb-8">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Through Derma Veritas, their vision is to create a center of
+                    excellence in aesthetics that not only delivers outstanding
+                    patient results but also shapes the future of training and
+                    development within the industry.
                   </p>
                 </div>
               </div>

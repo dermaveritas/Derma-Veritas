@@ -469,13 +469,13 @@ export default function SaggingJowlsTreatmentsSection() {
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Endolift Full Face:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,600 + VAT
+                      £1,600
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Endolift One Area:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £800 + VAT
+                      £800
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
@@ -604,7 +604,6 @@ export default function SaggingJowlsTreatmentsSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

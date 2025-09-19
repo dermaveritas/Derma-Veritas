@@ -816,7 +816,6 @@ export default function LaserHairRemovalSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

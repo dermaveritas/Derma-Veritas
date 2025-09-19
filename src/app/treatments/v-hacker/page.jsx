@@ -438,7 +438,6 @@ export default function VHackerTreatmentSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

@@ -580,7 +580,6 @@ export default function PrescriptionSkincareSection() {
 
       <ReviewsSection />
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

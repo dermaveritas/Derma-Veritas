@@ -397,15 +397,15 @@ export default function ClubMembershipPage() {
 
         <div className="bg-gray-50 relative flex items-center justify-center min-h-[400px] lg:min-h-[70vh]">
           <div className="relative w-full h-full">
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-gray-400 rounded-full mx-auto mb-4"></div>
-                <div className="text-gray-600">Professional Care Image</div>
-              </div>
-            </div>
+            <img
+              src="/membership.jpeg"
+              alt="Professional aesthetic treatment experience"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
             <div className="absolute top-6 right-6 bg-white bg-opacity-95 px-6 py-4 rounded-lg shadow-lg">
-              <div className="text-lg font-light text-gray-800">Dr. Expert</div>
-              <div className="text-sm text-gray-600">Medical Director</div>
+              <div className="text-lg font-light text-gray-800">
+                Dr. Mofasher Nawaz and Mr. A. Singh
+              </div>
             </div>
           </div>
         </div>

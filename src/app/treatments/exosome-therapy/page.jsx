@@ -600,7 +600,6 @@ export default function ExosomeTherapySection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

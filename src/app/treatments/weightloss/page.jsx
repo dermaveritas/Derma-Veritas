@@ -418,8 +418,8 @@ export default function WeightLossModulatorSection() {
                 <p>
                   All treatments are performed exclusively by our expert
                   clinical team who will tailor your treatment plan to your
-                  specific needs and goals. Our pricing reflects the expertise
-                  and premium service you receive.
+                  specific needs and goals. Pricing is determined during your
+                  consultation based on your individual requirements.
                 </p>
                 <p>
                   If you would like to discuss any of our treatments, please
@@ -434,43 +434,29 @@ export default function WeightLossModulatorSection() {
 
             {/* Right Pricing Cards */}
             <div className="space-y-6">
-              {/* Individual Treatment Pricing */}
-              <div className="border border-gray-200 p-6 bg-white shadow-[3px_3px_6px_rgba(0,0,0,0.15)]">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-base font-semibold text-gray-900">
+              {/* Consultation-Based Pricing */}
+              <div className="border border-gray-200 p-8 bg-white shadow-[3px_3px_6px_rgba(0,0,0,0.15)]">
+                <div className="text-center space-y-4">
+                  <h3 className="text-xl font-semibold text-gray-900">
                     Weight Loss Modulator Injections
                   </h3>
+
+                  <div className="py-6">
+                    <div className="text-3xl font-bold text-gray-900 mb-2">
+                      Consultation Required
+                    </div>
+                    <p className="text-gray-600 text-sm">
+                      Pricing determined during consultation based on your
+                      individual treatment plan
+                    </p>
+                  </div>
+
                   <button
-                    className="px-4 py-1 border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition rounded-lg"
+                    className="w-full px-6 py-3 border border-gray-900 text-gray-900 font-medium hover:bg-gray-900 hover:text-white transition rounded-lg mt-6"
                     onClick={() => setBookingOpen(true)}
                   >
-                    BOOK
+                    BOOK CONSULTATION
                   </button>
-                </div>
-
-                <div className="divide-y divide-gray-200">
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Single Session:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £XXX
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">4-Session Course:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £XXX
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">8-Session Course:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £XXX
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Initial Consultation:</span>
-                    <span className="text-lg font-bold text-gray-900">£XX</span>
-                  </div>
                 </div>
               </div>
             </div>
@@ -527,7 +513,6 @@ export default function WeightLossModulatorSection() {
 
       <ReviewsSection />
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

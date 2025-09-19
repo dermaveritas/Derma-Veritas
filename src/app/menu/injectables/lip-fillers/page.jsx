@@ -611,7 +611,6 @@ export default function LipFillersSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

@@ -493,7 +493,7 @@ export default function CO2LaserTreatmentSection() {
                       Single – One Area Upper Face:
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £700 + VAT
+                      £700
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
@@ -501,7 +501,7 @@ export default function CO2LaserTreatmentSection() {
                       Single – One Area Lower Face:
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £700 + VAT
+                      £700
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
@@ -509,13 +509,13 @@ export default function CO2LaserTreatmentSection() {
                       Single – Body (per limb):
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £700 + VAT
+                      £700
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Single – Full Face:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,250 + VAT
+                      £1,250
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
@@ -523,7 +523,7 @@ export default function CO2LaserTreatmentSection() {
                       3 Sessions – Full Face:
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £2,500 + VAT
+                      £2,500
                     </span>
                   </div>
                 </div>
@@ -580,7 +580,6 @@ export default function CO2LaserTreatmentSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

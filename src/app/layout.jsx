@@ -5,13 +5,29 @@ import ChildLayout from ".";
 import { gtmId, headSnippet, bodySnippet } from "@/config/gtm";
 
 export const metadata = {
-  title: "DermaVeritas",
-  description: "Skin Clinic & Wellness",
+  title: "Derma Veritas | Skin & Hair Clinic",
+  description:
+    "Derma Veritas is a premium skin, hair, and wellness clinic offering dermatology and aesthetic treatments with natural-looking results and patient safety at the core.",
+  keywords: [
+    "Derma Veritas",
+    "Skin Clinic",
+    "Hair Clinic",
+    "Dermatology",
+    "Aesthetic Treatments",
+    "Wellness Clinic",
+    "Laser Treatments",
+    "Cosmetic Dermatology",
+  ],
+  authors: [{ name: "Derma Veritas" }],
+  creator: "Derma Veritas",
+  publisher: "Derma Veritas",
+
   icons: {
-    icon: '/logo_white.png',
-    shortcut: '/logo_white.png',
-    apple: '/logo_white.png',
+    icon: "/logo_white.png", // keep favicon for browser tab
+    shortcut: "/logo_white.png",
   },
+
+  metadataBase: new URL("https://dermaveritas.com"),
 };
 
 export default function RootLayout({ children }) {

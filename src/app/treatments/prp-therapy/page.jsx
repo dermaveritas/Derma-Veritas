@@ -603,7 +603,6 @@ export default function PRPTherapySection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

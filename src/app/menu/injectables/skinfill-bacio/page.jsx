@@ -483,7 +483,6 @@ export default function SkinfillBacioPage() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

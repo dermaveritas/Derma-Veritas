@@ -587,7 +587,7 @@ export default function PrescriptionHairTreatments() {
 
       <ReviewsSection />
       <ClubMembership />
-      <MediaCoverage />
+
       <Footer />
     </>
   );

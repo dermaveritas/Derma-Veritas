@@ -495,50 +495,6 @@ export default function NonSurgicalRhinoplastySection() {
                   </div>
                 </div>
               </div>
-
-              {/* Package Pricing */}
-              <div className="border border-gray-200 p-6 bg-white shadow-[3px_3px_6px_rgba(0,0,0,0.15)]">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-base font-semibold text-gray-900">
-                    Combination Packages
-                  </h3>
-                  <button
-                    className="px-4 py-1 border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition rounded-lg"
-                    onClick={() => setBookingOpen(true)}
-                  >
-                    BOOK
-                  </button>
-                </div>
-
-                <div className="divide-y divide-gray-200">
-                  <div className="py-3">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-900 font-medium">
-                        Rhinoplasty + Filler Package:
-                      </span>
-                      <span className="text-lg font-bold text-gray-900">
-                        £650
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Includes Non-Surgical Rhinoplasty + 1ml Dermal Filler
-                    </p>
-                  </div>
-                  <div className="py-3">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-900 font-medium">
-                        Custom Treatment Plan:
-                      </span>
-                      <span className="text-lg font-bold text-gray-900">
-                        Consultation
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Tailored to your specific needs and goals
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -591,7 +547,6 @@ export default function NonSurgicalRhinoplastySection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

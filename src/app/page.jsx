@@ -229,9 +229,9 @@ export default function Home() {
               Mofasher Nawaz and Mr. A. Singh.{" "}
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Derma Veritas offers medically-led skin and dermatology clinic in
-              the area, founded by a medical doctor and a clinical pharmacist
-              with over 10 years experience in advanced skin and hair
+              Derma Veritas offers medically-led skin and dermatological
+              treatments in the area, founded by a medical doctor and a clinical
+              pharmacist with over 10 years experience in advanced skin and hair
               treatments. We specialize in skin resurfacing, facial tightening,
               non- surgical facelifts, and hair restoration, using the latest
               technology for safe, natural results. Our expert team are also
@@ -452,7 +452,6 @@ export default function Home() {
 
       <ClubMembership />
       <RecentBlogsSection />
-      <MediaCoverage />
     </div>
   );
 }

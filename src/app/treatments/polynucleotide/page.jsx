@@ -626,7 +626,7 @@ export default function PolynucleotideTreatmentsSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
+       
     </>
   );
 }

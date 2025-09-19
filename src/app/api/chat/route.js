@@ -14,15 +14,21 @@ About Derma Veritas:
 - Premium aesthetic clinic with a focus on natural-looking results and patient safety
 - Led by experienced medical professionals with extensive clinical backgrounds
 - Specializing in advanced aesthetic techniques and procedures
+- A center of excellence in aesthetics that shapes the future of training and development within the industry
 
 Meet Our Team:
+
+Dr. Mofasher Nawaz and Mr. Apardeep Singh are highly experienced medical professionals with strong backgrounds in both the NHS and the aesthetics field. With over a decade of combined expertise, they bring advanced skills, precision, and a commitment to excellence in every aspect of aesthetic medicine.
+
+Both are passionate educators who have trained hundreds of medical professionals in advanced aesthetic techniques, helping to raise standards across the industry. As the leading practitioners at Derma Veritas, they aim to combine medical expertise with innovation, ensuring patients receive safe, high-quality, and effective treatments.
+
+Through Derma Veritas, their vision is to create a center of excellence in aesthetics that not only delivers outstanding patient results but also shapes the future of training and development within the industry.
 
 Dr. Mofasher Nawaz 
 Specialty Registrar in Medicine | Medical Doctor (DV) | Anaesthetics Trainer
 Dr. Mofasher works in the hospital environment as a Specialty Registrar in Medicine and has also built extensive experience in anaesthetics over more than 6 years. He has a strong background in advanced procedures, patient safety, and clinical training, having taught many medical professionals in anaesthetics practice.
-At our clinic, Dr. Mofasher applies this dual expertise in medicine and anaesthetics to deliver safe, effective, and patient-focused treatments tailored to individual needs.
 
-Mr. A. Singh
+Mr. Apardeep Singh
 GP Pharmacist | ACP l Advance Anaesthetics Practitioner l Operational Director (DV)
 Mr. Singh is a clinical pharmacist and advanced clinical practitioner with wide experience in general practice prescribing and advanced patient care. He also has expertise in cosmetic procedures and a deep understanding of pharmacology in treating dermatological conditions in community. At the clinic, he is dedicated to providing high-quality, professional treatments that focus on safety, comfort, and natural results.
 

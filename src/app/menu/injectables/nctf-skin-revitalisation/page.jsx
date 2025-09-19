@@ -607,7 +607,6 @@ export default function NCTFSkinRevitalisationSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

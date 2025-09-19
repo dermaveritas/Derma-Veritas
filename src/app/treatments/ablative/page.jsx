@@ -536,7 +536,6 @@ export default function CO2ResurfacingTreatmentSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

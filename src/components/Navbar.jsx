@@ -39,9 +39,14 @@ export default function Navbar() {
           href: "/menu/injectables/8-point-facelift",
         },
         {
-          name: "Ablative co2 resurfacing",
+          name: "CO2 Ablative resurfacing",
           slug: "ablative",
           href: "/treatments/ablative",
+        },
+        {
+          name: "Non-surgical rhinoplasty",
+          slug: "non-surgical-rhinoplasty",
+          href: "/menu/injectables/non-surgical-rhinoplasty",
         },
       ],
     },
@@ -62,6 +67,16 @@ export default function Navbar() {
           name: "Pro Fusion",
           slug: "profusion",
           href: "/treatments/profusion",
+        },
+        {
+          name: "EXO NAD",
+          slug: "exo-nad",
+          href: "/treatments/exo-nad",
+        },
+        {
+          name: "Prescription treatment",
+          slug: "prescriptionskincare",
+          href: "/treatments/prescriptionskincare",
         },
       ],
     },
@@ -92,8 +107,8 @@ export default function Navbar() {
         },
       ],
     },
-    "facial-contouring": {
-      title: "Facial Contouring",
+    "facial-contorting": {
+      title: "Facial Contorting",
       treatments: [
         {
           name: "Fillers",
@@ -136,7 +151,7 @@ export default function Navbar() {
           href: "/treatments/hair-revitalizing",
         },
         {
-          name: "Prescriptions treatment s",
+          name: "Prescriptions treatments",
           slug: "prescriptionhair",
           href: "/treatments/prescriptionhair",
         },
@@ -149,11 +164,6 @@ export default function Navbar() {
           name: "Weight Loss modulators",
           slug: "weightloss",
           href: "/treatments/weightloss",
-        },
-        {
-          name: "Skin Tx and care",
-          slug: "prescriptionskincare",
-          href: "/treatments/prescriptionskincare",
         },
       ],
     },

@@ -22,11 +22,13 @@ import MediaCoverage from "@/components/MediaCoverage";
 import MobileMenuDrawer from "@/components/MobileMenuDrawer";
 import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
+import { useRouter } from "next/navigation";
 
 export default function DermalFillersSection() {
   const [expandedSections, setExpandedSections] = useState({});
   const [openIndex, setOpenIndex] = useState(null);
   const beforeAfterSectionRef = useRef(null);
+  const router = useRouter();
 
   const scrollToBeforeAfter = () => {
     beforeAfterSectionRef.current?.scrollIntoView({
@@ -76,6 +78,7 @@ export default function DermalFillersSection() {
       price: "£250",
       volume: "0.5–1.0 ml",
       image: "/images/lip-filler.jpg",
+      href: "/menu/injectables/lip-fillers",
     },
     {
       name: "Cheek Contouring",
@@ -84,13 +87,7 @@ export default function DermalFillersSection() {
       price: "£250",
       volume: "0.5–1.0 ml",
       image: "/images/cheek-filler.jpg",
-    },
-    {
-      name: "Jawline Sculpting",
-      description: "Sharp, defined jawline with improved facial structure",
-      price: "£450",
-      volume: "3.0 ml",
-      image: "/images/jawline-filler.jpg",
+      href: "/menu/injectables/cheek-fillers",
     },
     {
       name: "Tear Trough",
@@ -99,6 +96,7 @@ export default function DermalFillersSection() {
       price: "£450",
       volume: "Variable",
       image: "/images/tear-trough.jpg",
+      href: "/menu/injectables/tear-trough-filler",
     },
     {
       name: "Non-Surgical Rhinoplasty",
@@ -106,6 +104,7 @@ export default function DermalFillersSection() {
       price: "£450",
       volume: "Variable",
       image: "/images/nose-filler.jpg",
+      href: "/menu/injectables/non-surgical-rhinoplasty",
     },
     {
       name: "Russian Lip Technique",
@@ -113,6 +112,7 @@ export default function DermalFillersSection() {
       price: "£350",
       volume: "Variable",
       image: "/images/russian-lips.jpg",
+      href: "/menu/injectables/lip-fillers",
     },
   ];
 
@@ -149,7 +149,7 @@ export default function DermalFillersSection() {
               {/* Description */}
               <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 mt-6">
                 Discover the art of facial rejuvenation and contouring with
-                expert dermal filler treatments at Derma Veritas.
+                expert dermal filler treatments for all facial areas at Derma Veritas.
               </p>
 
               {/* Buttons */}
@@ -303,7 +303,7 @@ export default function DermalFillersSection() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Treatment Areas
+              All Filler Treatment Areas
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Our expert physicians provide dermal filler treatments for various
@@ -339,7 +339,10 @@ export default function DermalFillersSection() {
                     </div>
                   </div>
 
-                  <button className="w-full py-2 border border-[#272728] text-[#272728] hover:bg-[#272728] hover:text-white transition-colors">
+                  <button
+                    onClick={() => router.push(area.href)}
+                    className="w-full py-2 border border-[#272728] text-[#272728] hover:bg-[#272728] hover:text-white transition-colors"
+                  >
                     LEARN MORE
                   </button>
                 </div>
@@ -547,7 +550,6 @@ export default function DermalFillersSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

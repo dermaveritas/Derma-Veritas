@@ -501,13 +501,13 @@ export default function EndoliftSection() {
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">One Area:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £800 + VAT
+                      £800
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Full Face:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,600 + VAT
+                      £1,600
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
@@ -515,19 +515,19 @@ export default function EndoliftSection() {
                       Upper Face / Malar Bags (Under Eyes):
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,500 + VAT
+                      £1,500
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Upper Arms:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,800 + VAT
+                      £1,800
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Abdomen / Tummy:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £2,000 + VAT
+                      £2,000
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
@@ -535,7 +535,7 @@ export default function EndoliftSection() {
                       Thighs / Other Body Areas:
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £2,000 + VAT
+                      £2,000
                     </span>
                   </div>
                 </div>
@@ -636,7 +636,6 @@ export default function EndoliftSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

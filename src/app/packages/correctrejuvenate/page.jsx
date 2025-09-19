@@ -317,7 +317,7 @@ export default function CorrectRejuvenatePackagePage() {
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Complete Program:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,950 + VAT
+                      £1,950
                     </span>
                   </div>
                   <div className="text-center text-sm text-gray-600 mt-2">

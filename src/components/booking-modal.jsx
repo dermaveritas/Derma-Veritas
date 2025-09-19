@@ -71,29 +71,14 @@ export function BookingModal({
   // Treatment options mapping
   const treatmentOptions = {
     "8-point-facelift": {
-      name: "8 Point Facelift - Dermal Filler Treatments & Packages",
+      name: "8 Point Facelift - Complete Non-Surgical Facelift",
       options: [
         {
-          id: "lip-cheek-chin",
-          name: "Lip, Cheek, Chin (0.5-1.0ml)",
-          price: "£250",
-        },
-        { id: "jawline", name: "Jawline (3.0ml)", price: "£450" },
-        { id: "tear-trough", name: "Tear Trough", price: "£450" },
-        { id: "russian-lip", name: "Russian Lip Technique", price: "£350" },
-        { id: "additional-1ml", name: "Additional 1.0ml", price: "£110" },
-        {
-          id: "lift-reshape",
-          name: "Lift & Reshape Package",
-          price: "£1,950",
+          id: "complete-8-point",
+          name: "Complete 8-Point Facelift",
+          price: "£999",
           description:
-            "Includes Endolift + RF Microneedling + Profhilo + 2ml Dermal Filler",
-        },
-        {
-          id: "custom-plan",
-          name: "Custom Treatment Plan",
-          price: "Consultation",
-          description: "Tailored to your specific needs and goals",
+            "Comprehensive non-surgical facelift targeting 8 key facial points for natural enhancement and lifting",
         },
       ],
     },
@@ -252,13 +237,87 @@ export function BookingModal({
           id: "three-areas",
           name: "Precision Wrinkle Smoothing – Three Areas",
           price: "£250",
+          description: "Forehead Lines, Glabellar Lines, Crow's Feet",
         },
-        { id: "masseter", name: "Masseter Muscle Treatment", price: "£300" },
-        { id: "neckbands", name: "Neckbands Treatment", price: "£300" },
+        {
+          id: "bunny-lines",
+          name: "Bunny Lines (Add-on to Three Areas)",
+          price: "+£70",
+          description:
+            "Lines on the sides of the nose when smiling or scrunching",
+        },
+        {
+          id: "marionette-lines",
+          name: "Marionette Lines (Add-on to Three Areas)",
+          price: "+£70",
+          description: "Lines running from the corners of the mouth downwards",
+        },
+        {
+          id: "lip-lines",
+          name: "Lip Lines / Smoker Lines (Add-on to Three Areas)",
+          price: "+£70",
+          description: "Fine vertical lines above the upper lip",
+        },
+        {
+          id: "chin-dimpling",
+          name: "Chin Dimpling / Orange Peel Chin (Add-on to Three Areas)",
+          price: "+£70",
+          description: "Uneven texture of the chin",
+        },
+        {
+          id: "eyebrow-lift",
+          name: "Eyebrow Lift (Add-on to Three Areas)",
+          price: "+£70",
+          description: "Subtle elevation of the eyebrows for a refreshed look",
+        },
+        {
+          id: "gummy-smile",
+          name: "Gummy Smile Correction (Add-on to Three Areas)",
+          price: "+£70",
+          description: "Reduces excessive gum exposure when smiling",
+        },
+        {
+          id: "nasal-tip-lift",
+          name: "Nasal Tip Lift / Nose Wrinkle Relaxation (Add-on to Three Areas)",
+          price: "+£70",
+          description: "Softens lines on the nose",
+        },
+        {
+          id: "masseter",
+          name: "Masseter Reduction / Jaw Slimming",
+          price: "£300",
+          description:
+            "Reduces prominence of jaw muscles for facial contouring",
+        },
+        {
+          id: "neckbands",
+          name: "Neck Bands / Platysmal Bands",
+          price: "£300",
+          description: "Horizontal or vertical neck lines",
+        },
         {
           id: "hyperhidrosis",
-          name: "Hyperhidrosis (Excessive Sweating)",
+          name: "Excessive Sweating (Hyperhidrosis)",
           price: "£350",
+          description: "Underarms, hands, or feet",
+        },
+        {
+          id: "migraines",
+          name: "Migraines / Tension Headaches",
+          price: "£500",
+          description: "Targeted injections for pain relief",
+        },
+        {
+          id: "bruxism",
+          name: "Teeth Grinding / Bruxism",
+          price: "£300",
+          description: "Relaxing jaw muscles",
+        },
+        {
+          id: "tmj-relief",
+          name: "TMJ Tension Relief",
+          price: "£300",
+          description: "Jaw discomfort reduction",
         },
       ],
     },
@@ -660,7 +719,7 @@ export function BookingModal({
         {
           id: "complete-package",
           name: "Complete Lift & Reshape Package",
-          price: "£2,500 + VAT",
+          price: "£2,500  ",
           description:
             "10-12 week program: Endolift + 3x RF Microneedling + 2x Profhilo + 2ml Dermal Filler + Facial Scan",
         },
@@ -672,7 +731,7 @@ export function BookingModal({
         {
           id: "complete-package",
           name: "Complete Correct & Rejuvenate Package",
-          price: "£1,950 + VAT",
+          price: "£1,950  ",
           description:
             "8-12 week program: 3x CO₂ Laser + 3x Exosome Therapy + 3x Polynucleotide + 3 Area Neuro-Modulator + AI Facial Mapping",
         },
@@ -684,14 +743,14 @@ export function BookingModal({
         {
           id: "complete-package",
           name: "Complete Hair Restoration Package",
-          price: "£1,190 + VAT",
+          price: "£1,190  ",
           description:
             "16-18 week program: 3x Polynucleotides + 4x PRP Hair + 5x Hair+ Treatments + 4x Phototherapy + ExoHair Kit",
         },
         {
           id: "with-exosignal",
           name: "Package + 4x Exo Signal Hair Treatments",
-          price: "£1,590 + VAT",
+          price: "£1,590  ",
           description:
             "Complete package with additional 4x Exo Signal treatments for enhanced growth stimulation",
         },
@@ -737,34 +796,18 @@ export function BookingModal({
       name: "Weight Loss Treatments",
       options: [
         {
-          id: "consultation",
-          name: "Initial Consultation",
+          id: "consultation-assessment",
+          name: "Initial Consultation & Assessment",
           price: "Consultation Required",
-          description: "Comprehensive assessment with clinical team",
+          description:
+            "Comprehensive assessment with clinical team to determine your personalized treatment plan and pricing",
         },
         {
-          id: "single-session",
-          name: "Single Injection Session",
-          price: "Consultation Required",
-          description: "Individual weight loss modulator injection",
-        },
-        {
-          id: "four-session-course",
-          name: "4-Session Course",
-          price: "Consultation Required",
-          description: "Standard treatment course for optimal results",
-        },
-        {
-          id: "eight-session-course",
-          name: "8-Session Course",
-          price: "Consultation Required",
-          description: "Extended course for comprehensive weight management",
-        },
-        {
-          id: "follow-up-appointments",
-          name: "Follow-up Appointments",
-          price: "Consultation Required",
-          description: "Regular monitoring and progress assessment",
+          id: "treatment-plan",
+          name: "Personalized Treatment Plan",
+          price: "Pricing Determined After Consultation",
+          description:
+            "Individual weight loss modulator injection plan tailored to your needs and goals",
         },
       ],
     },
@@ -1139,10 +1182,13 @@ export function BookingModal({
                       Endolift
                     </SelectItem>
                     <SelectItem value="8-point-facelift" className="pl-6">
-                      8 Point Facelift
+                      Eight point facelift
                     </SelectItem>
                     <SelectItem value="ablative" className="pl-6">
-                      Ablative CO2 Resurfacing
+                      CO2 Ablative resurfacing
+                    </SelectItem>
+                    <SelectItem value="non-surgical-rhinoplasty" className="pl-6">
+                      Non-surgical rhinoplasty
                     </SelectItem>
 
                     {/* Skin Perfecting */}
@@ -1154,13 +1200,19 @@ export function BookingModal({
                       🌿 Skin Perfecting
                     </SelectItem>
                     <SelectItem value="co2-laser" className="pl-6">
-                      Fractional CO2 Resurfacing
+                      Fractional co2 resurfacing
                     </SelectItem>
                     <SelectItem value="skinpen-microneedling" className="pl-6">
-                      Radio Frequency Microneedling
+                      Radio frequency Microneedling
                     </SelectItem>
                     <SelectItem value="profusion-hydrafacial" className="pl-6">
                       Pro Fusion
+                    </SelectItem>
+                    <SelectItem value="exo" className="pl-6">
+                      EXO NAD
+                    </SelectItem>
+                    <SelectItem value="prescription-skincare" className="pl-6">
+                      Prescription treatment
                     </SelectItem>
 
                     {/* Age Defying */}
@@ -1172,7 +1224,7 @@ export function BookingModal({
                       ⏳ Age Defying
                     </SelectItem>
                     <SelectItem value="v-hacker" className="pl-6">
-                      V Hacker
+                      V hacker
                     </SelectItem>
                     <SelectItem value="iv-drips" className="pl-6">
                       Bio Hacking Formula
@@ -1193,16 +1245,28 @@ export function BookingModal({
                       Polynucleotide
                     </SelectItem>
 
-                    {/* Facial Contouring */}
+                    {/* Facial Contorting */}
                     <SelectItem
-                      value="header-facial-contouring"
+                      value="header-facial-contorting"
                       disabled
                       className="font-bold text-gray-800 bg-gray-50 mt-2"
                     >
-                      💎 Facial Contouring
+                      💎 Facial Contorting
                     </SelectItem>
                     <SelectItem value="dermal-fillers" className="pl-6">
-                      Fillers
+                      Jaw Fillers
+                    </SelectItem>
+                    <SelectItem value="chin-fillers" className="pl-6">
+                      Chin Fillers
+                    </SelectItem>
+                    <SelectItem value="lip-fillers" className="pl-6">
+                      Lip Fillers
+                    </SelectItem>
+                    <SelectItem value="cheek-fillers" className="pl-6">
+                      Cheek Fillers
+                    </SelectItem>
+                    <SelectItem value="tear-trough-filler" className="pl-6">
+                      Tear Trough Fillers
                     </SelectItem>
                     <SelectItem value="profhilo" className="pl-6">
                       Profhilo
@@ -1219,8 +1283,8 @@ export function BookingModal({
                     >
                       💇 Hair Enhancements
                     </SelectItem>
-                    <SelectItem value="revitalizing" className="pl-6">
-                      Hair + revitalizing formula
+                    <SelectItem value="iv-drips" className="pl-6">
+                      Hair PRP
                     </SelectItem>
                     <SelectItem
                       value="polynucleotides-hair-loss-treatment"
@@ -1231,8 +1295,11 @@ export function BookingModal({
                     <SelectItem value="exosignal" className="pl-6">
                       EXO SIGNAL
                     </SelectItem>
+                    <SelectItem value="revitalizing" className="pl-6">
+                      Hair + revitalizing formula
+                    </SelectItem>
                     <SelectItem value="prescription-hair" className="pl-6">
-                      Prescriptions treatment s
+                      Prescriptions treatments
                     </SelectItem>
 
                     {/* Others */}
@@ -1245,9 +1312,6 @@ export function BookingModal({
                     </SelectItem>
                     <SelectItem value="weight-loss" className="pl-6">
                       Weight Loss modulators
-                    </SelectItem>
-                    <SelectItem value="prescription-skincare" className="pl-6">
-                      Skin Tx and care
                     </SelectItem>
                   </SelectContent>
                 </Select>

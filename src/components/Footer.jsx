@@ -182,27 +182,6 @@ export default function Footer() {
           <p className="text-sm text-gray-500 mb-4 md:mb-0">
             © {new Date().getFullYear()} Derma Veritas. All rights reserved.
           </p>
-
-          <div className="flex space-x-6 text-sm">
-            <Link
-              href="/privacy-policy"
-              className="text-gray-500 hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/terms-of-service"
-              className="text-gray-500 hover:text-white transition-colors"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="/cookie-policy"
-              className="text-gray-500 hover:text-white transition-colors"
-            >
-              Cookie Policy
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

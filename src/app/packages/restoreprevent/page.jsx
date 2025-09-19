@@ -15,8 +15,9 @@ export default function HairRestorationPackagePage() {
     {
       name: "Restore & Prevent Hair Loss",
       duration: "16-18 weeks program",
-      price: "£1190 + VAT",
-      description: "Comprehensive hair restoration program for thinning, shedding, or early hair loss",
+      price: "£1190  ",
+      description:
+        "Comprehensive hair restoration program for thinning, shedding, or early hair loss",
       benefits: [
         "3x Polynucleotides Hair Therapy",
         "4x PRP Hair Therapy",
@@ -28,9 +29,9 @@ export default function HairRestorationPackagePage() {
       addOn: {
         name: "4x Exo Signal Hair Treatments",
         description: "Advanced growth stimulation",
-        price: "£400"
-      }
-    }
+        price: "£400",
+      },
+    },
   ];
 
   const faqs = [
@@ -95,8 +96,9 @@ export default function HairRestorationPackagePage() {
 
               {/* Description */}
               <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 mt-6">
-                A comprehensive, clinically designed hair restoration program combining cellular,
-                growth factor, and light-based therapies for optimal results.
+                A comprehensive, clinically designed hair restoration program
+                combining cellular, growth factor, and light-based therapies for
+                optimal results.
               </p>
 
               {/* Buttons */}
@@ -151,9 +153,11 @@ export default function HairRestorationPackagePage() {
               What is the Restore & Prevent Hair Loss Package?
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our comprehensive hair restoration program combines multiple advanced therapies to address
-              hair thinning, shedding, and early hair loss. This clinically designed program spans 16-18 weeks
-              and combines cellular, growth factor, and light-based therapies for optimal results.
+              Our comprehensive hair restoration program combines multiple
+              advanced therapies to address hair thinning, shedding, and early
+              hair loss. This clinically designed program spans 16-18 weeks and
+              combines cellular, growth factor, and light-based therapies for
+              optimal results.
             </p>
           </div>
 
@@ -225,7 +229,8 @@ export default function HairRestorationPackagePage() {
               Hair Restoration Package
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Our comprehensive program designed to address hair thinning, shedding, and early hair loss with a multi-faceted approach.
+              Our comprehensive program designed to address hair thinning,
+              shedding, and early hair loss with a multi-faceted approach.
             </p>
           </div>
 
@@ -269,7 +274,9 @@ export default function HairRestorationPackagePage() {
                         Optional Add-On:
                       </div>
                       <div className="flex justify-between items-center">
-                        <span className="text-gray-700">{treatment.addOn.name}</span>
+                        <span className="text-gray-700">
+                          {treatment.addOn.name}
+                        </span>
                         <span className="text-lg font-bold text-gray-900">
                           {treatment.addOn.price}
                         </span>
@@ -310,16 +317,18 @@ export default function HairRestorationPackagePage() {
               >
                 {faq.question}
                 <ChevronDown
-                  className={`h-5 w-5 text-gray-600 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
-                    }`}
+                  className={`h-5 w-5 text-gray-600 transition-transform duration-300 ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
                 />
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openIndex === index
                     ? "max-h-40 opacity-100"
                     : "max-h-0 opacity-0"
-                  }`}
+                }`}
               >
                 <div className="pb-4 text-gray-600">{faq.answer}</div>
               </div>

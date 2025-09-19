@@ -76,7 +76,7 @@ export default function EightPointFaceliftSection() {
     },
     {
       heading: "Our Pricing",
-      value: "From £1,950",
+      value: "£999",
       description: "View all",
     },
   ];
@@ -463,11 +463,11 @@ export default function EightPointFaceliftSection() {
 
             {/* Right Pricing Cards */}
             <div className="space-y-6">
-              {/* Individual Treatment Pricing */}
+              {/* Single Treatment Pricing */}
               <div className="border border-gray-200 p-6 bg-white shadow-[3px_3px_6px_rgba(0,0,0,0.15)]">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-base font-semibold text-gray-900">
-                    Dermal Filler Treatments
+                    8-Point Facelift Treatment
                   </h3>
                   <button
                     className="px-4 py-1 border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition rounded-lg"
@@ -477,86 +477,27 @@ export default function EightPointFaceliftSection() {
                   </button>
                 </div>
 
-                <div className="divide-y divide-gray-200">
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">
-                      Lip, Cheek, Chin (0.5-1.0ml):
-                    </span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £250
+                <div className="text-center py-6">
+                  <div className="mb-4">
+                    <span className="text-3xl font-bold text-gray-900">
+                      £999
                     </span>
                   </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Jawline (3.0ml):</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £450
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Tear Trough:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £450
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">
-                      Russian Lip Technique:
-                    </span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £350
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Additional 1.0ml:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £110
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Package Pricing */}
-              <div className="border border-gray-200 p-6 bg-white shadow-[3px_3px_6px_rgba(0,0,0,0.15)]">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-base font-semibold text-gray-900">
-                    Signature Packages
-                  </h3>
-                  <button
-                    className="px-4 py-1 border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition rounded-lg"
-                    onClick={() => setBookingOpen(true)}
-                  >
-                    BOOK
-                  </button>
-                </div>
-
-                <div className="divide-y divide-gray-200">
-                  <div className="py-3">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-900 font-medium">
-                        Lift & Reshape Package:
-                      </span>
-                      <span className="text-lg font-bold text-gray-900">
-                        £1,950
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Includes Endolift + RF Microneedling + Profhilo + 2ml
-                      Dermal Filler
-                    </p>
-                  </div>
-                  <div className="py-3">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-900 font-medium">
-                        Custom Treatment Plan:
-                      </span>
-                      <span className="text-lg font-bold text-gray-900">
-                        Consultation
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-600">
-                      Tailored to your specific needs and goals
-                    </p>
-                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Complete 8-Point Facelift
+                  </h4>
+                  <p className="text-gray-600 mb-4">
+                    Comprehensive non-surgical facelift targeting 8 key facial
+                    points for natural enhancement and lifting
+                  </p>
+                  <ul className="text-sm text-gray-600 space-y-2 text-left">
+                    <li>• Cheek enhancement and contouring</li>
+                    <li>• Jawline definition and sculpting</li>
+                    <li>• Tear trough and under-eye area</li>
+                    <li>• Lip enhancement and definition</li>
+                    <li>• Chin augmentation and balance</li>
+                    <li>• Natural-looking lifting effect</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -611,7 +552,6 @@ export default function EightPointFaceliftSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

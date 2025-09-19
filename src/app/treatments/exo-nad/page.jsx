@@ -553,7 +553,6 @@ export default function ExoNadPeelingSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

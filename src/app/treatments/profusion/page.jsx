@@ -606,7 +606,6 @@ export default function HandRejuvenationSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

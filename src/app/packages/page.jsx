@@ -18,7 +18,7 @@ export default function PackagesPage() {
       href: "/packages/profusion",
       treatments: "4 Treatment Options",
       duration: "40-75 minutes",
-      priceRange: "£1100 + VAT",
+      priceRange: "£1100  ",
     },
     {
       title: "Lift & Reshape",
@@ -28,7 +28,7 @@ export default function PackagesPage() {
       href: "/packages/liftreshape",
       treatments: "4 Complete Programs",
       duration: "8-18 weeks",
-      priceRange: "£2,500 + VAT",
+      priceRange: "£2,500  ",
     },
     {
       title: "Correct & Rejuvenate",
@@ -38,7 +38,7 @@ export default function PackagesPage() {
       href: "/packages/correctrejuvenate",
       treatments: "3 Membership Tiers",
       duration: "Monthly Plans",
-      priceRange: "£1,950 + VAT",
+      priceRange: "£1,950  ",
     },
     {
       title: "Restore & Prevent Hair Loss",
@@ -48,7 +48,7 @@ export default function PackagesPage() {
       href: "/packages/restoreprevent",
       treatments: "17 Treatment Sessions",
       duration: "16-18 weeks",
-      priceRange: "£1,190 + VAT",
+      priceRange: "£1,190  ",
     },
   ];
 

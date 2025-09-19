@@ -159,7 +159,7 @@ export default function UnderEyeTreatments() {
     },
     {
       name: "Endolift Upper Face/Malar Bags",
-      price: "£1,500 + VAT",
+      price: "£1,500  ",
       description: "Laser treatment for under-eye bags and puffiness",
       details: "Non-surgical laser solution for under-eye bags and tightening",
     },
@@ -640,7 +640,6 @@ export default function UnderEyeTreatments() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

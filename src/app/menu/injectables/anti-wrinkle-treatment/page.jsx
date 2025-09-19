@@ -68,7 +68,7 @@ export default function DermalFillersSection() {
     },
     {
       heading: "Our Pricing",
-      value: "From £595",
+      value: "From £125",
       description: "View all",
     },
   ];
@@ -328,7 +328,7 @@ export default function DermalFillersSection() {
               natural results.
             </p>
             <ul className="text-gray-600 space-y-2">
-              <li>• Results seen immediately; best after 2–3 weeks</li>
+              <li>• Results can be seen after 2–3 weeks</li>
               <li>
                 • Lasts 9 months – 2 years depending on area and lifestyle
               </li>
@@ -374,11 +374,11 @@ export default function DermalFillersSection() {
 
             {/* Right Pricing Cards */}
             <div className="space-y-6">
-              {/* Midlands Pricing Card */}
+              {/* Standard Pricing Card */}
               <div className="border border-gray-200 p-6 bg-white shadow-[3px_3px_6px_rgba(0,0,0,0.15)]">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-base font-semibold text-gray-900">
-                    Anti-Wrinkle Treatment Pricing (Midlands)
+                    Precision Wrinkle Smoothing
                   </h3>
                   <button
                     className="px-4 py-1 border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition rounded-lg"
@@ -392,29 +392,94 @@ export default function DermalFillersSection() {
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">One Area:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £180
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Two Areas:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £280
+                      £125
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Three Areas:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £320
+                      £250
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 text-sm">
+                    <span className="text-gray-600">
+                      (Forehead, Glabellar, Crow's Feet)
+                    </span>
+                    <span className="text-gray-600"></span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Add-on Treatments Card */}
+              <div className="border border-gray-200 p-6 bg-white shadow-[3px_3px_6px_rgba(0,0,0,0.15)]">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-base font-semibold text-gray-900">
+                    Add-on Treatments
+                  </h3>
+                  <span className="text-sm text-gray-600">
+                    +£70 each to Three Areas
+                  </span>
+                </div>
+
+                <div className="divide-y divide-gray-200">
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">Bunny Lines</span>
+                    <span className="text-sm font-bold text-gray-900">
+                      +£70
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Marionette Lines
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      +£70
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Lip Lines / Smoker Lines
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      +£70
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">Chin Dimpling</span>
+                    <span className="text-sm font-bold text-gray-900">
+                      +£70
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">Eyebrow Lift</span>
+                    <span className="text-sm font-bold text-gray-900">
+                      +£70
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Gummy Smile Correction
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      +£70
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Nasal Tip Lift
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      +£70
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* London Pricing Card */}
+              {/* Advanced Treatments Card */}
               <div className="border border-gray-200 p-6 bg-white shadow-[3px_3px_6px_rgba(0,0,0,0.15)]">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-base font-semibold text-gray-900">
-                    Anti-Wrinkle Treatment Pricing (London)
+                    Advanced Treatments
                   </h3>
                   <button
                     className="px-4 py-1 border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition rounded-lg"
@@ -425,22 +490,52 @@ export default function DermalFillersSection() {
                 </div>
 
                 <div className="divide-y divide-gray-200">
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">One Area:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £185
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Masseter Muscle Treatment
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      £300
                     </span>
                   </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Two Areas:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £285
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Neckbands Treatment
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      £300
                     </span>
                   </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Three Areas:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £385
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Hyperhidrosis (Excessive Sweating)
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      £350
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Migraines / Tension Headaches
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      £500
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      Teeth Grinding / Bruxism
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      £300
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-700 text-sm">
+                      TMJ Tension Relief
+                    </span>
+                    <span className="text-sm font-bold text-gray-900">
+                      £300
                     </span>
                   </div>
                 </div>
@@ -497,7 +592,6 @@ export default function DermalFillersSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

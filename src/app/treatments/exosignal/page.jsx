@@ -1,12 +1,7 @@
 "use client";
 
 import { useStore } from "@/store/zustand";
-import {
-  ChevronDown,
-  CheckCircle,
-  Clock,
-  AlertTriangle,
-} from "lucide-react";
+import { ChevronDown, CheckCircle, Clock, AlertTriangle } from "lucide-react";
 import { FaPoundSign } from "react-icons/fa";
 import { useState, useRef } from "react";
 
@@ -545,7 +540,6 @@ export default function ExoSignalHairTreatmentSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

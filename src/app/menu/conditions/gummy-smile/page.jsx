@@ -616,7 +616,6 @@ export default function GummySmileTreatmentSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }

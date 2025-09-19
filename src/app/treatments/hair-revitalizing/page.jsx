@@ -591,7 +591,6 @@ export default function HairRevitalizingTreatmentSection() {
       </section>
 
       <ClubMembership />
-      <MediaCoverage />
     </>
   );
 }
