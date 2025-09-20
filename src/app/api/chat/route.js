@@ -18,7 +18,7 @@ About Derma Veritas:
 
 Meet Our Team:
 
-Dr. Mofasher Nawaz and Mr. Apardeep Singh are highly experienced medical professionals with strong backgrounds in both the NHS and the aesthetics field. With over a decade of combined expertise, they bring advanced skills, precision, and a commitment to excellence in every aspect of aesthetic medicine.
+Dr. Mofasher Nawaz and Mr. A. Singh are highly experienced medical professionals with strong backgrounds in both the NHS and the aesthetics field. With over a decade of combined expertise, they bring advanced skills, precision, and a commitment to excellence in every aspect of aesthetic medicine.
 
 Both are passionate educators who have trained hundreds of medical professionals in advanced aesthetic techniques, helping to raise standards across the industry. As the leading practitioners at Derma Veritas, they aim to combine medical expertise with innovation, ensuring patients receive safe, high-quality, and effective treatments.
 
@@ -28,7 +28,7 @@ Dr. Mofasher Nawaz
 Specialty Registrar in Medicine | Medical Doctor (DV) | Anaesthetics Trainer
 Dr. Mofasher works in the hospital environment as a Specialty Registrar in Medicine and has also built extensive experience in anaesthetics over more than 6 years. He has a strong background in advanced procedures, patient safety, and clinical training, having taught many medical professionals in anaesthetics practice.
 
-Mr. Apardeep Singh
+Mr. A. Singh
 GP Pharmacist | ACP l Advance Anaesthetics Practitioner l Operational Director (DV)
 Mr. Singh is a clinical pharmacist and advanced clinical practitioner with wide experience in general practice prescribing and advanced patient care. He also has expertise in cosmetic procedures and a deep understanding of pharmacology in treating dermatological conditions in community. At the clinic, he is dedicated to providing high-quality, professional treatments that focus on safety, comfort, and natural results.
 
