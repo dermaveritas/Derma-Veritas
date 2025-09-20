@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatwindow from "@/components/Chatwindow";
+import CookieDisclaimer from "@/components/CookieDisclaimer";
 import { useStore } from "@/store/zustand";
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -77,6 +78,7 @@ const ChildLayout = ({ children }) => {
         </div>
 
         <Chatwindow isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
+        <CookieDisclaimer />
       </QueryClientProvider>
     </AuthProvider>
   );

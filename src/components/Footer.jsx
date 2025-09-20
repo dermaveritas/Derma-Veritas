@@ -53,18 +53,10 @@ export default function Footer() {
           <ul className="space-y-3">
             <li>
               <Link
-                href="/about"
-                className="hover:text-white transition-colors"
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/treatments"
                 className="hover:text-white transition-colors"
               >
-                Our Services
+                Our Treatments
               </Link>
             </li>
             <li>
@@ -72,15 +64,23 @@ export default function Footer() {
                 href="/packages"
                 className="hover:text-white transition-colors"
               >
-                Pricing Plans
+                Packages
               </Link>
             </li>
             <li>
               <Link
-                href="/membership"
+                href="/packages/membership"
                 className="hover:text-white transition-colors"
               >
                 Membership
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
+                className="hover:text-white transition-colors"
+              >
+                About Us
               </Link>
             </li>
             <li>
