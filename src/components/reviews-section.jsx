@@ -16,7 +16,7 @@ const reviews = [
     id: 2,
     name: "Holly Newland",
     rating: 5,
-    text: "I came to see Mr. A. Singh for my dermal filler treatment and I am over the moon with the results! Mr. Singh is so professional and knowledgeable about skin care. The whole team at Derma Veritas are absolutely lovely and so helpful.",
+    text: "I came to see Mr. A Singh for my dermal filler treatment and I am over the moon with the results! Mr. Singh is so professional and knowledgeable about skin care. The whole team at Derma Veritas are absolutely lovely and so helpful.",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const reviews = [
     id: 5,
     name: "Rachel Green",
     rating: 5,
-    text: "From booking to aftercare, everything at Derma Veritas was seamless. Mr. A. Singh's expertise in aesthetic procedures is evident - the results look so natural and I've received countless compliments.",
+    text: "From booking to aftercare, everything at Derma Veritas was seamless. Mr. A Singh's expertise in aesthetic procedures is evident - the results look so natural and I've received countless compliments.",
   },
   {
     id: 6,
@@ -58,7 +58,7 @@ const reviews = [
     id: 9,
     name: "Charlotte Davis",
     rating: 5,
-    text: "Outstanding clinic with state-of-the-art equipment. Mr. A. Singh's consultation was detailed and honest about my skin concerns, and the pigmentation treatment results speak for themselves.",
+    text: "Outstanding clinic with state-of-the-art equipment. Mr. A Singh's consultation was detailed and honest about my skin concerns, and the pigmentation treatment results speak for themselves.",
   },
   {
     id: 10,

@@ -46,7 +46,7 @@ export default function AboutPage() {
             About Us
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-            With years of dermatology experience, Dr. Mofasher Nawaz and Mr. A.
+            With years of dermatology experience, Dr. Mofasher Nawaz and Mr. A
             Singh lead our clinic with one goal: safe treatments and natural
             outcomes.{" "}
           </p>
@@ -66,7 +66,7 @@ export default function AboutPage() {
 
           <p className="text-gray-600 text-lg leading-relaxed mb-6">
             With over a decade of combined expertise, Dr. Mofasher Nawaz and Mr.
-            A. Singh bring advanced skills, precision, and a commitment to
+            A Singh bring advanced skills, precision, and a commitment to
             excellence in every aspect of aesthetic medicine.
           </p>
 
@@ -143,7 +143,7 @@ export default function AboutPage() {
                 <div className="mb-8">
                   <p className="text-muted-foreground leading-relaxed text-lg">
                     <strong>Dr. Mofasher Nawaz</strong> and
-                    <strong> Mr. A. Singh </strong>
+                    <strong> Mr. A Singh </strong>
                     are highly experienced medical professionals with strong
                     backgrounds in both the NHS and the aesthetics field. With
                     over a decade of combined expertise, they bring advanced

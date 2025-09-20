@@ -402,11 +402,6 @@ export default function ClubMembershipPage() {
               alt="Professional aesthetic treatment experience"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute top-6 right-6 bg-white bg-opacity-95 px-6 py-4 rounded-lg shadow-lg">
-              <div className="text-lg font-light text-gray-800">
-                Dr. Mofasher Nawaz and Mr. A. Singh
-              </div>
-            </div>
           </div>
         </div>
       </div>

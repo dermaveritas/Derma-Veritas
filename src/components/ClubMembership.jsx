@@ -27,9 +27,9 @@ export default function ClubMembership() {
           {/* Description */}
           <div className="text-center md:flex-1">
             <p className="text-gray-300 text-base md:text-lg">
-              Receive your favourite treatments monthly & save!{" "}
+              Enjoy your favourite treatments every month & save —
               <span className="font-semibold text-white">
-                Prices start from £54 per month*
+                Starting at just £80/month
               </span>
             </p>
           </div>

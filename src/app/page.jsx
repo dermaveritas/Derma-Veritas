@@ -226,7 +226,7 @@ export default function Home() {
           <div className="space-y-6 lg:order-2">
             <h2 className="text-4xl lg:text-5xl font-light text-gray-900 leading-tight">
               Expert skin and hair care under the trusted leadership of Dr.
-              Mofasher Nawaz and Mr. A. Singh.{" "}
+              Mofasher Nawaz and Mr. A Singh.{" "}
             </h2>
             <p className="text-gray-600 leading-relaxed">
               Derma Veritas offers medically-led skin and dermatological
@@ -254,9 +254,9 @@ export default function Home() {
             />
             <div className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg">
               <h3 className="font-semibold text-gray-900">
-                Dr Mofasher Nawaz & Mr. A. Singh
+                Dr Mofasher Nawaz & Mr. A Singh
               </h3>
-              <p className="text-sm text-gray-600">Founder & Co-Founder</p>
+              <p className="text-sm text-gray-600">Founders</p>
             </div>
           </div>
         </div>

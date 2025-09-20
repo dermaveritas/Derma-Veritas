@@ -5,7 +5,6 @@ import {
   X,
   Send,
   MessageCircle,
-  Bot,
   User,
   Clock,
   CheckCheck,
@@ -17,8 +16,8 @@ import ReactMarkdown from "react-markdown";
 // Typing indicator component
 const TypingIndicator = () => (
   <div className="flex justify-start items-end space-x-2">
-    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center shadow-lg">
-      <Bot className="w-4 h-4 text-white" />
+    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center shadow-lg overflow-hidden">
+      <img src={"/Bot.jpeg"} alt="Bot" className="w-full h-full object-cover" />
     </div>
     <div className="bg-gray-100 text-gray-900 max-w-[70%] p-4 rounded-2xl rounded-bl-md shadow-sm">
       <div className="flex space-x-1">
@@ -89,8 +88,12 @@ export default function Chatwindow({ isOpen, onClose }) {
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-4 rounded-t-xl flex items-center justify-between shadow-lg">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center shadow-lg">
-                <MessageCircle className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center shadow-lg overflow-hidden">
+                <img
+                  src={"/Bot.jpeg"}
+                  alt="Bot"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
             </div>
@@ -137,8 +140,12 @@ export default function Chatwindow({ isOpen, onClose }) {
               } animate-in slide-in-from-bottom duration-300`}
             >
               {message.role === "assistant" && (
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center shadow-lg flex-shrink-0">
-                  <Bot className="w-4 h-4 text-white" />
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center shadow-lg flex-shrink-0 overflow-hidden">
+                  <img
+                    src={"/Bot.jpeg"}
+                    alt="Bot"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               )}
 
