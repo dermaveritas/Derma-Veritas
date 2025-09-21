@@ -67,10 +67,6 @@ export default function ConsultationSection() {
               <p className="text-sm text-gray-600 mb-4 leading-snug">
                 {step.description}
               </p>
-
-              <button className="text-sm text-gray-600 hover:text-gray-800 underline transition-colors">
-                Read more
-              </button>
             </div>
           ))}
         </div>
