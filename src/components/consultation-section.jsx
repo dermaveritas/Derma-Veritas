@@ -14,7 +14,7 @@ export default function ConsultationSection() {
       number: 2,
       title: "Your Treatment",
       description:
-        "Once you are happy with your treatment plan, we will arrange your procedure(s) to take place in our state-of-the-art Birmingham or London clinic.",
+        "Once you are happy with your treatment plan, we will arrange your procedure(s) to take place in our state-of-the-art clinic.",
     },
     {
       number: 3,
