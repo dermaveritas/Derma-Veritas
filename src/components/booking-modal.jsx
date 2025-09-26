@@ -474,18 +474,160 @@ export function BookingModal({
       ],
     },
     "quad-laser-hair-removal": {
-      name: "Quad Laser Hair Removal - Face",
+      name: "Quad Laser Hair Removal",
       options: [
-        { id: "upper-lip", name: "Upper Lip", price: "£45 (6 for £225)" },
-        { id: "chin", name: "Chin", price: "£50 (6 for £250)" },
-        { id: "lip-chin", name: "Lip & Chin", price: "£75 (6 for £375)" },
-        { id: "sides-face", name: "Sides of Face", price: "£60 (6 for £300)" },
-        { id: "full-face", name: "Full Face", price: "£120 (6 for £600)" },
-        { id: "neck", name: "Neck (Front/Back)", price: "£60 (6 for £300)" },
+        // Face Options
+        {
+          id: "upper-lip",
+          name: "Upper Lip",
+          price: "£45 (6 for £225)",
+          description: "Laser hair removal for the upper lip area",
+        },
+        {
+          id: "chin",
+          name: "Chin",
+          price: "£50 (6 for £250)",
+          description: "Laser hair removal for the chin area",
+        },
+        {
+          id: "lip-chin",
+          name: "Lip & Chin",
+          price: "£75 (6 for £375)",
+          description: "Laser hair removal for both lip and chin areas",
+        },
+        {
+          id: "sides-face",
+          name: "Sides of Face",
+          price: "£60 (6 for £300)",
+          description: "Laser hair removal for the sides of the face",
+        },
+        {
+          id: "full-face",
+          name: "Full Face",
+          price: "£120 (6 for £600)",
+          description: "Laser hair removal for the entire face",
+        },
+        {
+          id: "neck",
+          name: "Neck (Front/Back)",
+          price: "£60 (6 for £300)",
+          description: "Laser hair removal for the front or back of the neck",
+        },
         {
           id: "face-neck",
           name: "Full Face & Neck",
           price: "£160 (6 for £800)",
+          description: "Laser hair removal for the full face and neck",
+        },
+        // Men's Laser Options
+        {
+          id: "beard-line",
+          name: "Beard Line (Cheeks)",
+          price: "£70 (6 for £350)",
+          description:
+            "Laser hair removal for shaping the beard line on cheeks",
+        },
+        {
+          id: "beard-full",
+          name: "Beard (Full)",
+          price: "£120 (6 for £600)",
+          description: "Laser hair removal for the full beard",
+        },
+        {
+          id: "neck-front",
+          name: "Neck (Front)",
+          price: "£60 (6 for £300)",
+          description: "Laser hair removal for the front of the neck",
+        },
+        {
+          id: "neck-back",
+          name: "Neck (Back)",
+          price: "£60 (6 for £300)",
+          description: "Laser hair removal for the back of the neck",
+        },
+        {
+          id: "beard-neck",
+          name: "Beard & Neck Combined",
+          price: "£160 (6 for £800)",
+          description: "Laser hair removal for the full beard and neck",
+        },
+        // Body Areas Options
+        {
+          id: "underarms",
+          name: "Underarms",
+          price: "£60 (6 for £300)",
+          description: "Laser hair removal for the underarm area",
+        },
+        {
+          id: "half-arms",
+          name: "Half Arms",
+          price: "£100 (6 for £500)",
+          description: "Laser hair removal for the lower or upper arms",
+        },
+        {
+          id: "full-arms",
+          name: "Full Arms",
+          price: "£150 (6 for £750)",
+          description: "Laser hair removal for the entire arms",
+        },
+        {
+          id: "chest",
+          name: "Chest",
+          price: "£100 (6 for £500)",
+          description: "Laser hair removal for the chest area",
+        },
+        {
+          id: "full-legs",
+          name: "Full Legs",
+          price: "£220 (6 for £1,100)",
+          description: "Laser hair removal for the entire legs",
+        },
+        // Intimate Areas Options
+        {
+          id: "bikini-line",
+          name: "Bikini Line",
+          price: "£70 (6 for £350)",
+          description: "Laser hair removal for the basic bikini line",
+        },
+        {
+          id: "extended-bikini",
+          name: "Extended Bikini",
+          price: "£90 (6 for £450)",
+          description: "Laser hair removal for an extended bikini area",
+        },
+        {
+          id: "brazilian",
+          name: "Brazilian",
+          price: "£120 (6 for £600)",
+          description: "Laser hair removal for the Brazilian style",
+        },
+        {
+          id: "hollywood",
+          name: "Hollywood",
+          price: "£140 (6 for £700)",
+          description: "Laser hair removal for the full Hollywood style",
+        },
+        // Full Body Packages Options
+        {
+          id: "half-body",
+          name: "Half Body (Upper/Lower)",
+          price: "£280 (6 for £1,100)",
+          description:
+            "Laser hair removal for either upper or lower half of the body",
+        },
+        {
+          id: "full-body-female",
+          name: "Full Body (Female)",
+          price: "£450 (6 for £1,600)",
+          description:
+            "Comprehensive laser hair removal for the full body (female)",
+        },
+        {
+          id: "full-body-male",
+          name: "Full Body (Male)",
+          price: "£500 (6 for £1,700)",
+          description:
+            "Comprehensive laser hair removal for the full body (male)",
         },
       ],
     },
@@ -1187,7 +1329,10 @@ export function BookingModal({
                     <SelectItem value="ablative" className="pl-6">
                       CO2 Ablative resurfacing
                     </SelectItem>
-                    <SelectItem value="non-surgical-rhinoplasty" className="pl-6">
+                    <SelectItem
+                      value="non-surgical-rhinoplasty"
+                      className="pl-6"
+                    >
                       Non-surgical rhinoplasty
                     </SelectItem>
 
@@ -1312,6 +1457,12 @@ export function BookingModal({
                     </SelectItem>
                     <SelectItem value="weight-loss" className="pl-6">
                       Weight Loss modulators
+                    </SelectItem>
+                    <SelectItem
+                      value="quad-laser-hair-removal"
+                      className="pl-6"
+                    >
+                      Quad Laser Hair Removal
                     </SelectItem>
                   </SelectContent>
                 </Select>
