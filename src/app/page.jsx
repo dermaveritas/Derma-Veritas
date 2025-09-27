@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ShieldCheck, BadgeCheck } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import TreatmentSlider from "@/components/TreatmentSlider";
 import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
@@ -18,28 +18,11 @@ import { BookingModal } from "@/components/booking-modal";
 export default function Home() {
   const [expandedSections, setExpandedSections] = useState({});
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const { bookingOpen, setBookingOpen } = useStore();
 
   // get router instance for navigation
   const router = useRouter();
-
-  // Hero background images array - replace with your actual image paths
-  const heroImages = [
-    "hero/Image_1.jpg",
-    "hero/Image_2.jpg",
-    "hero/Image_3.PNG",
-  ];
-
-  // Auto-cycle through images with smooth transition
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
-    }, 5000); // Change image every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [heroImages.length]);
 
   const toggleSection = (section) => {
     setExpandedSections((prev) => ({
@@ -90,48 +73,29 @@ export default function Home() {
     <div className="min-h-screen bg-white" style={sectionStyle}>
       {/* Hero Section */}
       <main className="relative h-screen overflow-hidden">
-        <div className="absolute inset-0 w-full h-full bg-black">
-          {/* Image Carousel */}
-          <div className="relative w-full h-full">
-            {heroImages.map((image, index) => (
-              <div
-                key={index}
-                className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
-                  index === currentImageIndex
-                    ? "opacity-100 z-10"
-                    : "opacity-0 z-0"
-                }`}
-              >
-                <img
-                  src={image}
-                  alt={`Hero background ${index + 1}`}
-                  className="w-full h-full object-cover"
-                  loading={index === 0 ? "eager" : "lazy"}
-                />
-              </div>
-            ))}
+        <div className="absolute inset-0 w-full h-full">
+          {/* Video Background */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute w-full h-full object-cover md:object-cover object-[80%] sm:object-center"
+            style={{
+              transform: 'scale(1.2)',
+              '@media (min-width: 768px)': {
+                transform: 'scale(1)',
+              }
+            }}
+          >
+            <source src="/hero/Hero.mov" type="video/mp4" />
+          </video>
 
-            {/* Smooth overlay gradient for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60 z-5" />
-          </div>
-
-          {/* Optional: Add slide indicators */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-            {heroImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentImageIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentImageIndex
-                    ? "bg-white scale-110"
-                    : "bg-white/50 hover:bg-white/75"
-                }`}
-              />
-            ))}
-          </div>
+          {/* Darker overlay gradient for better text readability */}
+          <div className="absolute inset-0 bg-black/55 z-5" /> {/* Changed opacity from 60 to 70 and simplified the overlay */}
         </div>
-        <div className="absolute inset-0 bg-black/50 z-10" />
-        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 pt-40">
+
+        <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 pt-20 md:pt-40">
           <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-light leading-tight mb-12 max-w-4xl">
             Derma Veritas <br />
             Doctor Led
