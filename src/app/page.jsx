@@ -73,6 +73,7 @@ export default function Home() {
             loop
             muted
             playsInline
+            poster="hero/Hero.jpeg"
             className="absolute w-full h-full object-cover md:object-cover object-[80%] sm:object-center"
             style={{
               transform: "scale(1.2)",
@@ -82,7 +83,7 @@ export default function Home() {
             }}
           >
             <source
-              src="https://res.cloudinary.com/dairdpofj/video/upload/v1759035924/Hero_ymqrfi.mp4"
+              src="https://res.cloudinary.com/dairdpofj/video/upload/v1759036819/Hero_fcki5h.mp4"
               type="video/mp4"
             />
           </video>

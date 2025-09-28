@@ -10,6 +10,7 @@ import ClinicsModal from "./ClinicsModal";
 import { BookingModal } from "./booking-modal";
 import { useStore } from "@/store/zustand";
 import UserMenuDropdown from "./UserMenuDropdown";
+import { getActiveTreatment, treatmentCategories } from "@/constants";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,152 +29,6 @@ export default function Navbar() {
   const iconColor = isHomePage ? "white" : "black";
 
   // Treatment categories
-  const treatmentCategories = {
-    "non-surgical-enhancement": {
-      title: "Non-surgical Enhancement",
-      treatments: [
-        { name: "Endolift", slug: "endolift", href: "/treatments/endolift" },
-        {
-          name: "Eight point facelift",
-          slug: "8-point-facelift",
-          href: "/menu/injectables/8-point-facelift",
-        },
-        {
-          name: "CO2 Ablative resurfacing",
-          slug: "ablative",
-          href: "/treatments/ablative",
-        },
-        {
-          name: "Non-surgical rhinoplasty",
-          slug: "non-surgical-rhinoplasty",
-          href: "/menu/injectables/non-surgical-rhinoplasty",
-        },
-      ],
-    },
-    "skin-perfecting": {
-      title: "Skin Perfecting",
-      treatments: [
-        {
-          name: "Fractional co2 resurfacing",
-          slug: "co2",
-          href: "/treatments/co2",
-        },
-        {
-          name: "Radio frequency Microneedling",
-          slug: "rf-microneedling",
-          href: "/treatments/rf-microneedling",
-        },
-        {
-          name: "Pro Fusion",
-          slug: "profusion",
-          href: "/treatments/profusion",
-        },
-        {
-          name: "EXO NAD",
-          slug: "exo-nad",
-          href: "/treatments/exo-nad",
-        },
-        {
-          name: "Prescription treatment",
-          slug: "prescriptionskincare",
-          href: "/treatments/prescriptionskincare",
-        },
-      ],
-    },
-    "age-defying": {
-      title: "Age Defying",
-      treatments: [
-        { name: "V hacker", slug: "v-hacker", href: "/treatments/v-hacker" },
-        {
-          name: "Bio Hacking Formula",
-          slug: "bio-hacking",
-          href: "/treatments/exosome-therapy",
-        },
-        {
-          name: "Exosomes",
-          slug: "exosome-therapy",
-          href: "/treatments/exosome-therapy",
-        },
-        {
-          name: "Anti- wrinkle",
-          slug: "anti-wrinkle-treatment",
-          href: "/menu/injectables/anti-wrinkle-treatment",
-        },
-        { name: "PRP", slug: "prp-therapy", href: "/treatments/prp-therapy" },
-        {
-          name: "Polynucleotide",
-          slug: "polynucleotide",
-          href: "/treatments/polynucleotide",
-        },
-      ],
-    },
-    "facial-contorting": {
-      title: "Facial Contorting",
-      treatments: [
-        {
-          name: "Fillers",
-          slug: "dermal-fillers",
-          href: "/menu/injectables/dermal-fillers",
-        },
-        {
-          name: "Profhilo",
-          slug: "profhilo",
-          href: "/menu/injectables/profhilo",
-        },
-        {
-          name: "Skin Fill Bacio",
-          slug: "skinfill-bacio",
-          href: "/menu/injectables/skinfill-bacio",
-        },
-      ],
-    },
-    "hair-enhancements": {
-      title: "Hair Enhancements",
-      treatments: [
-        {
-          name: "Hair PRP",
-          slug: "prp-therapy",
-          href: "/treatments/prp-therapy",
-        },
-        {
-          name: "Hair polynucleotide",
-          slug: "polynucleotides-hair-loss-treatment",
-          href: "/menu/injectables/polynucleotides-hair-loss-treatment",
-        },
-        {
-          name: "EXO SIGNAL",
-          slug: "exosignal",
-          href: "/treatments/exosignal",
-        },
-        {
-          name: "Hair + revitalizing formula",
-          slug: "hair-revitalizing",
-          href: "/treatments/hair-revitalizing",
-        },
-        {
-          name: "Prescriptions treatments",
-          slug: "prescriptionhair",
-          href: "/treatments/prescriptionhair",
-        },
-      ],
-    },
-    others: {
-      title: "Others",
-      treatments: [
-        {
-          name: "Weight Loss modulators",
-          slug: "weightloss",
-          href: "/treatments/weightloss",
-        },
-      ],
-    },
-  };
-
-  const slugify = (str) =>
-    str
-      .toLowerCase()
-      .replace(/\s+/g, "-")
-      .replace(/[^a-z0-9-]/g, "");
 
   // Scroll listener
   useEffect(() => {
@@ -229,65 +84,6 @@ export default function Navbar() {
       link: "/locations",
     },
   ];
-
-  const getCurrentTreatment = () => {
-    if (
-      pathname.includes("/packages/profusion") ||
-      pathname === "/packages/profusion"
-    ) {
-      return "profusion-hydrafacial";
-    }
-
-    if (pathname.includes("/menu/injectables/")) {
-      const treatmentSlug = pathname.split("/menu/injectables/")[1];
-      const treatmentMap = {
-        "anti-wrinkle-treatment": "anti-wrinkle-treatment",
-        "non-surgical-rhinoplasty": "non-surgical-rhinoplasty",
-        "8-point-facelift": "8-point-facelift",
-        "nctf-skin-revitalisation": "nctf-skin-revitalisation-skincare",
-        "harmonyca-dermal-filler": "harmonyca-dermal-filler",
-        "dermal-fillers": "dermal-fillers",
-        "lip-fillers": "lip-fillers",
-        "chin-fillers": "chin-fillers",
-        "tear-trough-filler": "tear-trough-filler",
-        "cheek-fillers": "cheek-fillers",
-        profhilo: "profhilo",
-        "fat-dissolving-injections": "fat-dissolving-injections",
-        "hand-rejuvenation": "hand-rejuvenation",
-        "polynucleotides-hair-loss-treatment":
-          "polynucleotides-hair-loss-treatment",
-        "polynucleotides-skin-rejuvenation-treatment":
-          "polynucleotides-skin-rejuvenation-treatment",
-        "Anti-Wrinkle-treatment": "anti-wrinkle-treatment",
-        "skin-boosters": "skin-boosters",
-        "skinfill-bacio": "skinfill-bacio",
-      };
-      return treatmentMap[treatmentSlug] || "";
-    }
-
-    if (pathname.includes("/treatments/")) {
-      const treatmentSlug = pathname.split("/treatments/")[1];
-      const treatmentMap = {
-        microneedling: "skinpen-microneedling",
-        "rf-microneedling": "skinpen-microneedling",
-        "mole-removal": "mole-removal",
-        "skin-tag-removal": "skin-tag-removal",
-        "exosome-therapy": "iv-drips",
-        co2: "co2-laser",
-        polynucleotide: "polynucleotides-skin-rejuvenation-treatment",
-        endolift: "endolift",
-        "prp-therapy": "iv-drips",
-        "quad-laser-hair-removal": "quad-laser-hair-removal",
-        "exo-nad": "exo",
-        "v-hacker": "v-hacker",
-        "hair-revitalizing": "revitalizing",
-        exosignal: "exosignal",
-      };
-      return treatmentMap[treatmentSlug] || "";
-    }
-
-    return "";
-  };
 
   return (
     <>
@@ -524,7 +320,7 @@ export default function Navbar() {
       <BookingModal
         open={bookingOpen}
         onOpenChange={setBookingOpen}
-        selectedTreatment={getCurrentTreatment()}
+        selectedTreatment={getActiveTreatment(pathname)}
       />
     </>
   );

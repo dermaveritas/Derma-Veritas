@@ -7,18 +7,20 @@ export const useStore = create((set, get) => ({
   bookingOpen: false,
   pendingBooking: null, // Store pending booking data
   isChatOpen: false,
+  showLoginModal: false,
+  setShowLoginModal: (isOpen) => set({ showLoginModal: isOpen }),
   setIsChatOpen: (isOpen) => set({ isChatOpen: isOpen }),
-  setUser: (user) => set({ user }),
+  setUser: (user) =>
+    set({
+      user,
+      showLoginModal: false,
+    }),
   setUserRole: (role) => set({ userRole: role }),
   setBookingOpen: (isOpen) => {
-    if (isOpen) {
-      const { user } = get();
-      if (!user) {
-        if (typeof window !== "undefined") {
-          window.location.href = "/login";
-        }
-        return;
-      }
+    const { user } = get();
+    if (isOpen && !user) {
+      set({ showLoginModal: true });
+      return;
     }
     set({ bookingOpen: isOpen });
   },

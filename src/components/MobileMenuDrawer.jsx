@@ -17,20 +17,20 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import ClinicsModal from "./ClinicsModal";
 import { BookingModal } from "./booking-modal";
-import { usePathname } from "next/navigation";
 import { useAuth } from "@/store/FirebaseAuthProvider";
 import { useCartItemCount } from "@/hooks/useCart";
 import { useStore } from "@/store/zustand";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { getActiveTreatment } from "@/constants";
 
 export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
+  const pathname = usePathname();
   const [expandedSections, setExpandedSections] = useState({});
   const [activeSubmenu, setActiveSubmenu] = useState(null);
   const [submenuOpenedByClick, setSubmenuOpenedByClick] = useState(false);
   const [isClinicsOpen, setIsClinicsOpen] = useState(false);
   const [bookingOpen, setBookingOpen] = useState(false);
   const hideTimeoutRef = useRef(null);
-  const pathname = usePathname();
 
   // Auth and Cart
   const { user, isAdmin } = useAuth();
@@ -100,68 +100,6 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
       clearTimeout(hideTimeoutRef.current);
       hideTimeoutRef.current = null;
     }
-  };
-
-  // Function to determine treatment based on current page
-  const getCurrentTreatment = () => {
-    // Handle packages - fix the path matching
-    if (
-      pathname.includes("/packages/profusion") ||
-      pathname === "/packages/profusion"
-    ) {
-      return "profusion-hydrafacial";
-    }
-
-    // Handle injectable treatments
-    if (pathname.includes("/menu/injectables/")) {
-      const treatmentSlug = pathname.split("/menu/injectables/")[1];
-      const treatmentMap = {
-        "anti-wrinkle-treatment": "anti-wrinkle-treatment",
-        "non-surgical-rhinoplasty": "non-surgical-rhinoplasty",
-        "8-point-facelift": "8-point-facelift",
-        "nctf-skin-revitalisation": "nctf-skin-revitalisation-skincare",
-        "harmonyca-dermal-filler": "harmonyca-dermal-filler",
-        "dermal-fillers": "dermal-fillers",
-        "lip-fillers": "lip-fillers",
-        "chin-fillers": "chin-fillers",
-        "tear-trough-filler": "tear-trough-filler",
-        "cheek-fillers": "cheek-fillers",
-        profhilo: "profhilo",
-        "fat-dissolving-injections": "fat-dissolving-injections",
-        "hand-rejuvenation": "hand-rejuvenation",
-        "polynucleotides-hair-loss-treatment":
-          "polynucleotides-hair-loss-treatment",
-        "polynucleotides-skin-rejuvenation-treatment":
-          "polynucleotides-skin-rejuvenation-treatment",
-        "Anti-Wrinkle-treatment": "anti-wrinkle-treatment",
-        "skinfill-bacio": "skinfill-bacio",
-      };
-      return treatmentMap[treatmentSlug] || "";
-    }
-
-    // Handle other treatment types
-    if (pathname.includes("/treatments/")) {
-      const treatmentSlug = pathname.split("/treatments/")[1];
-      const treatmentMap = {
-        microneedling: "skinpen-microneedling",
-        "rf-microneedling": "skinpen-microneedling",
-        "mole-removal": "mole-removal",
-        "skin-tag-removal": "skin-tag-removal",
-        "exosome-therapy": "iv-drips",
-        co2: "co2-laser",
-        polynucleotide: "polynucleotides-skin-rejuvenation-treatment",
-        endolift: "endolift",
-        "prp-therapy": "iv-drips",
-        "quad-laser-hair-removal": "quad-laser-hair-removal",
-        "exo-nad": "exo",
-        "v-hacker": "v-hacker",
-        "hair-revitalizing": "revitalizing",
-        exosignal: "exosignal",
-      };
-      return treatmentMap[treatmentSlug] || "";
-    }
-
-    return "";
   };
 
   // Menu data - Updated to match navbar exactly
@@ -436,6 +374,17 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                     label="Others"
                     section="Others"
                     links={othersLinks}
+                    type="treatments"
+                  />
+                  <MobileDropdown
+                    label="Hair Removal"
+                    section="HairRemoval"
+                    links={[
+                      {
+                        name: "Quad Laser Hair Removal",
+                        href: "/treatments/quad-laser-hair-removal",
+                      },
+                    ]}
                     type="treatments"
                   />
                 </div>
@@ -748,7 +697,7 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
       <BookingModal
         open={bookingOpen}
         onOpenChange={setBookingOpen}
-        selectedTreatment={getCurrentTreatment()}
+        selectedTreatment={getActiveTreatment(pathname)}
       />
     </>
   );
