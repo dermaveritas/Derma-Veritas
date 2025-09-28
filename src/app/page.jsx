@@ -24,13 +24,6 @@ export default function Home() {
   // get router instance for navigation
   const router = useRouter();
 
-  const toggleSection = (section) => {
-    setExpandedSections((prev) => ({
-      ...prev,
-      [section]: !prev[section],
-    }));
-  };
-
   const handleTreatmentsClick = () => {
     router.push("/treatments");
   };
@@ -82,17 +75,20 @@ export default function Home() {
             playsInline
             className="absolute w-full h-full object-cover md:object-cover object-[80%] sm:object-center"
             style={{
-              transform: 'scale(1.2)',
-              '@media (min-width: 768px)': {
-                transform: 'scale(1)',
-              }
+              transform: "scale(1.2)",
+              "@media (min-width: 768px)": {
+                transform: "scale(1)",
+              },
             }}
           >
-            <source src="/hero/Hero.mov" type="video/mp4" />
+            <source
+              src="https://res.cloudinary.com/dairdpofj/video/upload/v1759035924/Hero_ymqrfi.mp4"
+              type="video/mp4"
+            />
           </video>
-
           {/* Darker overlay gradient for better text readability */}
-          <div className="absolute inset-0 bg-black/55 z-5" /> {/* Changed opacity from 60 to 70 and simplified the overlay */}
+          <div className="absolute inset-0 bg-black/55 z-5" />{" "}
+          {/* Changed opacity from 60 to 70 and simplified the overlay */}
         </div>
 
         <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4 pt-20 md:pt-40">
