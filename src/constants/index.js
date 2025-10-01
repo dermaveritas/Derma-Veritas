@@ -1038,7 +1038,7 @@ export const treatmentCategories = {
     ],
   },
   "facial-contorting": {
-    title: "Facial Contorting",
+    title: "Facial Contouring",
     treatments: [
       {
         name: "Fillers",

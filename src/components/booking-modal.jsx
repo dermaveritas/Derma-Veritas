@@ -481,13 +481,13 @@ export function BookingModal({
                         Polynucleotide
                       </SelectItem>
 
-                      {/* Facial Contorting */}
+                      {/* Facial Contouring */}
                       <SelectItem
                         value="header-facial-contorting"
                         disabled
                         className="font-bold text-gray-800 bg-gray-50 mt-2"
                       >
-                        💎 Facial Contorting
+                        💎 Facial Contouring
                       </SelectItem>
                       <SelectItem value="dermal-fillers" className="pl-6">
                         Jaw Fillers

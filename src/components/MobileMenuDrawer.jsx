@@ -359,7 +359,7 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                     type="treatments"
                   />
                   <MobileDropdown
-                    label="Facial Contorting"
+                    label="Facial Contouring"
                     section="FacialContouring"
                     links={facialContouringLinks}
                     type="treatments"
@@ -655,7 +655,7 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                           />
 
                           <DesktopDropdown
-                            label="Facial Contorting"
+                            label="Facial Contouring"
                             section="FacialContouring"
                             links={facialContouringLinks}
                             type="treatments"
