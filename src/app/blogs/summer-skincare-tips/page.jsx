@@ -25,14 +25,18 @@ export default function SummerSkincareTipsPage() {
             </h1>
 
             <div className="flex gap-2 mb-8">
-              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">Face</span>
-              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">Skincare</span>
+              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">
+                Face
+              </span>
+              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">
+                Skincare
+              </span>
             </div>
           </div>
 
           <div className="aspect-[16/9] mb-8 overflow-hidden rounded-lg">
             <img
-              src="/woman-applying-sunscreen-at-beach-summer-skincare-.png"
+              src="/images/woman-applying-sunscreen-at-beach-summer-vibes.png"
               alt="Woman applying sunscreen at beach"
               className="w-full h-full object-cover"
             />
@@ -40,36 +44,50 @@ export default function SummerSkincareTipsPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground mb-8">
-              Summer brings unique challenges for your skin. Higher temperatures, increased humidity, and more sun
-              exposure require adjustments to your skincare routine.
+              Summer brings unique challenges for your skin. Higher
+              temperatures, increased humidity, and more sun exposure require
+              adjustments to your skincare routine.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Lighten Your Routine</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Lighten Your Routine
+            </h2>
             <p className="text-foreground mb-6">
-              Switch to lighter, gel-based moisturizers and serums that won't feel heavy in the heat. Your skin produces
-              more oil in summer, so you may need less hydration than in cooler months.
+              Switch to lighter, gel-based moisturizers and serums that won't
+              feel heavy in the heat. Your skin produces more oil in summer, so
+              you may need less hydration than in cooler months.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Sun Protection is Non-Negotiable</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Sun Protection is Non-Negotiable
+            </h2>
             <p className="text-foreground mb-6">
-              Use a broad-spectrum SPF 30 or higher every day, even when it's cloudy. Reapply every two hours and after
-              swimming or sweating. Don't forget often-missed areas like your ears, neck, and the tops of your feet.
+              Use a broad-spectrum SPF 30 or higher every day, even when it's
+              cloudy. Reapply every two hours and after swimming or sweating.
+              Don't forget often-missed areas like your ears, neck, and the tops
+              of your feet.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Stay Hydrated Inside and Out</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Stay Hydrated Inside and Out
+            </h2>
             <p className="text-foreground mb-6">
-              Drink plenty of water and use hydrating serums with hyaluronic acid. Consider using a facial mist
-              throughout the day to refresh and hydrate your skin.
+              Drink plenty of water and use hydrating serums with hyaluronic
+              acid. Consider using a facial mist throughout the day to refresh
+              and hydrate your skin.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Gentle Exfoliation</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Gentle Exfoliation
+            </h2>
             <p className="text-foreground mb-6">
-              Regular exfoliation helps remove dead skin cells and prevents clogged pores from increased sweating. Use
-              gentle chemical exfoliants rather than harsh scrubs.
+              Regular exfoliation helps remove dead skin cells and prevents
+              clogged pores from increased sweating. Use gentle chemical
+              exfoliants rather than harsh scrubs.
             </p>
           </div>
         </article>
       </div>
     </div>
-  )
+  );
 }

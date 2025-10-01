@@ -25,14 +25,18 @@ export default function PostTreatmentCarePage() {
             </h1>
 
             <div className="flex gap-2 mb-8">
-              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">Face</span>
-              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">Aesthetics</span>
+              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">
+                Face
+              </span>
+              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">
+                Aesthetics
+              </span>
             </div>
           </div>
 
           <div className="aspect-[16/9] mb-8 overflow-hidden rounded-lg">
             <img
-              src="/placeholder.svg?height=600&width=1200"
+              src="/images/serene-spa-environment-recovery-skincare.png"
               alt="Serene spa environment for recovery"
               className="w-full h-full object-cover"
             />
@@ -40,8 +44,9 @@ export default function PostTreatmentCarePage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground mb-8">
-              Proper post-treatment care is crucial for achieving optimal results and minimizing potential side effects.
-              Following these guidelines will help ensure your investment pays off.
+              Proper post-treatment care is crucial for achieving optimal
+              results and minimizing potential side effects. Following these
+              guidelines will help ensure your investment pays off.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
@@ -55,28 +60,37 @@ export default function PostTreatmentCarePage() {
               <li>Stay hydrated and avoid alcohol</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">First Week Guidelines</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              First Week Guidelines
+            </h2>
             <p className="text-foreground mb-6">
-              Continue to be gentle with your skin. Use mild, fragrance-free products and avoid active ingredients like
-              retinoids or acids unless specifically approved by your provider. Sun protection is absolutely essential
-              during this healing period.
+              Continue to be gentle with your skin. Use mild, fragrance-free
+              products and avoid active ingredients like retinoids or acids
+              unless specifically approved by your provider. Sun protection is
+              absolutely essential during this healing period.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Long-term Maintenance</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Long-term Maintenance
+            </h2>
             <p className="text-foreground mb-6">
-              Maintain a consistent skincare routine with quality products. Regular follow-up appointments help monitor
-              your progress and plan future treatments. Consider professional skincare treatments to enhance and
-              maintain your results.
+              Maintain a consistent skincare routine with quality products.
+              Regular follow-up appointments help monitor your progress and plan
+              future treatments. Consider professional skincare treatments to
+              enhance and maintain your results.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">When to Contact Your Provider</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              When to Contact Your Provider
+            </h2>
             <p className="text-foreground mb-6">
-              While some swelling and mild discomfort are normal, contact your provider if you experience severe pain,
-              excessive swelling, signs of infection, or any concerning changes in the treated area.
+              While some swelling and mild discomfort are normal, contact your
+              provider if you experience severe pain, excessive swelling, signs
+              of infection, or any concerning changes in the treated area.
             </p>
           </div>
         </article>
       </div>
     </div>
-  )
+  );
 }

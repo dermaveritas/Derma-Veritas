@@ -25,14 +25,18 @@ export default function AntiAgingSkincareRoutinePage() {
             </h1>
 
             <div className="flex gap-2 mb-8">
-              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">Face</span>
-              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">Skincare</span>
+              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">
+                Face
+              </span>
+              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">
+                Skincare
+              </span>
             </div>
           </div>
 
           <div className="aspect-[16/9] mb-8 overflow-hidden rounded-lg">
             <img
-              src="/luxury-skincare-products-on-marble-surface-elegant.png"
+              src="/images/luxury-skincare-products-on-marble-surface.png"
               alt="Luxury skincare products arrangement"
               className="w-full h-full object-cover"
             />
@@ -40,20 +44,24 @@ export default function AntiAgingSkincareRoutinePage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground mb-8">
-              A well-structured anti-aging skincare routine can significantly slow down the signs of aging and maintain
-              healthy, youthful-looking skin for years to come.
+              A well-structured anti-aging skincare routine can significantly
+              slow down the signs of aging and maintain healthy,
+              youthful-looking skin for years to come.
             </p>
 
             <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
               The Foundation: Cleansing and Moisturizing
             </h2>
             <p className="text-foreground mb-6">
-              Start with a gentle cleanser that removes impurities without stripping your skin's natural barrier. Follow
-              with a moisturizer containing hyaluronic acid and ceramides to maintain hydration and skin barrier
-              function.
+              Start with a gentle cleanser that removes impurities without
+              stripping your skin's natural barrier. Follow with a moisturizer
+              containing hyaluronic acid and ceramides to maintain hydration and
+              skin barrier function.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Key Anti-Aging Ingredients</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Key Anti-Aging Ingredients
+            </h2>
             <ul className="list-disc pl-6 text-foreground mb-6">
               <li>Retinoids for cell turnover and collagen production</li>
               <li>Vitamin C for antioxidant protection and brightening</li>
@@ -62,14 +70,18 @@ export default function AntiAgingSkincareRoutinePage() {
               <li>Alpha hydroxy acids for gentle exfoliation</li>
             </ul>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Morning vs. Evening Routine</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Morning vs. Evening Routine
+            </h2>
             <p className="text-foreground mb-6">
-              Your morning routine should focus on protection with antioxidants and SPF, while your evening routine can
-              include more active ingredients like retinoids and exfoliating acids that work best without sun exposure.
+              Your morning routine should focus on protection with antioxidants
+              and SPF, while your evening routine can include more active
+              ingredients like retinoids and exfoliating acids that work best
+              without sun exposure.
             </p>
           </div>
         </article>
       </div>
     </div>
-  )
+  );
 }

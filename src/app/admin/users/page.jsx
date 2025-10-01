@@ -24,6 +24,7 @@ import {
   TrendingUp,
   Calendar,
   PoundSterling,
+  Copy,
 } from "lucide-react";
 import { toast } from "sonner";
 import {
@@ -34,6 +35,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { UserDetailsModal } from "@/app/admin/users/_components/UserDetailsModal";
+import { ChangeReferralCodeModal } from "./_components/ChangeReferralCodeModal";
 
 export default function UsersPage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -42,6 +44,8 @@ export default function UsersPage() {
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isReferralModalOpen, setIsReferralModalOpen] = useState(false);
+  const [selectedUserForReferral, setSelectedUserForReferral] = useState(null);
 
   // Debounce search term
   useEffect(() => {
@@ -466,6 +470,15 @@ export default function UsersPage() {
                               View Details
                             </DropdownMenuItem>
                             <DropdownMenuItem
+                              onClick={() => {
+                                setSelectedUserForReferral(user);
+                                setIsReferralModalOpen(true);
+                              }}
+                            >
+                              <Copy className="mr-2 h-4 w-4" />
+                              Change Referral Code
+                            </DropdownMenuItem>
+                            <DropdownMenuItem
                               onClick={() =>
                                 handleToggleBan(user.id, user.isBanned)
                               }
@@ -504,6 +517,17 @@ export default function UsersPage() {
           userId={selectedUserId}
           isOpen={isModalOpen}
           onClose={handleCloseModal}
+        />
+
+        {/* Change Referral Code Modal */}
+        <ChangeReferralCodeModal
+          userId={selectedUserForReferral?.id}
+          currentCode={selectedUserForReferral?.referralCode}
+          isOpen={isReferralModalOpen}
+          onClose={() => {
+            setIsReferralModalOpen(false);
+            setSelectedUserForReferral(null);
+          }}
         />
       </div>
     </TooltipProvider>

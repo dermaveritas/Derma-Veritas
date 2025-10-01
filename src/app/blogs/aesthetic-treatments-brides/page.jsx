@@ -36,7 +36,7 @@ export default function AestheticTreatmentsBridesPage() {
 
           <div className="aspect-[16/9] mb-8 overflow-hidden rounded-lg">
             <img
-              src="/elegant-bride-in-white-dress-natural-lighting-wedd.png"
+              src="/images/elegant-bride-in-white-dress-natural-lighting.png"
               alt="Elegant bride in natural lighting"
               className="w-full h-full object-cover"
             />

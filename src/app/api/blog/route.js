@@ -132,7 +132,6 @@ export async function POST(request) {
       try {
         const imageData = JSON.parse(coverImageUrl);
         coverImage = imageData.url;
-        console.log("Parsed cover image URL:", coverImage);
       } catch (e) {
         console.error("Error parsing cover image URL:", e);
         console.log("Raw coverImageUrl value:", coverImageUrl);
@@ -152,8 +151,6 @@ export async function POST(request) {
       createdAt: new Date(),
       updatedAt: new Date(),
     };
-
-    console.log("Creating blog with data:", blogData);
 
     const docRef = await addDoc(collection(db, "blogs"), blogData);
 

@@ -120,6 +120,33 @@ export const useToggleUserBan = () => {
   });
 };
 
+// Update User Referral Code (Admin only)
+export const useUpdateUserReferralCode = () => {
+  return useMutation({
+    mutationFn: async ({ userId, referralCode }) => {
+      const response = await fetch(`/api/user/${userId}/referral-code`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ referralCode, isAdmin: true }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || "Failed to update referral code");
+      }
+
+      return response.json();
+    },
+    onSuccess: (data, variables) => {
+      const { userId } = variables;
+
+      // Invalidate user caches
+      queryClient.invalidateQueries({ queryKey: ["user", userId] });
+      queryClient.invalidateQueries({ queryKey: ["users"] });
+    },
+  });
+};
+
 // Get Users by Role
 export const useUsersByRole = (role) => {
   return useQuery({

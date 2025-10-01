@@ -25,14 +25,18 @@ export default function SunProtectionAfterProceduresPage() {
             </h1>
 
             <div className="flex gap-2 mb-8">
-              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">Face</span>
-              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">Aesthetics</span>
+              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">
+                Face
+              </span>
+              <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-md">
+                Aesthetics
+              </span>
             </div>
           </div>
 
           <div className="aspect-[16/9] mb-8 overflow-hidden rounded-lg">
             <img
-              src="/woman-wearing-sun-hat-smiling-outdoors-summer-prot.png"
+              src="/images/woman-wearing-sun-hat-smiling-outdoors.png"
               alt="Woman with sun protection outdoors"
               className="w-full h-full object-cover"
             />
@@ -40,25 +44,34 @@ export default function SunProtectionAfterProceduresPage() {
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground mb-8">
-              After investing in aesthetic treatments, proper sun protection becomes even more critical to maintain your
-              results and ensure optimal healing.
+              After investing in aesthetic treatments, proper sun protection
+              becomes even more critical to maintain your results and ensure
+              optimal healing.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Increased Photosensitivity</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Increased Photosensitivity
+            </h2>
             <p className="text-foreground mb-6">
-              Many aesthetic procedures, including chemical peels, laser treatments, and certain topical medications,
-              can make your skin more sensitive to UV radiation. This increased photosensitivity can last for weeks or
-              even months after treatment.
+              Many aesthetic procedures, including chemical peels, laser
+              treatments, and certain topical medications, can make your skin
+              more sensitive to UV radiation. This increased photosensitivity
+              can last for weeks or even months after treatment.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Protecting Your Investment</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Protecting Your Investment
+            </h2>
             <p className="text-foreground mb-6">
-              Sun exposure can reverse the benefits of your aesthetic treatments by causing hyperpigmentation, premature
-              aging, and compromising the healing process. Proper protection ensures you get the maximum benefit from
-              your investment.
+              Sun exposure can reverse the benefits of your aesthetic treatments
+              by causing hyperpigmentation, premature aging, and compromising
+              the healing process. Proper protection ensures you get the maximum
+              benefit from your investment.
             </p>
 
-            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">Essential Sun Protection Tips</h2>
+            <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">
+              Essential Sun Protection Tips
+            </h2>
             <ul className="list-disc pl-6 text-foreground mb-6">
               <li>Use broad-spectrum SPF 30 or higher daily</li>
               <li>Reapply sunscreen every 2 hours</li>
@@ -70,5 +83,5 @@ export default function SunProtectionAfterProceduresPage() {
         </article>
       </div>
     </div>
-  )
+  );
 }

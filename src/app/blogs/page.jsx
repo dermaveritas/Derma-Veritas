@@ -54,15 +54,6 @@ const staticBlogPosts = [
     directory: "anti-aging-skincare-routine",
   },
   {
-    id: "static-5",
-    title: "Anti-Wrinkle Treatment: Separating Myths from Facts",
-    date: "June 15, 2025",
-    image: "/images/professional-aesthetic-consultation-modern-clinic.png",
-    tags: ["Face", "Aesthetics"],
-    excerpt:
-      "Get the truth about Botox treatments and what to expect from the procedure.",
-  },
-  {
     id: "static-6",
     title: "Essential Summer Skincare Tips for Healthy Skin",
     date: "June 5, 2025",
@@ -132,7 +123,6 @@ export default function BlogsPage() {
 
   // Fetch dynamic blog posts (only published)
   const { data, isLoading, error } = useBlogsData("", "published");
-  console.log(data);
 
   // Helper function to convert Firestore timestamp to Date
   const convertFirestoreTimestamp = (timestamp) => {
@@ -144,15 +134,16 @@ export default function BlogsPage() {
 
   // Helper function to strip HTML tags and get plain text
   const stripHtmlTags = (html) => {
+    if (!html) return "";
     const doc = new DOMParser().parseFromString(html, "text/html");
     return doc.body.textContent || "";
   };
 
-  // Combine static and dynamic posts
+  // Process dynamic blog posts
   const dynamicBlogPosts =
     data?.blogs?.map((blog) => ({
       id: blog.id,
-      slug: slugify(blog.title), // Generate slug for dynamic posts
+      slug: slugify(blog.title),
       title: blog.title,
       date: convertFirestoreTimestamp(blog.createdAt).toLocaleDateString(
         "en-US",
@@ -167,11 +158,18 @@ export default function BlogsPage() {
         Array.isArray(blog.tags) && blog.tags.length > 0
           ? blog.tags
           : [blog.category || "General"],
-      excerpt: stripHtmlTags(blog.content).substring(0, 100) + "...", // Generate excerpt from content
+      excerpt: stripHtmlTags(blog.content).substring(0, 150) + "...",
+      isDynamic: true, // Add flag to identify dynamic posts
     })) || [];
 
-  // Merge static and dynamic posts, sort by date (newest first)
-  const allBlogPosts = [...staticBlogPosts, ...dynamicBlogPosts].sort(
+  // Add isDynamic flag to static posts
+  const processedStaticPosts = staticBlogPosts.map((post) => ({
+    ...post,
+    isDynamic: false,
+  }));
+
+  // Merge and sort all blog posts by date
+  const allBlogPosts = [...processedStaticPosts, ...dynamicBlogPosts].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
 
@@ -182,14 +180,13 @@ export default function BlogsPage() {
     }));
   };
 
-  const handleBlogClick = (slug) => {
-    // Check if this is a static post with a mapped directory
-    const directory = slugToDirectoryMap[slug];
-    if (directory) {
-      router.push(`/blogs/${directory}`);
+  const handleBlogClick = (post) => {
+    if (post.isDynamic) {
+      router.push(`/blogs/${post.slug}`);
     } else {
-      // For dynamic posts, use the slug directly
-      router.push(`/blogs/${slug}`);
+      // For static posts, use the directory if available
+      const directory = slugToDirectoryMap[post.slug];
+      router.push(`/blogs/${directory || post.slug}`);
     }
   };
 
@@ -304,114 +301,71 @@ export default function BlogsPage() {
             </p>
           </motion.div>
 
-          {isLoading && (
-            <p className="text-center text-gray-600">Loading blogs...</p>
-          )}
-          {error && (
+          {isLoading ? (
+            <div className="flex justify-center items-center min-h-[200px]">
+              <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-gray-900"></div>
+            </div>
+          ) : error ? (
             <p className="text-center text-red-600">
               Error loading blogs: {error.message}
             </p>
-          )}
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allBlogPosts.map((post, index) => (
-              <motion.div
-                key={post.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                onClick={() => handleBlogClick(post.slug)}
-              >
-                <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
-                  <img
-                    src={post.image || "/images/placeholder.svg"}
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center text-gray-500 text-sm mb-4">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {post.date}
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {allBlogPosts.map((post, index) => (
+                <motion.div
+                  key={post.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                  onClick={() => handleBlogClick(post)}
+                >
+                  <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
+                    <img
+                      src={post.image || "/images/placeholder.svg"}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
 
-                  <h3 className="text-xl font-light text-gray-900 mb-3 leading-tight group-hover:text-[#272728] transition-colors">
-                    {post.title}
-                  </h3>
+                  <div className="p-6">
+                    <div className="flex items-center text-gray-500 text-sm mb-4">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {post.date}
+                    </div>
 
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                    {post.excerpt}
-                  </p>
+                    <h3 className="text-xl font-light text-gray-900 mb-3 leading-tight group-hover:text-[#272728] transition-colors">
+                      {post.title}
+                    </h3>
 
-                  <div className="flex justify-between items-center">
-                    <span className="flex items-center text-gray-600 text-sm font-medium">
-                      Read more →
-                    </span>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                      {post.excerpt}
+                    </p>
 
-                    <div className="flex gap-2">
-                      {post.tags.map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    <div className="flex justify-between items-center">
+                      <span className="flex items-center text-gray-600 text-sm font-medium">
+                        Read more →
+                      </span>
+
+                      <div className="flex gap-2">
+                        {post.tags.map((tag, index) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
-
-      {/* CTA Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="bg-white px-6 sm:px-8 lg:px-12 py-12 lg:py-16 flex flex-col justify-center">
-          <h2 className="text-4xl lg:text-5xl font-light text-gray-800 mb-8 leading-tight">
-            Stay Informed About Your Skincare
-          </h2>
-
-          <p className="text-gray-600 text-lg leading-relaxed mb-6">
-            Our blog is regularly updated with new content to keep you informed
-            about the latest developments in skincare and aesthetic treatments.
-            Bookmark this page and check back often for new articles.
-          </p>
-
-          <p className="text-gray-600 text-lg leading-relaxed mb-12">
-            Have a topic you'd like us to cover? Visit our clinic for a
-            consultation and let us know what information would be most valuable
-            to you.
-          </p>
-
-          <Button
-            onClick={() => setBookingOpen(true)}
-            className="relative !px-8 !py-4 text-sm font-bold uppercase text-white bg-[#272728]  tracking-wide hover:bg-gray-700 transition-colors w-fit rounded-lg"
-          >
-            <span>BOOK A CONSULTATION</span>
-            <span className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent h-[35%] top-0 left-0 pointer-events-none" />
-          </Button>
-        </div>
-
-        <div className="bg-gray-50 relative flex items-center justify-center min-h-[400px] lg:min-h-[70vh]">
-          <div className="relative w-full h-full">
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-gray-400 rounded-full mx-auto mb-4"></div>
-                <div className="text-gray-600">Skincare Consultation Image</div>
-              </div>
-            </div>
-            <div className="absolute top-6 right-6 bg-white bg-opacity-95 px-6 py-4 rounded-lg shadow-lg">
-              <div className="text-lg font-light text-gray-800">Dr. Expert</div>
-              <div className="text-sm text-gray-600">Medical Director</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Clinics Modal */}
       <ClinicsModal
