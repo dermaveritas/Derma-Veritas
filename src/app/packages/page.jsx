@@ -34,7 +34,7 @@ export default function PackagesPage() {
       title: "Correct & Rejuvenate",
       description:
         "Exclusive membership tiers with ongoing treatments and benefits",
-      image: "/pacakage/Correct & Rejuvenate.jpg", // Fixed path to match your actual file
+      image: "/pacakage/Correct_&_Rejuvenate.jpg", // Fixed path to match your actual file
       href: "/packages/correctrejuvenate",
       treatments: "3 Membership Tiers",
       duration: "Monthly Plans",
