@@ -46,7 +46,7 @@ const treatments = [
     title: "Microneedling",
     image: "/skin_care/Microneedling Horizental.jpg",
     price: "From £450",
-    href: "/treatments/skinpen-microneedling",
+    href: "/treatments/microneedling",
   },
   {
     id: 7,
