@@ -19,8 +19,6 @@ import { Play } from "lucide-react";
 import BeforeAfterSection from "@/components/before-after-section";
 import Footer from "@/components/Footer";
 import ClubMembership from "@/components/ClubMembership";
-import MediaCoverage from "@/components/MediaCoverage";
-import MobileMenuDrawer from "@/components/MobileMenuDrawer";
 import {
   Eye,
   CheckCircle,

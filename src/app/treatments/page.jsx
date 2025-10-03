@@ -7,14 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useStore } from "@/store/zustand";
 
-// Function to generate slug from treatment name
-const generateSlug = (name) => {
-  return name
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^a-z0-9-]/g, "");
-};
-
 // Function to get correct href for each treatment
 const getTreatmentHref = (treatmentName) => {
   const treatmentMap = {
@@ -57,23 +49,21 @@ const treatmentCategories = [
         name: "Endolift",
         description:
           "Minimally invasive laser treatment for skin tightening and lifting.",
-        image:
-          "https://img.freepik.com/free-photo/overhead-view-pen-spiral-notebook-stethoscope-grey-background_23-2148129623.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/skin_care/Endolift horizental.jpg",
       },
       {
         id: 2,
         name: "Eight Point Facelift",
         description:
           "A non-surgical facelift technique that uses dermal fillers to restore volume and lift the face.",
-        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
+        image: "/injectables/8 Point Facelift horizental.jpg",
       },
       {
         id: 3,
         name: "Ablative CO2 Resurfacing",
         description:
           "Advanced CO2 laser treatment for skin resurfacing and rejuvenation.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/laser_treatments/Ablative horizental.jpg",
       },
     ],
   },
@@ -86,24 +76,21 @@ const treatmentCategories = [
         name: "Fractional CO2 Resurfacing",
         description:
           "Advanced CO2 laser treatment for skin resurfacing and rejuvenation.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/skin_care/CO2 Laser veritcal.jpg",
       },
       {
         id: 5,
         name: "Radio Frequency Microneedling",
         description:
           "Combine microneedling with radio frequency for enhanced skin tightening and rejuvenation.",
-        image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/skin_care/Microneedling Horizental.jpg",
       },
       {
         id: 6,
         name: "Pro Fusion",
         description:
           "Advanced skin treatment for enhanced facial contours and volume.",
-        image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/images/professional-aesthetic-consultation-modern-clinic-.png",
       },
     ],
   },
@@ -116,47 +103,36 @@ const treatmentCategories = [
         name: "V Hacker",
         description:
           "Innovative treatment for targeted body contouring and fat reduction.",
-        image: "https://thumbs.dreamstime.com/b/medical-treatment-26268599.jpg",
+        image: "/wellness/V-Hacker Biohacking horizental.jpg",
       },
       {
         id: 8,
         name: "Bio Hacking Formula",
         description:
           "Advanced regenerative therapy using exosomes to promote healing and rejuvenation.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/wellness/Exosome Therapy horizental.jpg",
       },
-      {
-        id: 9,
-        name: "Exosomes",
-        description:
-          "Advanced regenerative therapy using exosomes to promote healing and rejuvenation.",
-        image:
-          "https://img.freepik.com/free-photo/stethoscope-hanging-from-doctor-s-gown_1232-646.jpg?semt=ais_hybrid&w=740&q=80",
-      },
+
       {
         id: 10,
         name: "Anti-Wrinkle",
         description:
           "Reduce the appearance of fine lines and wrinkles with our advanced anti-wrinkle treatments.",
-        image:
-          "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
+        image: "/injectables/Anti Wrinkle horizental.jpg",
       },
       {
         id: 11,
         name: "PRP",
         description:
           "Platelet-rich plasma therapy for skin rejuvenation and healing.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
+        image: "/wellness/PRP Therapy horizental.jpg",
       },
       {
         id: 12,
         name: "Polynucleotide",
         description:
           "Polynucleotide treatments for skin regeneration and revitalization.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
+        image: "/skin_care/Polynucleotide horizental.jpg",
       },
     ],
   },
@@ -169,24 +145,21 @@ const treatmentCategories = [
         name: "Fillers",
         description:
           "Restore volume and enhance facial contours with our premium dermal fillers.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRalrdoQZBQZTJVkZjIf34lWjfB1hyyfRyeFV_ndZaxRiO8cjnQvrcGwvVBUJ4BluGd2bQ&usqp=CAU",
+        image: "/injectables/Dermal Filler horizental.jpg",
       },
       {
         id: 14,
         name: "Profhilo",
         description:
           "An innovative skin remodelling treatment that improves skin quality and elasticity.",
-        image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/injectables/Profhilo Veritcal.jpg",
       },
       {
         id: 15,
         name: "Skin Fill Bacio",
         description:
           "Advanced skinfill treatment for enhanced facial contours and volume.",
-        image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/injectables/Skinfill Bacio horizental.jpg",
       },
     ],
   },
@@ -199,40 +172,35 @@ const treatmentCategories = [
         name: "Hair PRP",
         description:
           "Platelet-rich plasma therapy for hair growth and rejuvenation.",
-        image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOphOwuZ-j4tfu-zKK3LmpjOay_rKdLhFsvzC0pS28rArMdh_dPQJlvuDvRFWlCXLEv5k&usqp=CAU",
+        image: "/wellness/PRP Therapy horizental.jpg",
       },
       {
         id: 17,
         name: "Hair Polynucleotide",
         description:
           "Stimulate hair growth and improve hair density with our advanced polynucleotide therapy.",
-        image:
-          "https://img.freepik.com/free-photo/overhead-view-pen-spiral-notebook-stethoscope-grey-background_23-2148129623.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/skin_care/Polynucleotide horizental.jpg",
       },
       {
         id: 18,
         name: "EXO SIGNAL",
         description:
           "Advanced hair treatment using exosome technology for hair growth and revitalization.",
-        image:
-          "https://img.freepik.com/free-photo/overhead-view-pen-spiral-notebook-stethoscope-grey-background_23-2148129623.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/hair_trearments/ExoSignal™ Hair Treatment horizental.jpg",
       },
       {
         id: 19,
         name: "Hair + Revitalizing Formula",
         description:
           "Comprehensive hair revitalizing treatment for healthier, stronger hair.",
-        image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+        image: "/wellness/Hair_Revitalizing.jpg",
       },
       {
         id: 20,
         name: "Prescription Hair Treatments",
         description:
           "Clinically tailored therapies designed to support hair growth, scalp health, and long-term hair maintenance.",
-        image:
-          "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
+        image: "/wellness/Hair_Revitalizing_Vertical.jpg",
       },
     ],
   },
@@ -246,7 +214,7 @@ const treatmentCategories = [
         description:
           "Professional therapy designed to support weight management, metabolic balance, and overall wellbeing.",
         image:
-          "https://media.istockphoto.com/id/1437830105/photo/cropped-shot-of-a-female-nurse-hold-her-senior-patients-hand-giving-support-doctor-helping.jpg?s=612x612&w=0&k=20&c=oKR-00at4oXr4tY5IxzqsswaLaaPsPRkdw2MJbYHWgA=",
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
       },
       {
         id: 22,
@@ -254,7 +222,7 @@ const treatmentCategories = [
         description:
           "Clinically guided therapies tailored to target specific skin concerns such as acne, hyperpigmentation, and sensitivity.",
         image:
-          "https://img.freepik.com/free-photo/anonymous-doctor-helping-colleague-write-prescription_23-2147896202.jpg?semt=ais_hybrid&w=740&q=80",
+          "https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8c2tpbmNhcmUlMjBwcm9kdWN0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
       },
     ],
   },
