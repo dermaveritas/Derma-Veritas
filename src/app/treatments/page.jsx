@@ -49,14 +49,14 @@ const treatmentCategories = [
         name: "Endolift",
         description:
           "Minimally invasive laser treatment for skin tightening and lifting.",
-        image: "/skin_care/Endolift horizental.jpg",
+        image: "/skin_care/Endolift Horizental.jpg",
       },
       {
         id: 2,
         name: "Eight Point Facelift",
         description:
           "A non-surgical facelift technique that uses dermal fillers to restore volume and lift the face.",
-        image: "/injectables/8 Point Facelift horizental.jpg",
+        image: "/injectables/8 Point Facelift Horizental.jpg",
       },
       {
         id: 3,
@@ -103,14 +103,14 @@ const treatmentCategories = [
         name: "V Hacker",
         description:
           "Innovative treatment for targeted body contouring and fat reduction.",
-        image: "/wellness/V-Hacker Biohacking horizental.jpg",
+        image: "/wellness/V-Hacker Biohacking Horizental.jpg",
       },
       {
         id: 8,
         name: "Bio Hacking Formula",
         description:
           "Advanced regenerative therapy using exosomes to promote healing and rejuvenation.",
-        image: "/wellness/Exosome Therapy horizental.jpg",
+        image: "/wellness/Exosome Therapy Horizental.jpg",
       },
 
       {
@@ -118,21 +118,21 @@ const treatmentCategories = [
         name: "Anti-Wrinkle",
         description:
           "Reduce the appearance of fine lines and wrinkles with our advanced anti-wrinkle treatments.",
-        image: "/injectables/Anti Wrinkle horizental.jpg",
+        image: "/injectables/Anti Wrinkle Horizental.jpg",
       },
       {
         id: 11,
         name: "PRP",
         description:
           "Platelet-rich plasma therapy for skin rejuvenation and healing.",
-        image: "/wellness/PRP Therapy horizental.jpg",
+        image: "/wellness/PRP Therapy Horizental.jpg",
       },
       {
         id: 12,
         name: "Polynucleotide",
         description:
           "Polynucleotide treatments for skin regeneration and revitalization.",
-        image: "/skin_care/Polynucleotide horizental.jpg",
+        image: "/skin_care/Polynucleotide Horizental.jpg",
       },
     ],
   },
@@ -145,7 +145,7 @@ const treatmentCategories = [
         name: "Fillers",
         description:
           "Restore volume and enhance facial contours with our premium dermal fillers.",
-        image: "/injectables/Dermal Filler horizental.jpg",
+        image: "/injectables/Dermal Filler Horizental.jpg",
       },
       {
         id: 14,
@@ -159,7 +159,7 @@ const treatmentCategories = [
         name: "Skin Fill Bacio",
         description:
           "Advanced skinfill treatment for enhanced facial contours and volume.",
-        image: "/injectables/Skinfill Bacio horizental.jpg",
+        image: "/injectables/Skinfill Bacio Horizental.jpg",
       },
     ],
   },
@@ -172,21 +172,21 @@ const treatmentCategories = [
         name: "Hair PRP",
         description:
           "Platelet-rich plasma therapy for hair growth and rejuvenation.",
-        image: "/wellness/PRP Therapy horizental.jpg",
+        image: "/wellness/PRP Therapy Horizental.jpg",
       },
       {
         id: 17,
         name: "Hair Polynucleotide",
         description:
           "Stimulate hair growth and improve hair density with our advanced polynucleotide therapy.",
-        image: "/skin_care/Polynucleotide horizental.jpg",
+        image: "/skin_care/Polynucleotide Horizental.jpg",
       },
       {
         id: 18,
         name: "EXO SIGNAL",
         description:
           "Advanced hair treatment using exosome technology for hair growth and revitalization.",
-        image: "/hair_trearments/ExoSignal™ Hair Treatment horizental.jpg",
+        image: "/hair_trearments/ExoSignal™ Hair Treatment Horizental.jpg",
       },
       {
         id: 19,
@@ -521,7 +521,7 @@ export default function TreatmentsPage() {
                   >
                     <div className="relative overflow-hidden">
                       <motion.img
-                        src={treatment.image}
+                        src={encodeURI(treatment.image)} // Use encodeURI to handle spaces and special characters
                         alt={treatment.name}
                         className="w-full h-48 object-cover"
                         onError={(e) => {
