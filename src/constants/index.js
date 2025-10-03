@@ -1115,6 +1115,10 @@ export const getActiveTreatment = (pathname) => {
     return "profusion-hydrafacial";
   }
 
+  if (pathname.includes("/treatments/profusion")) {
+    return "profusion-hydrafacial";
+  }
+
   if (pathname.includes("/menu/injectables/")) {
     const treatmentSlug = pathname.split("/menu/injectables/")[1];
     const treatmentMap = {

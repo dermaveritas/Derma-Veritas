@@ -33,7 +33,8 @@ import {
 import ReviewsSection from "@/components/reviews-section";
 import ConsultationSection from "@/components/consultation-section";
 
-export default function HandRejuvenationSection() {
+export default function ProFusionSection() {
+  // Changed from HandRejuvenationSection
   const [expandedSections, setExpandedSections] = useState({});
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -42,113 +43,111 @@ export default function HandRejuvenationSection() {
   const beforeAfterSectionRef = useRef(null);
   const { bookingOpen, setBookingOpen } = useStore();
 
+  // Update the cardData array to match package information
   const cardData = [
     {
       heading: "Results Seen",
-      value: "Immediate to Gradual",
-      description: "Depends on treatment type",
+      value: "Immediate",
+      description: "Progressive improvement with sessions",
     },
     {
       heading: "Results Last",
-      value: "3-12 Months",
+      value: "4-6 weeks",
     },
     {
       heading: "No. of Sessions",
-      value: "1-3 Treatments",
+      value: "6 recommended",
     },
     {
       heading: "Procedure Time",
-      value: "20-45 Minutes",
+      value: "40-75 minutes",
     },
     {
       heading: "Pain",
-      value: "Minimal",
-      description: "Topical anesthetic available",
+      value: "None",
+      description: "Relaxing treatment",
     },
     {
       heading: "Downtime",
-      value: "Minimal",
+      value: "None",
     },
     {
       heading: "Side Effects",
-      value: "Mild swelling/bruising",
+      value: "Minimal redness",
     },
     {
       heading: "Our Pricing",
-      value: "From £200",
+      value: "From £150",
       description: "View all",
     },
   ];
 
-  const faqs = [
+  // Update treatmentOptions to match package prices and details
+  const treatmentOptions = [
     {
-      question: "What is Hand Rejuvenation?",
-      answer:
-        "Hand Rejuvenation is a non-surgical treatment designed to restore youthfulness, smoothness, and volume to aging hands. It addresses signs of aging such as volume loss, prominent veins, wrinkles, and sun damage.",
+      title: "Signature + RF",
+      price: "£150 per session",
+      results: "Deep cleansing and hydration with RF tightening",
+      duration: "4-6 weeks",
+      sessions: "Package of 6 available (£750)",
+      time: "40 minutes",
+      downtime: "None",
     },
     {
-      question: "Which treatment is best for my hands?",
-      answer:
-        "The best treatment depends on your specific concerns. Dermal fillers are ideal for volume loss, PRP improves skin quality, polynucleotides enhance hydration, and laser therapy targets pigmentation and wrinkles.",
+      title: "Deluxe + RF",
+      price: "£180 per session",
+      results: "Enhanced results with custom booster and LED therapy",
+      duration: "4-6 weeks",
+      sessions: "Package of 6 available (£900)",
+      time: "50 minutes",
+      downtime: "None",
     },
     {
-      question: "How long do the results last?",
-      answer:
-        "Results vary by treatment: Dermal fillers last 6-12 months, PRP several months with maintenance, polynucleotides 3-6 months, and laser results are progressive over weeks.",
+      title: "Platinum + RF",
+      price: "£210 per session",
+      results: "Advanced treatment with lymphatic drainage",
+      duration: "4-6 weeks",
+      sessions: "Package of 6 available (£1,050)",
+      time: "70 minutes",
+      downtime: "None",
     },
     {
-      question: "Is the procedure painful?",
-      answer:
-        "Most treatments involve minimal discomfort. Topical anesthetics can be applied to ensure comfort during the procedure.",
-    },
-    {
-      question: "What is the downtime?",
-      answer:
-        "There is minimal downtime. Some treatments may cause mild swelling or bruising for a few days, while laser treatments may cause mild redness/peeling.",
-    },
-    {
-      question: "Who performs the treatment?",
-      answer:
-        "All treatments are performed exclusively by our expert physicians and clinical pharmacy leads who are industry-leading trainers.",
+      title: "Elite – Cellular Repair & Lift",
+      price: "£250 per session",
+      results: "Ultimate treatment with enhanced serums",
+      duration: "4-6 weeks",
+      sessions: "Package of 6 available (£1,250)",
+      time: "75 minutes",
+      downtime: "None",
     },
   ];
 
-  const treatmentOptions = [
+  // Update faqs to match package information
+  const faqs = [
     {
-      title: "Dermal Fillers (1–2 ml)",
-      price: "£300 – £450",
-      results: "Immediate restoration of volume and smoother appearance",
-      duration: "6–12 months",
-      sessions: "Typically 1",
-      time: "30 minutes",
-      downtime: "Minimal; mild swelling/bruising may occur",
+      question: "What is ProFusion HydraFacial?",
+      answer:
+        "ProFusion HydraFacial is an advanced skin rejuvenation treatment using state-of-the-art devices that combine cutting-edge technology with clinical expertise. It uses specialized serums, creams, and boosters to target unique skin concerns with remarkable results.",
     },
     {
-      title: "PRP Therapy (3 Sessions)",
-      price: "£500",
-      results: "Gradual improvement in skin quality, texture, and glow",
-      duration: "Results last several months with follow-up maintenance",
-      sessions: "3 (recommended)",
-      time: "30–45 minutes",
-      downtime: "Minimal",
+      question: "How often should I get a ProFusion HydraFacial?",
+      answer:
+        "For optimal results, we recommend starting with a series of treatments spaced 4-6 weeks apart. Many clients then transition to maintenance treatments every 8-12 weeks depending on their skin goals and concerns.",
     },
     {
-      title: "Polynucleotide (PN) Therapy (2–3 Sessions)",
-      price: "£350 – £500",
-      results: "Increased hydration, elasticity, and tissue regeneration",
-      duration: "3–6 months",
-      sessions: "2–3 depending on goals",
-      time: "30 minutes",
-      downtime: "Minimal",
+      question: "Is there any downtime after the treatment?",
+      answer:
+        "There is minimal to no downtime with ProFusion HydraFacial. You may experience slight redness immediately after the treatment, but this typically subsides within a few hours. You can resume normal activities immediately after your session.",
     },
     {
-      title: "Laser / Light Therapy (CO₂ / Phototherapy)",
-      price: "From £200 per session",
-      results: "Reduction in pigmentation, age spots, and wrinkles",
-      duration: "Progressive results over weeks",
-      sessions: "1–3",
-      time: "20–40 minutes",
-      downtime: "Mild redness/peeling for a few days",
+      question: "Who is a good candidate for ProFusion HydraFacial?",
+      answer:
+        "Almost anyone can benefit from ProFusion HydraFacial treatments. They are suitable for all skin types and address various concerns including fine lines, wrinkles, hyperpigmentation, congested pores, oily skin, and dull complexion.",
+    },
+    {
+      question: "Can I combine ProFusion HydraFacial with other treatments?",
+      answer:
+        "Yes, ProFusion HydraFacial can be effectively combined with other treatments for enhanced results. Our experts will create a customized treatment plan based on your skin goals during your consultation.",
     },
   ];
 
@@ -190,23 +189,24 @@ export default function HandRejuvenationSection() {
               <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
                 <div className="w-12 h-px bg-gray-400"></div>
                 <span className="text-gray-600 text-sm font-medium tracking-wide">
-                  Non-Surgical Treatment
+                  Advanced Skin Rejuvenation
                 </span>
               </div>
 
               {/* Main Heading */}
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Hand Rejuvenation
+                ProFusion
                 <br />
-                for youthful,
+                HydraFacial
                 <br />
-                smooth hands
+                Treatment
               </h2>
 
               {/* Description */}
               <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-xl mx-auto md:mx-0 mt-6">
-                Restore youthfulness, smoothness, and volume to aging hands with
-                our advanced non-surgical treatments at Derma Veritas.
+                Ultimate skin rejuvenation using state-of-the-art ProFusion
+                devices that combine cutting-edge technology with clinical
+                expertise.
               </p>
 
               {/* Buttons */}
@@ -226,137 +226,10 @@ export default function HandRejuvenationSection() {
             <div className="relative flex items-center justify-center">
               <div className="rounded-3xl overflow-hidden bg-gray-200 aspect-[4/5] w-full max-w-lg">
                 <img
-                  src="/images/professional-aesthetic-consultation-modern-clinic-.png"
-                  alt="Professional hand rejuvenation treatment"
+                  src="/pacakage/Pro-Fusion.jpg"
+                  alt="Professional ProFusion HydraFacial treatment"
                   className="w-full h-full object-cover"
                 />
-
-                {/* Review Badge */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-white border border-gray-200 p-6 md:p-8 shadow-[-4px_4px_0_0_rgba(0,0,0,0.1)]">
-            {/* Top Row */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-8">
-              <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                  <Eye className="w-5 h-5 text-gray-600" />
-                  <span className="text-gray-600 text-sm font-light">
-                    {cardData[0].heading}
-                  </span>
-                </div>
-                <h3 className="text-lg font-light text-gray-900 mb-1">
-                  {cardData[0].value}
-                </h3>
-                <p className="text-gray-500 text-sm font-light">
-                  {cardData[0].description}
-                </p>
-              </div>
-
-              <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                  <CheckCircle className="w-5 h-5 text-gray-600" />
-                  <span className="text-gray-600 text-sm font-light">
-                    {cardData[1].heading}
-                  </span>
-                </div>
-                <h3 className="text-lg font-light text-gray-900 mb-1">
-                  {cardData[1].value}
-                </h3>
-                {cardData[1].description && (
-                  <p className="text-gray-500 text-sm font-light">
-                    {cardData[1].description}
-                  </p>
-                )}
-              </div>
-
-              <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                  <RotateCcw className="w-5 h-5 text-gray-600" />
-                  <span className="text-gray-600 text-sm font-light">
-                    {cardData[2].heading}
-                  </span>
-                </div>
-                <h3 className="text-lg font-light text-gray-900">
-                  {cardData[2].value}
-                </h3>
-              </div>
-
-              <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                  <Clock className="w-5 h-5 text-gray-600" />
-                  <span className="text-gray-600 text-sm font-light">
-                    {cardData[3].heading}
-                  </span>
-                </div>
-                <h3 className="text-lg font-light text-gray-900">
-                  {cardData[3].value}
-                </h3>
-              </div>
-            </div>
-
-            {/* Bottom Row */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
-              <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                  <Frown className="w-5 h-5 text-gray-600" />
-                  <span className="text-gray-600 text-sm font-light">
-                    {cardData[4].heading}
-                  </span>
-                </div>
-                <h3 className="text-lg font-light text-gray-900 mb-1">
-                  {cardData[4].value}
-                </h3>
-                <p className="text-gray-500 text-sm font-light">
-                  {cardData[4].description}
-                </p>
-              </div>
-
-              <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                  <TrendingDown className="w-5 h-5 text-gray-600" />
-                  <span className="text-gray-600 text-sm font-light">
-                    {cardData[5].heading}
-                  </span>
-                </div>
-                <h3 className="text-lg font-light text-gray-900">
-                  {cardData[5].value}
-                </h3>
-              </div>
-
-              <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                  <AlertTriangle className="w-5 h-5 text-gray-600" />
-                  <span className="text-gray-600 text-sm font-light">
-                    {cardData[6].heading}
-                  </span>
-                </div>
-                <h3 className="text-lg font-light text-gray-900">
-                  {cardData[6].value}
-                </h3>
-              </div>
-
-              <div className="text-center md:text-left">
-                <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                  <Pound className="w-5 h-5 text-gray-600" />
-                  <span className="text-gray-600 text-sm font-light">
-                    {cardData[7].heading}
-                  </span>
-                </div>
-                <h3 className="text-lg font-light text-gray-900 mb-1">
-                  {cardData[7].value}
-                </h3>
-                <p
-                  onClick={scrollToPricing}
-                  className="text-gray-500 text-sm font-light underline cursor-pointer hover:text-gray-700"
-                >
-                  {cardData[7].description}
-                </p>
               </div>
             </div>
           </div>
@@ -368,84 +241,76 @@ export default function HandRejuvenationSection() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              What is Hand Rejuvenation?
+              What is ProFusion HydraFacial?
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Hand Rejuvenation is a non-surgical treatment designed to restore
-              youthfulness, smoothness, and volume to aging hands. Over time,
-              hands often show signs of aging such as volume loss, prominent
-              veins, wrinkles, and sun damage. Using advanced techniques, we
-              rejuvenate the skin, restore volume, and improve overall texture
-              for naturally youthful-looking hands.
+              ProFusion HydraFacial represents the pinnacle of skin rejuvenation
+              technology. Our state-of-the-art devices combine cutting-edge
+              technology with clinical expertise, using specialized serums,
+              creams, and boosters that target your unique skin concerns for
+              remarkable results.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-gray-900">
-                Benefits Include:
+                Key Benefits:
               </h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  Restores lost volume and plumpness
+                  Deep cleansing and hydration
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  Reduces appearance of veins and tendons
+                  Exfoliation and extraction without irritation
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  Improves skin quality, hydration, and texture
+                  RF technology for skin tightening
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  Diminishes age spots, fine lines, and wrinkles
+                  Customizable for specific skin concerns
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                  Non-surgical, minimally invasive, and natural-looking results
+                  Immediate results with no downtime
                 </li>
               </ul>
             </div>
 
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-gray-900">
-                Why Choose Our Clinic:
+                Why Choose Our ProFusion Treatment:
               </h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Treatments performed only by expert doctors & clinical
-                  pharmacy leads
+                  Latest technology with advanced RF capabilities
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Combination of advanced injectables and laser-based therapies
+                  Performed by certified skincare specialists
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Tailored treatment plans depending on skin type and hand
-                  condition
+                  Personalized treatment plans for your skin type
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Safe, effective, and natural-looking rejuvenation
+                  Medical-grade products and equipment
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  Minimal downtime with long-lasting results
+                  Luxurious experience with exceptional results
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-
-      {/* BeforeAfterSection would go here if you have hand-specific before/after images */}
-      <div ref={beforeAfterSectionRef}>
-        <BeforeAfterSection />
-      </div>
 
       <ConsultationSection />
 
@@ -531,7 +396,11 @@ export default function HandRejuvenationSection() {
                     </div>
                   </div>
 
-                  <button className="w-full mt-4 px-4 py-2 border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition">
+                  <button
+                    className="w-full mt-4 px-4 py-2 border border-gray-900 text-gray-900 text-sm font-medium hover:bg-gray-900 hover:text-white transition"
+                    onClick={() => setBookingOpen(true)}
+                    data-treatment="profusion-hydrafacial"
+                  >
                     BOOK NOW
                   </button>
                 </div>

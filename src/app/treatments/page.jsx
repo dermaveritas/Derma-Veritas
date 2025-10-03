@@ -90,7 +90,7 @@ const treatmentCategories = [
         name: "Pro Fusion",
         description:
           "Advanced skin treatment for enhanced facial contours and volume.",
-        image: "/images/professional-aesthetic-consultation-modern-clinic-.png",
+        image: "/pacakage/Pro-Fusion.jpg",
       },
     ],
   },
@@ -179,7 +179,7 @@ const treatmentCategories = [
         name: "Hair Polynucleotide",
         description:
           "Stimulate hair growth and improve hair density with our advanced polynucleotide therapy.",
-        image: "/skin_care/Polynucleotide Horizental.jpg",
+        image: "/injectables/Polynucleotide Hair Loss Horizental.jpg",
       },
       {
         id: 18,

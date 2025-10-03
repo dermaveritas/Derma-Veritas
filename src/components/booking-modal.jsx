@@ -93,6 +93,17 @@ export function BookingModal({
     }
   }, [user, profileData, selectedTreatment, open]);
 
+  useEffect(() => {
+    // Set initial treatment value if coming from ProFusion pages
+    const pathname = window.location.pathname;
+    if ((pathname.includes('/treatments/profusion') || pathname.includes('/packages/profusion')) && open) {
+      setFormData(prev => ({
+        ...prev,
+        treatment: 'profusion-hydrafacial'
+      }));
+    }
+  }, [open]);
+
   // Reset treatmentOption when treatment changes
   useEffect(() => {
     if (formData.treatment) {
