@@ -66,7 +66,7 @@ const GallerySection = ({ showAll = true }) => {
       category: "skin-rejuvenation",
       title: "Skin Treatment",
       description: "Texture enhancement",
-      size: "small",
+      size: "medium",
     },
     {
       id: 9,
@@ -310,7 +310,7 @@ const GallerySection = ({ showAll = true }) => {
         {!showAll && (
           <div className="text-center mt-12">
             <Button
-              onClick={() => window.location.href = '/gallery'}
+              onClick={() => (window.location.href = "/gallery")}
               className="bg-gray-900 text-white hover:bg-gray-800 px-8 py-3 text-lg font-medium rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               View Full Gallery
