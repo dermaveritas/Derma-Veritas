@@ -51,14 +51,7 @@ const GallerySection = ({ showAll = true }) => {
       description: "Permanent hair reduction",
       size: "medium",
     },
-    {
-      id: 6,
-      src: "/gallery/Quad lasier.jpg 1.jpg",
-      category: "hair-removal",
-      title: "Quad Laser Treatment",
-      description: "Hair removal results",
-      size: "medium",
-    },
+
     {
       id: 7,
       src: "/gallery/Untitled-2.png",
@@ -73,7 +66,7 @@ const GallerySection = ({ showAll = true }) => {
       category: "skin-rejuvenation",
       title: "Skin Treatment",
       description: "Texture enhancement",
-      size: "medium",
+      size: "small",
     },
     {
       id: 9,
