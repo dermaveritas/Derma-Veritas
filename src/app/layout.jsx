@@ -23,8 +23,8 @@ export const metadata = {
   publisher: "Derma Veritas",
 
   icons: {
-    icon: "/logo_white.png", // keep favicon for browser tab
-    shortcut: "/logo_white.png",
+    icon: "/favicon2.jpg", // keep favicon for browser tab
+    shortcut: "/favicon2.jpg",
   },
 
   metadataBase: new URL("https://dermaveritas.com"),
