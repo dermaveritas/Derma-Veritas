@@ -12,6 +12,8 @@ import {
   updateDoc,
   arrayUnion,
 } from "firebase/firestore";
+import { sendEmail } from "../../../utils/sendemail.js";
+import { generateAppointmentEmailHTML } from "../../../emails/appointment.js";
 
 // GET - Get appointments
 export async function GET(request) {
@@ -139,14 +141,15 @@ export async function POST(request) {
     // Handle referral code validation (if provided)
     if (body.referralCode && body.referralCode.trim()) {
       const providedReferralCode = body.referralCode.trim().toUpperCase();
-      
+
       // Check if user is trying to use their own referral code
       if (providedReferralCode === userData.referralCode) {
         return Response.json(
           {
             success: false,
-            message: "You cannot use your own referral code. Please remove it or use a different code.",
-            errorType: "INVALID_REFERRAL_CODE"
+            message:
+              "You cannot use your own referral code. Please remove it or use a different code.",
+            errorType: "INVALID_REFERRAL_CODE",
           },
           { status: 400 }
         );
@@ -163,7 +166,7 @@ export async function POST(request) {
           {
             success: false,
             message: `You have already used the referral code "${providedReferralCode}" before. Each referral code can only be used once per user. Please remove it or use a different code.`,
-            errorType: "REFERRAL_CODE_ALREADY_USED"
+            errorType: "REFERRAL_CODE_ALREADY_USED",
           },
           { status: 400 }
         );
@@ -180,8 +183,9 @@ export async function POST(request) {
         return Response.json(
           {
             success: false,
-            message: "Invalid referral code. Please check the code and try again, or remove it to continue without a referral.",
-            errorType: "INVALID_REFERRAL_CODE"
+            message:
+              "Invalid referral code. Please check the code and try again, or remove it to continue without a referral.",
+            errorType: "INVALID_REFERRAL_CODE",
           },
           { status: 400 }
         );
@@ -292,7 +296,7 @@ export async function POST(request) {
             userDiscount: discountAmount,
             createdAt: new Date(),
             updatedAt: new Date(),
-          }
+          },
         ];
 
         // Update referrer's document with reward
@@ -304,7 +308,9 @@ export async function POST(request) {
         });
 
         referralRewardProcessed = true;
-        console.log(`Referral reward of £${rewardAmount} added for referrer ${referrerId}, user discount of £${discountAmount} applied`);
+        console.log(
+          `Referral reward of £${rewardAmount} added for referrer ${referrerId}, user discount of £${discountAmount} applied`
+        );
       } catch (error) {
         console.error("Error processing referral reward:", error);
         // Don't fail the appointment creation if referral processing fails
@@ -324,13 +330,33 @@ export async function POST(request) {
           userDiscount: discountAmount,
           originalPrice,
           finalPrice,
-        }
+        },
       ];
 
       await updateDoc(userRef, {
         usedReferralCodes: updatedUsedCodes,
         updatedAt: new Date(),
       });
+    }
+
+    // Send notification email to admin
+    try {
+      const emailHTML = generateAppointmentEmailHTML({
+        ...newAppointment,
+        appointmentNumber,
+        createdAt: newAppointment.createdAt,
+      });
+      await sendEmail({
+        to: process.env.EMAIL_USER,
+        subject: `New Appointment Booked`,
+        html: emailHTML,
+      });
+    } catch (emailError) {
+      console.error(
+        "Error sending appointment notification email:",
+        emailError
+      );
+      // Don't fail the appointment creation if email fails
     }
 
     return Response.json({
