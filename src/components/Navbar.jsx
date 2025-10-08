@@ -81,7 +81,7 @@ export default function Navbar() {
       content:
         "Experience world-class skin & hair treatments in our premium clinic",
       cta: "Visit Us",
-      link: "/locations",
+      link: "/treatments",
     },
   ];
 
