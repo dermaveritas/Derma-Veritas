@@ -23,7 +23,6 @@ export function generateAppointmentEmailHTML(appointmentData) {
       </h2>
       
       <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
-        <p><strong>Appointment Number:</strong> ${appointmentNumber}</p>
         <p><strong>Client Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
