@@ -1,9 +1,12 @@
 import { db } from "@/config/db";
+import { doc, updateDoc } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
   try {
-    const { userId, planName, paymentStatus } = await req.json();
+    const body = await req.json();
+
+    const { userId, planName, paymentStatus, paymentDetails } = body;
 
     if (!userId || !planName || !paymentStatus) {
       return NextResponse.json(
@@ -16,18 +19,22 @@ export async function POST(req) {
       return NextResponse.json({ message: "Payment not completed" });
     }
 
-    await db.user.update({
-      where: { id: userId },
-      data: {
-        membershipPlan: planName,
-        membershipStatus: "active",
-        planUpdatedAt: new Date(),
+    const userRef = doc(db, "users", userId);
+    await updateDoc(userRef, {
+      membershipPlan: planName,
+      membershipStatus: "active",
+      planUpdatedAt: new Date().toISOString(),
+      membershipPaymentInfo: {
+        monthlyPrice: paymentDetails?.monthlyPrice || 0,
+        stripeCustomerId: paymentDetails?.stripeCustomerId || null,
+        stripeSessionId: paymentDetails?.stripeSessionId || null,
+        stripeSubscriptionId: paymentDetails?.stripeSubscriptionId || null,
+        subscriptionStarted: new Date().toISOString(),
       },
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Payment status update error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
