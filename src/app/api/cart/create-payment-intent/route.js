@@ -2,7 +2,9 @@ import Stripe from "stripe";
 import { db } from "@/config/db";
 import { doc, getDoc } from "firebase/firestore";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 export async function POST(req) {
   try {
@@ -27,7 +29,7 @@ export async function POST(req) {
     }
 
     const cartData = cartSnap.data();
-    
+
     if (!cartData.products || cartData.products.length === 0) {
       return Response.json({
         success: false,

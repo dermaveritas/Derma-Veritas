@@ -2,22 +2,24 @@ import { db } from "../../../config/db.js";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 // Helper function to calculate total price
 async function calculateTotalPrice(products) {
   let totalPrice = 0;
-  
+
   for (const item of products) {
     const productRef = doc(db, "products", item.productId);
     const productSnap = await getDoc(productRef);
-    
+
     if (productSnap.exists()) {
       const productData = productSnap.data();
       totalPrice += productData.price * item.quantity;
     }
   }
-  
+
   return totalPrice;
 }
 
@@ -50,13 +52,13 @@ export async function POST(request) {
       }
 
       const cartData = cartSnap.data();
-      
+
       // Populate product details with full product data
       const populatedProducts = [];
       for (const item of cartData.products) {
         const productRef = doc(db, "products", item.productId);
         const productSnap = await getDoc(productRef);
-        
+
         if (productSnap.exists()) {
           const productData = productSnap.data();
           populatedProducts.push({
@@ -119,7 +121,7 @@ export async function POST(request) {
     // Verify product exists and get its data
     const productRef = doc(db, "products", productId);
     const productSnap = await getDoc(productRef);
-    
+
     if (!productSnap.exists()) {
       return Response.json({
         success: false,
@@ -175,7 +177,7 @@ export async function POST(request) {
       cartData.products.map(async (item) => {
         const productRef = doc(db, "products", item.productId);
         const productSnap = await getDoc(productRef);
-        
+
         if (productSnap.exists()) {
           const productData = productSnap.data();
           return {

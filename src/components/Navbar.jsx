@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, ChevronDown, Gift, Star, ChevronRight } from "lucide-react";
+import { Menu, ChevronDown, Gift, Star, ChevronRight, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
@@ -253,7 +253,7 @@ export default function Navbar() {
               { name: "GALLERY", href: "/gallery" },
               { name: "SHOP", href: "/shop" },
               { name: "ABOUT US", href: "/about" },
-              { name: "CONTACT", href: "/contact" },
+              { name: "CONTACT US", href: "/contact" },
             ].map((item) => (
               <Link
                 key={item.name}
@@ -269,6 +269,17 @@ export default function Navbar() {
 
           {/* Right - Buttons */}
           <div className="flex items-center gap-3 sm:gap-4">
+            {/* Phone Number - Visible on desktop */}
+            <a
+              href="tel:01902243398"
+              className={`hidden lg:flex items-center gap-1.5 text-xs font-medium transition-colors duration-200 hover:opacity-80 ${
+                isScrolled ? "text-white" : textColor
+              }`}
+            >
+              <Phone className="w-3.5 h-3.5" />
+              <span>01902 243398</span>
+            </a>
+
             <div className="hidden md:block">
               <button
                 onClick={() => setBookingOpen(true)}

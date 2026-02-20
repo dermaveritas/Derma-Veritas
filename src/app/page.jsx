@@ -2,6 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { MessageCircle, ShieldCheck, BadgeCheck } from "lucide-react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTiktok,
+  FaSnapchat,
+  FaReddit,
+} from "react-icons/fa";
 import { useState } from "react";
 import TreatmentSlider from "@/components/TreatmentSlider";
 import ReviewsSection from "@/components/reviews-section";
@@ -130,6 +137,48 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-gray-100/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-white/60 to-gray-200/80 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-bottom-left"></div>
             </button>
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="flex items-center gap-4 mt-6">
+            {[
+              {
+                name: "Facebook",
+                href: "https://www.facebook.com/share/1L27aEP3Fj/",
+                icon: FaFacebookF,
+              },
+              {
+                name: "Instagram",
+                href: "https://www.instagram.com/derma_veritas?igsh=MTNtcmFjY254bWN4dw==",
+                icon: FaInstagram,
+              },
+              {
+                name: "TikTok",
+                href: "https://www.tiktok.com/@derma.veritas?_t=ZS-8xw9tsrJMEJ&_r=1",
+                icon: FaTiktok,
+              },
+              {
+                name: "Snapchat",
+                href: "https://www.snapchat.com/add/dermaveritas?share_id=XRGq8aGebuM&locale=en-US",
+                icon: FaSnapchat,
+              },
+              {
+                name: "Reddit",
+                href: "https://www.reddit.com/user/Derma-Veritas",
+                icon: FaReddit,
+              },
+            ].map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-white/15 border border-white/25 flex items-center justify-center text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300"
+                aria-label={social.name}
+              >
+                <social.icon className="w-4 h-4" />
+              </a>
+            ))}
           </div>
         </div>
       </main>

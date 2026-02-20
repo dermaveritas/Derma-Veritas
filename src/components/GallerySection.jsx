@@ -56,48 +56,48 @@ const GallerySection = ({ showAll = true }) => {
       id: 7,
       src: "/gallery/Untitled-2.png",
       category: "skin-rejuvenation",
-      title: "Skin Treatment",
-      description: "Complexion improvement",
+      title: "Exosome Skin Therapy",
+      description: "Deep cellular rejuvenation results",
       size: "small",
     },
     {
       id: 8,
       src: "/gallery/Untitled-3.png",
       category: "skin-rejuvenation",
-      title: "Skin Treatment",
-      description: "Texture enhancement",
+      title: "RF Microneedling Results",
+      description: "Texture and tone enhancement",
       size: "medium",
     },
     {
       id: 9,
       src: "/gallery/Untitled-4.png",
       category: "skin-rejuvenation",
-      title: "Skin Treatment",
-      description: "Radiance boost",
+      title: "Chemical Peel Treatment",
+      description: "Radiance and clarity boost",
       size: "small",
     },
     {
       id: 10,
       src: "/gallery/Untitled-5.png",
       category: "skin-rejuvenation",
-      title: "Skin Treatment",
-      description: "Pigmentation treatment",
+      title: "Pigmentation Correction",
+      description: "Even skin tone restoration",
       size: "medium",
     },
     {
       id: 11,
       src: "/gallery/Untitled-6.png",
       category: "skin-rejuvenation",
-      title: "Skin Treatment",
-      description: "Tone improvement",
+      title: "Pro Fusion Hydrafacial",
+      description: "Deep cleanse and glow results",
       size: "medium",
     },
     {
       id: 12,
       src: "/gallery/Untitled-7.png",
       category: "skin-rejuvenation",
-      title: "Skin Treatment",
-      description: "Overall rejuvenation",
+      title: "V-Hacker Anti-Aging",
+      description: "Firmer, youthful skin results",
       size: "small",
     },
     {
@@ -190,6 +190,7 @@ const GallerySection = ({ showAll = true }) => {
     { key: "hair-restoration", label: "Hair Restoration" },
     { key: "skin-rejuvenation", label: "Skin Rejuvenation" },
     { key: "hair-removal", label: "Hair Removal" },
+    { key: "prp-hair-restoration", label: "PRP Hair Restoration" },
   ];
 
   const filteredItems =
@@ -266,11 +267,10 @@ const GallerySection = ({ showAll = true }) => {
               <button
                 key={filter.key}
                 onClick={() => setSelectedFilter(filter.key)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                  selectedFilter === filter.key
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${selectedFilter === filter.key
                     ? "bg-gray-900 text-white shadow-lg"
                     : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
-                }`}
+                  }`}
               >
                 {filter.label}
               </button>
@@ -295,11 +295,11 @@ const GallerySection = ({ showAll = true }) => {
                 className="w-full h-full object-cover"
               />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end">
-                <div className="p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="font-semibold text-lg">{item.title}</h3>
-                  <p className="text-sm opacity-90">{item.description}</p>
+              {/* Overlay - Always visible */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end">
+                <div className="p-4 text-white">
+                  <h3 className="font-semibold text-sm">{item.title}</h3>
+                  <p className="text-xs opacity-90">{item.description}</p>
                 </div>
               </div>
             </div>

@@ -224,9 +224,8 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
       >
         <span>{label}</span>
         <ChevronDown
-          className={`w-6 h-6 transition-transform ${
-            expandedSections[section] ? "rotate-180" : ""
-          }`}
+          className={`w-6 h-6 transition-transform ${expandedSections[section] ? "rotate-180" : ""
+            }`}
         />
       </button>
 
@@ -264,9 +263,8 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
       >
         <span className="text-xl font-light text-black">{label}</span>
         <ChevronDown
-          className={`w-6 h-6 text-black transition-transform ${
-            expandedSections[section] ? "rotate-180" : ""
-          }`}
+          className={`w-6 h-6 text-black transition-transform ${expandedSections[section] ? "rotate-180" : ""
+            }`}
         />
       </button>
 
@@ -396,7 +394,7 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                   { name: "GALLERY", href: "/gallery" },
                   { name: "SHOP", href: "/shop" },
                   { name: "ABOUT US", href: "/about" },
-                  { name: "CONTACT", href: "/contact" },
+                  { name: "CONTACT US", href: "/contact" },
                 ].map((item) => (
                   <div
                     key={item.name}
@@ -612,7 +610,7 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                       className="block text-lg font-light text-black hover:text-gray-600 transition-colors cursor-pointer"
                       onClick={() => setIsOpen(false)}
                     >
-                      CONTACT
+                      CONTACT US
                     </Link>
                   </div>
                 </div>

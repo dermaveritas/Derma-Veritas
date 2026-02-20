@@ -2,7 +2,9 @@ import { db } from "../../../../config/db.js";
 import { doc, getDoc } from "firebase/firestore";
 import Stripe from "stripe";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 export async function POST(request) {
   try {
@@ -39,13 +41,13 @@ export async function POST(request) {
       cartData.products.map(async (item) => {
         const productRef = doc(db, "products", item.productId);
         const productSnap = await getDoc(productRef);
-        
+
         if (!productSnap.exists()) {
           throw new Error(`Product ${item.productId} not found`);
         }
-        
+
         const product = productSnap.data();
-        
+
         return {
           price_data: {
             currency: "usd",

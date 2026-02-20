@@ -169,6 +169,14 @@ export default function PolynucleotideTreatmentsSection() {
                   VIEW PRICES
                   <span className="absolute inset-0 bg-gradient-to-b from-black/5 to-transparent h-[35%] top-0 left-0 pointer-events-none" />
                 </button>
+                {/* BOOK NOW */}
+                <button
+                  onClick={() => setBookingOpen(true)}
+                  className="relative px-8 py-4 text-sm font-bold uppercase text-white bg-[#272728] rounded-lg tracking-wider hover:bg-[#3a3a3b] transition-colors"
+                >
+                  BOOK NOW
+                  <span className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent h-[35%] top-0 left-0 pointer-events-none" />
+                </button>
               </div>
             </div>
 
@@ -595,18 +603,16 @@ export default function PolynucleotideTreatmentsSection() {
               >
                 {faq.question}
                 <ChevronDown
-                  className={`h-5 w-5 text-gray-600 transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
-                  }`}
+                  className={`h-5 w-5 text-gray-600 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  openIndex === index
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index
                     ? "max-h-40 opacity-100"
                     : "max-h-0 opacity-0"
-                }`}
+                  }`}
               >
                 <div className="pb-4 text-gray-600">{faq.answer}</div>
               </div>
@@ -626,7 +632,7 @@ export default function PolynucleotideTreatmentsSection() {
       </section>
 
       <ClubMembership />
-       
+
     </>
   );
 }

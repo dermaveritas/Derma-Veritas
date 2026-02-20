@@ -33,7 +33,10 @@ import {
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
+  Phone,
+  Mail,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { treatmentOptions } from "@/constants";
 import LoginModal from "@/app/login/_components/LoginModel";
 import { useStore } from "@/store/zustand";
@@ -120,13 +123,7 @@ export function BookingModal({
     // Clear any previous referral errors
     setReferralError(null);
 
-    // Check if user is logged in - redirect to login if not
-    if (!user) {
-      const currentUrl = window.location.pathname + window.location.search;
-      sessionStorage.setItem("redirectAfterLogin", currentUrl);
-      router.push("/login");
-      return;
-    }
+    // No login required — users can submit directly
 
     try {
       // Get selected treatment details
@@ -383,6 +380,65 @@ export function BookingModal({
             </SheetHeader>
 
             <form onSubmit={handleSubmit} className="space-y-6 mt-8">
+              {/* Quick Contact Options */}
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-6 space-y-5">
+                <div className="text-center">
+                  <h3 className="font-bold text-white text-lg">
+                    Get In Touch Directly
+                  </h3>
+                  <p className="text-gray-300 text-sm mt-1">
+                    Choose the easiest way to reach us
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <a
+                    href="tel:01902243398"
+                    className="flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-lg transition-all group"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-colors">
+                      <Phone className="w-5 h-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-bold text-gray-900 block">Call Us</span>
+                      <span className="text-sm text-gray-500">01902 243398</span>
+                    </div>
+                  </a>
+                  <a
+                    href="https://wa.me/447741340615"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-lg transition-all group"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors">
+                      <FaWhatsapp className="w-5 h-5 text-green-600" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-bold text-gray-900 block">WhatsApp</span>
+                      <span className="text-sm text-gray-500">+44 7741 340615</span>
+                    </div>
+                  </a>
+                  <a
+                    href="mailto:info@dermaveritas.com"
+                    className="flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-lg transition-all group"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 group-hover:bg-purple-200 transition-colors">
+                      <Mail className="w-5 h-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <span className="text-sm font-bold text-gray-900 block">Email Us</span>
+                      <span className="text-sm text-gray-500">info@dermaveritas.com</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="flex items-center gap-4">
+                <div className="flex-1 h-px bg-gray-200"></div>
+                <span className="text-xs text-gray-500 font-medium uppercase">Or fill the form below</span>
+                <div className="flex-1 h-px bg-gray-200"></div>
+              </div>
+
               {/* Treatment Selection */}
               <div className="space-y-6">
                 <div className="space-y-3">
@@ -644,15 +700,15 @@ export function BookingModal({
                               {selectedTreatmentData.options.find(
                                 (opt) => opt.id === formData.treatmentOption
                               )?.description && (
-                                <p className="text-xs text-green-600 mt-2">
-                                  {
-                                    selectedTreatmentData.options.find(
-                                      (opt) =>
-                                        opt.id === formData.treatmentOption
-                                    )?.description
-                                  }
-                                </p>
-                              )}
+                                  <p className="text-xs text-green-600 mt-2">
+                                    {
+                                      selectedTreatmentData.options.find(
+                                        (opt) =>
+                                          opt.id === formData.treatmentOption
+                                      )?.description
+                                    }
+                                  </p>
+                                )}
                             </div>
                             <div className="text-right">
                               <p className="text-lg font-bold text-green-800">
@@ -849,20 +905,18 @@ export function BookingModal({
                                   disabled={isDisabled}
                                   className={`
                                   h-10 w-full text-sm rounded-lg transition-all duration-200 font-medium
-                                  ${
-                                    isSelected
+                                  ${isSelected
                                       ? "bg-gradient-to-r from-gray-800 to-gray-900 text-white shadow-lg transform scale-105"
                                       : isToday
-                                      ? "bg-blue-100 text-blue-800 border border-blue-300"
-                                      : isDisabled
-                                      ? "text-gray-300 cursor-not-allowed"
-                                      : "text-gray-700 hover:bg-gray-100 hover:scale-105"
-                                  }
-                                  ${
-                                    !isDisabled && !isSelected
+                                        ? "bg-blue-100 text-blue-800 border border-blue-300"
+                                        : isDisabled
+                                          ? "text-gray-300 cursor-not-allowed"
+                                          : "text-gray-700 hover:bg-gray-100 hover:scale-105"
+                                    }
+                                  ${!isDisabled && !isSelected
                                       ? "hover:shadow-md"
                                       : ""
-                                  }
+                                    }
                                 `}
                                 >
                                   {date.getDate()}
@@ -980,11 +1034,10 @@ export function BookingModal({
                         placeholder="Enter referral code if you have one"
                         value={formData.referralCode}
                         onChange={handleReferralCodeChange}
-                        className={`h-12 pr-10 border-gray-200 focus:border-gray-400 transition-colors ${
-                          referralError
-                            ? "border-red-300 focus:border-red-400"
-                            : ""
-                        }`}
+                        className={`h-12 pr-10 border-gray-200 focus:border-gray-400 transition-colors ${referralError
+                          ? "border-red-300 focus:border-red-400"
+                          : ""
+                          }`}
                         maxLength={8}
                       />
                       {formData.referralCode && (
@@ -1188,8 +1241,8 @@ export function BookingModal({
                   {createAppointment.isPending
                     ? "SUBMITTING..."
                     : referralError
-                    ? "PLEASE FIX REFERRAL CODE ISSUE"
-                    : "SUBMIT CONSULTATION REQUEST"}
+                      ? "PLEASE FIX REFERRAL CODE ISSUE"
+                      : "SUBMIT CONSULTATION REQUEST"}
                 </Button>
 
                 {referralError && (

@@ -9,7 +9,9 @@ import {
   Timestamp,
 } from "firebase/firestore";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 export async function POST(req) {
   const sig = req.headers.get("stripe-signature");

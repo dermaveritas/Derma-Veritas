@@ -3,7 +3,9 @@ import Stripe from "stripe";
 import { db } from "@/config/db";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = process.env.STRIPE_SECRET_KEY
+  ? new Stripe(process.env.STRIPE_SECRET_KEY)
+  : null;
 
 export async function POST(request) {
   try {
@@ -103,8 +105,7 @@ export async function POST(request) {
       },
       success_url:
         successUrl ||
-        `${
-          process.env.NEXT_PUBLIC_BASE_URL
+        `${process.env.NEXT_PUBLIC_BASE_URL
         }/membership/success?plan=${encodeURIComponent(planName)}`,
       cancel_url:
         cancelUrl || `${process.env.NEXT_PUBLIC_BASE_URL}/membership/cancel`,
