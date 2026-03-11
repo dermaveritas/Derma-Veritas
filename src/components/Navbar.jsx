@@ -168,12 +168,12 @@ export default function Navbar() {
           </div>
 
           {/* Center - Navigation Links (hidden on mobile) */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 ml-4">
             {/* Treatments Dropdown */}
             <div className="relative treatments-dropdown group">
               <button
                 onClick={handleTreatmentsClick}
-                className={`flex items-center gap-1 text-sm font-medium ${isScrolled ? "text-white" : textColor
+                className={`flex items-center gap-1 text-sm font-medium whitespace-nowrap ${isScrolled ? "text-white" : textColor
                   } hover:opacity-80 transition-opacity`}
               >
                 TREATMENTS
@@ -266,7 +266,7 @@ export default function Navbar() {
             {/* Phone Number - Visible on desktop */}
             <a
               href="tel:01902243398"
-              className={`hidden lg:flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 hover:opacity-80 ${isScrolled ? "text-white" : textColor
+              className={`hidden lg:flex items-center gap-1.5 text-sm font-medium whitespace-nowrap transition-colors duration-200 hover:opacity-80 ${isScrolled ? "text-white" : textColor
                 }`}
             >
               <Phone className="w-3.5 h-3.5" />
