@@ -143,11 +143,11 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav
         className={`px-4 py-3 fixed left-0 right-0 z-40 transition-all duration-300 ${isScrolled
-            ? `bg-black/80 backdrop-blur-sm border-gray-700 ${isScrollingUp ? "top-[30px]" : "-top-16"
-            }`
-            : isHomePage
-              ? "bg-transparent border-white/20 top-[38px]"
-              : "bg-white border-gray-200 top-[38px]"
+          ? `bg-black/80 backdrop-blur-sm border-gray-700 ${isScrollingUp ? "top-[30px]" : "-top-16"
+          }`
+          : isHomePage
+            ? "bg-transparent border-white/20 top-[38px]"
+            : "bg-white border-gray-200 top-[38px]"
           }`}
       >
         <div className="flex items-center justify-between max-w-7xl mx-auto">
@@ -186,8 +186,8 @@ export default function Navbar() {
               {/* Main Dropdown Menu */}
               <div
                 className={`absolute top-full left-0 mt-1 w-64 bg-white shadow-xl rounded-md py-2 z-50 transition-all duration-200 ${isClickedTreatments
-                    ? "opacity-100 visible"
-                    : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+                  ? "opacity-100 visible"
+                  : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
                   }`}
               >
                 {Object.entries(treatmentCategories).map(([key, category]) => (
@@ -205,8 +205,8 @@ export default function Navbar() {
                     {/* Nested Dropdown */}
                     <div
                       className={`absolute left-full top-0 ml-2 w-72 bg-white shadow-xl rounded-md py-2 z-50 transition-all duration-200 ${clickedCategory === key
-                          ? "opacity-100 visible"
-                          : "opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible"
+                        ? "opacity-100 visible"
+                        : "opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible"
                         }`}
                     >
                       <div className="px-4 py-2 border-b border-gray-100">
@@ -253,7 +253,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium ${isScrolled ? "text-white" : textColor
+                className={`text-sm font-medium whitespace-nowrap ${isScrolled ? "text-white" : textColor
                   } hover:opacity-80 transition-opacity`}
               >
                 {item.name}
@@ -277,8 +277,8 @@ export default function Navbar() {
               <button
                 onClick={() => setBookingOpen(true)}
                 className={`px-6 py-3 text-xs font-bold uppercase border-0 rounded-none tracking-wide hover:bg-white/10 transition-colors duration-200 ${isScrolled
-                    ? "text-white bg-transparent"
-                    : `${textColor} bg-transparent`
+                  ? "text-white bg-transparent"
+                  : `${textColor} bg-transparent`
                   }`}
               >
                 BOOK A CONSULTATION
