@@ -493,46 +493,12 @@ export default function CO2LaserTreatmentSection() {
 
                 <div className="divide-y divide-gray-200">
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Patch Test:</span>
-                    <span className="text-lg font-bold text-gray-900">£50</span>
+                    <span className="text-gray-700">1 Session:</span>
+                    <span className="text-lg font-bold text-gray-900">£400</span>
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">
-                      Single – One Area Upper Face:
-                    </span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £700
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">
-                      Single – One Area Lower Face:
-                    </span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £700
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">
-                      Single – Body (per limb):
-                    </span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £700
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Single – Full Face:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £1,250
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">
-                      3 Sessions – Full Face:
-                    </span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £2,500
-                    </span>
+                    <span className="text-gray-700">3 Sessions:</span>
+                    <span className="text-lg font-bold text-gray-900">£950</span>
                   </div>
                 </div>
               </div>
@@ -564,8 +530,8 @@ export default function CO2LaserTreatmentSection() {
 
               <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index
-                    ? "max-h-40 opacity-100"
-                    : "max-h-0 opacity-0"
+                  ? "max-h-40 opacity-100"
+                  : "max-h-0 opacity-0"
                   }`}
               >
                 <div className="pb-4 text-gray-600">{faq.answer}</div>

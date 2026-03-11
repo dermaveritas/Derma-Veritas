@@ -389,6 +389,7 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
 
                 {/* Static Links */}
                 {[
+                  { name: "ENDOLIFT", href: "/treatments/endolift" },
                   { name: "PACKAGES", href: "/packages" },
                   { name: "DV MEMBERSHIP", href: "/packages/membership" },
                   { name: "GALLERY", href: "/gallery" },

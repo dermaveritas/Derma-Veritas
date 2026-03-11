@@ -508,9 +508,9 @@ export default function PRPTherapySection() {
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Hair (3 Sessions):</span>
+                    <span className="text-gray-700">Hair (4 Sessions):</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £500
+                      £400
                     </span>
                   </div>
                 </div>
@@ -587,8 +587,8 @@ export default function PRPTherapySection() {
 
               <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index
-                    ? "max-h-40 opacity-100"
-                    : "max-h-0 opacity-0"
+                  ? "max-h-40 opacity-100"
+                  : "max-h-0 opacity-0"
                   }`}
               >
                 <div className="pb-4 text-gray-600">{faq.answer}</div>

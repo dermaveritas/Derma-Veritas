@@ -489,15 +489,7 @@ export default function RFMicroneedlingSection() {
                 <div className="divide-y divide-gray-200">
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">
-                      Single Treatment – Full Face:
-                    </span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £450
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">
-                      Single Treatment – Scars & Stretch Marks (One Area):
+                      1 Session:
                     </span>
                     <span className="text-lg font-bold text-gray-900">
                       £350
@@ -505,10 +497,10 @@ export default function RFMicroneedlingSection() {
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">
-                      3 Sessions – Full Face:
+                      3 Sessions:
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,250
+                      £875
                     </span>
                   </div>
                 </div>
@@ -585,8 +577,8 @@ export default function RFMicroneedlingSection() {
 
               <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index
-                    ? "max-h-40 opacity-100"
-                    : "max-h-0 opacity-0"
+                  ? "max-h-40 opacity-100"
+                  : "max-h-0 opacity-0"
                   }`}
               >
                 <div className="pb-4 text-gray-600">{faq.answer}</div>

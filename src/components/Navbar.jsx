@@ -142,15 +142,13 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <nav
-        className={`px-4 py-3 fixed left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled
-            ? `bg-black/80 backdrop-blur-sm border-gray-700 ${
-                isScrollingUp ? "top-[30px]" : "-top-16"
-              }`
+        className={`px-4 py-3 fixed left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+            ? `bg-black/80 backdrop-blur-sm border-gray-700 ${isScrollingUp ? "top-[30px]" : "-top-16"
+            }`
             : isHomePage
-            ? "bg-transparent border-white/20 top-[38px]"
-            : "bg-white border-gray-200 top-[38px]"
-        }`}
+              ? "bg-transparent border-white/20 top-[38px]"
+              : "bg-white border-gray-200 top-[38px]"
+          }`}
       >
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
@@ -175,25 +173,22 @@ export default function Navbar() {
             <div className="relative treatments-dropdown group">
               <button
                 onClick={handleTreatmentsClick}
-                className={`flex items-center gap-1 text-sm font-medium ${
-                  isScrolled ? "text-white" : textColor
-                } hover:opacity-80 transition-opacity`}
+                className={`flex items-center gap-1 text-sm font-medium ${isScrolled ? "text-white" : textColor
+                  } hover:opacity-80 transition-opacity`}
               >
                 TREATMENTS
                 <ChevronDown
-                  className={`w-4 h-4 transition-transform ${
-                    isClickedTreatments ? "rotate-180" : ""
-                  }`}
+                  className={`w-4 h-4 transition-transform ${isClickedTreatments ? "rotate-180" : ""
+                    }`}
                 />
               </button>
 
               {/* Main Dropdown Menu */}
               <div
-                className={`absolute top-full left-0 mt-1 w-64 bg-white shadow-xl rounded-md py-2 z-50 transition-all duration-200 ${
-                  isClickedTreatments
+                className={`absolute top-full left-0 mt-1 w-64 bg-white shadow-xl rounded-md py-2 z-50 transition-all duration-200 ${isClickedTreatments
                     ? "opacity-100 visible"
                     : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
-                }`}
+                  }`}
               >
                 {Object.entries(treatmentCategories).map(([key, category]) => (
                   <div key={key} className="relative group/item">
@@ -209,11 +204,10 @@ export default function Navbar() {
 
                     {/* Nested Dropdown */}
                     <div
-                      className={`absolute left-full top-0 ml-2 w-72 bg-white shadow-xl rounded-md py-2 z-50 transition-all duration-200 ${
-                        clickedCategory === key
+                      className={`absolute left-full top-0 ml-2 w-72 bg-white shadow-xl rounded-md py-2 z-50 transition-all duration-200 ${clickedCategory === key
                           ? "opacity-100 visible"
                           : "opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible"
-                      }`}
+                        }`}
                     >
                       <div className="px-4 py-2 border-b border-gray-100">
                         <h3 className="font-bold text-gray-800 text-sm uppercase">
@@ -248,6 +242,7 @@ export default function Navbar() {
 
             {/* Other Navigation Links */}
             {[
+              { name: "ENDOLIFT", href: "https://www.dermaveritas.com/treatments/endolift" },
               { name: "PACKAGES", href: "/packages" },
               { name: "DV MEMBERSHIP", href: "/packages/membership" },
               { name: "GALLERY", href: "/gallery" },
@@ -258,9 +253,8 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium ${
-                  isScrolled ? "text-white" : textColor
-                } hover:opacity-80 transition-opacity`}
+                className={`text-sm font-medium ${isScrolled ? "text-white" : textColor
+                  } hover:opacity-80 transition-opacity`}
               >
                 {item.name}
               </Link>
@@ -272,9 +266,8 @@ export default function Navbar() {
             {/* Phone Number - Visible on desktop */}
             <a
               href="tel:01902243398"
-              className={`hidden lg:flex items-center gap-1.5 text-xs font-medium transition-colors duration-200 hover:opacity-80 ${
-                isScrolled ? "text-white" : textColor
-              }`}
+              className={`hidden lg:flex items-center gap-1.5 text-sm font-medium transition-colors duration-200 hover:opacity-80 ${isScrolled ? "text-white" : textColor
+                }`}
             >
               <Phone className="w-3.5 h-3.5" />
               <span>01902 243398</span>
@@ -283,11 +276,10 @@ export default function Navbar() {
             <div className="hidden md:block">
               <button
                 onClick={() => setBookingOpen(true)}
-                className={`px-6 py-3 text-xs font-bold uppercase border-0 rounded-none tracking-wide hover:bg-white/10 transition-colors duration-200 ${
-                  isScrolled
+                className={`px-6 py-3 text-xs font-bold uppercase border-0 rounded-none tracking-wide hover:bg-white/10 transition-colors duration-200 ${isScrolled
                     ? "text-white bg-transparent"
                     : `${textColor} bg-transparent`
-                }`}
+                  }`}
               >
                 BOOK A CONSULTATION
               </button>
@@ -298,16 +290,14 @@ export default function Navbar() {
               className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 bg-transparent border-0 rounded-none hover:bg-white/10 transition-colors duration-200 md:hidden"
             >
               <span
-                className={`text-sm font-medium mr-2 sm:mr-3 ${
-                  isScrolled ? "text-white" : textColor
-                }`}
+                className={`text-sm font-medium mr-2 sm:mr-3 ${isScrolled ? "text-white" : textColor
+                  }`}
               >
                 MENU
               </span>
               <Menu
-                className={`w-5 h-5 sm:w-6 sm:h-6 ${
-                  isScrolled ? "text-white" : textColor
-                }`}
+                className={`w-5 h-5 sm:w-6 sm:h-6 ${isScrolled ? "text-white" : textColor
+                  }`}
               />
             </button>
 

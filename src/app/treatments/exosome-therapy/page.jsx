@@ -497,15 +497,9 @@ export default function ExosomeTherapySection() {
 
                 <div className="divide-y divide-gray-200">
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">3 Sessions:</span>
+                    <span className="text-gray-700">Face + Hair (1 Session):</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £500
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">5 Sessions:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £700
+                      £250
                     </span>
                   </div>
                 </div>
@@ -584,8 +578,8 @@ export default function ExosomeTherapySection() {
 
               <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index
-                    ? "max-h-40 opacity-100"
-                    : "max-h-0 opacity-0"
+                  ? "max-h-40 opacity-100"
+                  : "max-h-0 opacity-0"
                   }`}
               >
                 <div className="pb-4 text-gray-600">{faq.answer}</div>

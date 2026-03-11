@@ -318,47 +318,20 @@ export const treatmentOptions = {
   endolift: {
     name: "Endolift® (Skin & Tissue Rejuvenation)",
     options: [
-      { id: "one-area", name: "One Area", price: "£800" },
-      { id: "full-face", name: "Full Face", price: "£1,600" },
-      {
-        id: "upper-face",
-        name: "Upper Face / Malar Bags (Under Eyes)",
-        price: "£1,500",
-      },
-      { id: "upper-arms", name: "Upper Arms", price: "£1,800" },
-      { id: "abdomen", name: "Abdomen / Tummy", price: "£2,000" },
-      { id: "thighs", name: "Thighs / Other Body Areas", price: "£2,000" },
+      { id: "full-face", name: "Full Face", price: "£2,600" },
+      { id: "upper-face", name: "Upper Face (Cheeks & Buccal)", price: "£1,700" },
+      { id: "lower-face", name: "Lower Face (Jawline & Neck)", price: "£1,700" },
+      { id: "malar-bags", name: "Malar Bags (Both Sides)", price: "£1,200" },
+      { id: "bingo-arms", name: "Bingo Arms (Both)", price: "£2,500" },
+      { id: "abdomen", name: "Abdomen", price: "£3,000" },
+      { id: "thighs", name: "Thighs (Inner)", price: "£2,500" },
     ],
   },
   "co2-laser": {
     name: "CO₂ Fractional Laser",
     options: [
-      { id: "patch-test", name: "Patch Test", price: "£50" },
-      {
-        id: "upper-face",
-        name: "Single – One Area Upper Face",
-        price: "£700",
-      },
-      {
-        id: "lower-face",
-        name: "Single – One Area Lower Face",
-        price: "£700",
-      },
-      {
-        id: "body-limb",
-        name: "Single – Body (per limb)",
-        price: "£700",
-      },
-      {
-        id: "full-face-single",
-        name: "Single – Full Face",
-        price: "£1,250",
-      },
-      {
-        id: "full-face-3",
-        name: "3 Sessions – Full Face",
-        price: "£2,500",
-      },
+      { id: "1-session", name: "1 Session", price: "£400" },
+      { id: "3-sessions", name: "3 Sessions", price: "£950" },
     ],
   },
   microneedling: {
@@ -384,21 +357,35 @@ export const treatmentOptions = {
   "skinpen-microneedling": {
     name: "RF Microneedling",
     options: [
-      {
-        id: "full-face",
-        name: "Single Treatment – Full Face",
-        price: "£450",
-      },
-      {
-        id: "scars-stretch",
-        name: "Single Treatment – Scars & Stretch Marks (One Area)",
-        price: "£350",
-      },
-      {
-        id: "full-face-3",
-        name: "3 Sessions – Full Face",
-        price: "£1,250",
-      },
+      { id: "1-session", name: "1 Session", price: "£350" },
+      { id: "3-sessions", name: "3 Sessions", price: "£875" },
+    ],
+  },
+  "carbon-peel-facial": {
+    name: "Carbon Peel Facial (with Q Switch / Pico Laser)",
+    options: [
+      { id: "1-session", name: "1 Session", price: "£150" },
+    ],
+  },
+  "chemical-peel": {
+    name: "Chemical Peel (Medical Grade)",
+    options: [
+      { id: "1-session", name: "1 Session", price: "£180" },
+      { id: "3-sessions", name: "3 Sessions", price: "£400" },
+    ],
+  },
+  "exosomes": {
+    name: "Exosomes",
+    options: [
+      { id: "face-hair", name: "Face + Hair (1 Session)", price: "£250" },
+    ],
+  },
+  "hair-treatments": {
+    name: "Hair Treatments",
+    options: [
+      { id: "meso-hair", name: "Meso Hair (4 Sessions)", price: "£400" },
+      { id: "dutexone", name: "Dutexone (4 Sessions)", price: "£500" },
+      { id: "prp", name: "PRP (4 Sessions)", price: "£400" },
     ],
   },
   "quad-laser-hair-removal": {

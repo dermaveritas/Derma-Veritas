@@ -507,43 +507,49 @@ export default function EndoliftSection() {
 
                 <div className="divide-y divide-gray-200">
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">One Area:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £800
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">Full Face:</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,600
+                      £2,600
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">
-                      Upper Face / Malar Bags (Under Eyes):
+                      Upper Face (Cheeks & Buccal):
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £1,500
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Upper Arms:</span>
-                    <span className="text-lg font-bold text-gray-900">
-                      £1,800
+                      £1,700
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Abdomen / Tummy:</span>
+                    <span className="text-gray-700">Lower Face (Jawline & Neck):</span>
                     <span className="text-lg font-bold text-gray-900">
-                      £2,000
+                      £1,700
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-3">
+                    <span className="text-gray-700">Malar Bags (Both Sides):</span>
+                    <span className="text-lg font-bold text-gray-900">
+                      £1,200
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-3">
+                    <span className="text-gray-700">Bingo Arms (Both):</span>
+                    <span className="text-lg font-bold text-gray-900">
+                      £2,500
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center py-3">
+                    <span className="text-gray-700">Abdomen:</span>
+                    <span className="text-lg font-bold text-gray-900">
+                      £3,000
                     </span>
                   </div>
                   <div className="flex justify-between items-center py-3">
                     <span className="text-gray-700">
-                      Thighs / Other Body Areas:
+                      Thighs (Inner):
                     </span>
                     <span className="text-lg font-bold text-gray-900">
-                      £2,000
+                      £2,500
                     </span>
                   </div>
                 </div>
@@ -620,8 +626,8 @@ export default function EndoliftSection() {
 
               <div
                 className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index
-                    ? "max-h-40 opacity-100"
-                    : "max-h-0 opacity-0"
+                  ? "max-h-40 opacity-100"
+                  : "max-h-0 opacity-0"
                   }`}
               >
                 <div className="pb-4 text-gray-600">{faq.answer}</div>
