@@ -143,7 +143,7 @@ export function BookingModal({
           optionDescription: selectedOption?.description || null,
         },
         clinic: "main", // Default to main clinic since there's only one
-        userId: user.uid,
+        userId: user?.uid || null,
         status: "pending",
         createdAt: new Date().toISOString(),
       };
