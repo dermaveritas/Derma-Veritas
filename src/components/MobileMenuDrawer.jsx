@@ -136,9 +136,14 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
     { name: "Pro Fusion", slug: "profusion", href: "/treatments/profusion" },
     { name: "EXO NAD", slug: "exo-nad", href: "/treatments/exo-nad" },
     {
-      name: "Prescription treatment",
-      slug: "prescriptionskincare",
-      href: "/treatments/prescriptionskincare",
+      name: "Carbon Peel Facial",
+      slug: "carbon-peel-facial",
+      href: "/treatments/carbon-peel-facial",
+    },
+    {
+      name: "Chemical Peel",
+      slug: "chemical-peel",
+      href: "/treatments/chemical-peel",
     },
   ];
 
@@ -150,9 +155,9 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
       href: "/treatments/exosome-therapy",
     },
     {
-      name: "Exosomes",
-      slug: "exosome-therapy",
-      href: "/treatments/exosome-therapy",
+      name: "Exosomes (Face + Hair)",
+      slug: "exosomes",
+      href: "/treatments/exosomes",
     },
     {
       name: "Anti- wrinkle",
@@ -195,17 +200,9 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
       href: "/treatments/hair-revitalizing",
     },
     {
-      name: "Prescriptions treatments",
-      slug: "prescriptionhair",
-      href: "/treatments/prescriptionhair",
-    },
-  ];
-
-  const othersLinks = [
-    {
-      name: "Weight Loss modulators",
-      slug: "weightloss",
-      href: "/treatments/weightloss",
+      name: "Hair Treatments (Meso, Dutexone, PRP)",
+      slug: "hair-treatments",
+      href: "/treatments/hair-treatments",
     },
   ];
 
@@ -366,12 +363,6 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                     label="Hair Enhancements"
                     section="HairEnhancements"
                     links={hairEnhancementsLinks}
-                    type="treatments"
-                  />
-                  <MobileDropdown
-                    label="Others"
-                    section="Others"
-                    links={othersLinks}
                     type="treatments"
                   />
                   <MobileDropdown
@@ -664,13 +655,6 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                             label="Hair Enhancements"
                             section="HairEnhancements"
                             links={hairEnhancementsLinks}
-                            type="treatments"
-                          />
-
-                          <DesktopDropdown
-                            label="Others"
-                            section="Others"
-                            links={othersLinks}
                             type="treatments"
                           />
                         </>

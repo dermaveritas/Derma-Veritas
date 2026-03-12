@@ -991,9 +991,14 @@ export const treatmentCategories = {
         href: "/treatments/exo-nad",
       },
       {
-        name: "Prescription treatment",
-        slug: "prescriptionskincare",
-        href: "/treatments/prescriptionskincare",
+        name: "Carbon Peel Facial",
+        slug: "carbon-peel-facial",
+        href: "/treatments/carbon-peel-facial",
+      },
+      {
+        name: "Chemical Peel",
+        slug: "chemical-peel",
+        href: "/treatments/chemical-peel",
       },
     ],
   },
@@ -1007,9 +1012,9 @@ export const treatmentCategories = {
         href: "/treatments/exosome-therapy",
       },
       {
-        name: "Exosomes",
-        slug: "exosome-therapy",
-        href: "/treatments/exosome-therapy",
+        name: "Exosomes (Face + Hair)",
+        slug: "exosomes",
+        href: "/treatments/exosomes",
       },
       {
         name: "Anti- wrinkle",
@@ -1079,19 +1084,9 @@ export const treatmentCategories = {
         href: "/treatments/hair-revitalizing",
       },
       {
-        name: "Prescriptions treatments",
-        slug: "prescriptionhair",
-        href: "/treatments/prescriptionhair",
-      },
-    ],
-  },
-  others: {
-    title: "Others",
-    treatments: [
-      {
-        name: "Weight Loss modulators",
-        slug: "weightloss",
-        href: "/treatments/weightloss",
+        name: "Hair Treatments (Meso, Dutexone, PRP)",
+        slug: "hair-treatments",
+        href: "/treatments/hair-treatments",
       },
     ],
   },
@@ -1148,6 +1143,10 @@ export const getActiveTreatment = (pathname) => {
       "v-hacker": "v-hacker",
       "hair-revitalizing": "revitalizing",
       exosignal: "exosignal",
+      "carbon-peel-facial": "carbon-peel-facial",
+      "chemical-peel": "chemical-peel",
+      "exosomes": "exosomes",
+      "hair-treatments": "hair-treatments",
     };
     return treatmentMap[treatmentSlug] || "";
   }

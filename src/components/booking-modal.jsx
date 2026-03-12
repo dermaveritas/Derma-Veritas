@@ -509,10 +509,16 @@ export function BookingModal({
                         EXO NAD
                       </SelectItem>
                       <SelectItem
-                        value="prescription-skincare"
+                        value="carbon-peel-facial"
                         className="pl-6"
                       >
-                        Prescription treatment
+                        Carbon Peel Facial
+                      </SelectItem>
+                      <SelectItem
+                        value="chemical-peel"
+                        className="pl-6"
+                      >
+                        Chemical Peel
                       </SelectItem>
 
                       {/* Age Defying */}
@@ -529,8 +535,8 @@ export function BookingModal({
                       <SelectItem value="iv-drips" className="pl-6">
                         Bio Hacking Formula
                       </SelectItem>
-                      <SelectItem value="iv-drips" className="pl-6">
-                        Exosomes
+                      <SelectItem value="exosomes" className="pl-6">
+                        Exosomes (Face + Hair)
                       </SelectItem>
                       <SelectItem
                         value="anti-wrinkle-treatment"
@@ -616,26 +622,8 @@ export function BookingModal({
                       <SelectItem value="revitalizing" className="pl-6">
                         Hair + revitalizing formula
                       </SelectItem>
-                      <SelectItem value="prescription-hair" className="pl-6">
-                        Prescriptions treatments
-                      </SelectItem>
-
-                      {/* Others */}
-                      <SelectItem
-                        value="header-others"
-                        disabled
-                        className="font-bold text-gray-800 bg-gray-50 mt-2"
-                      >
-                        🧩 Others
-                      </SelectItem>
-                      <SelectItem value="weight-loss" className="pl-6">
-                        Weight Loss modulators
-                      </SelectItem>
-                      <SelectItem
-                        value="quad-laser-hair-removal"
-                        className="pl-6"
-                      >
-                        Quad Laser Hair Removal
+                      <SelectItem value="hair-treatments" className="pl-6">
+                        Hair Treatments (Meso, Dutexone, PRP)
                       </SelectItem>
                     </SelectContent>
                   </Select>
