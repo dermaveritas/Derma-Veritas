@@ -17,11 +17,6 @@ export const useStore = create((set, get) => ({
     }),
   setUserRole: (role) => set({ userRole: role }),
   setBookingOpen: (isOpen) => {
-    const { user } = get();
-    if (isOpen && !user) {
-      set({ showLoginModal: true });
-      return;
-    }
     set({ bookingOpen: isOpen });
   },
   setPendingBooking: (bookingData) => set({ pendingBooking: bookingData }),
