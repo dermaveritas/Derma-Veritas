@@ -135,11 +135,6 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
     },
     { name: "Pro Fusion", slug: "profusion", href: "/treatments/profusion" },
     { name: "EXO NAD", slug: "exo-nad", href: "/treatments/exo-nad" },
-    {
-      name: "Prescription treatment",
-      slug: "prescriptionskincare",
-      href: "/treatments/prescriptionskincare",
-    },
   ];
 
   const ageDefyingLinks = [
@@ -193,19 +188,6 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
       name: "Hair + revitalizing formula",
       slug: "hair-revitalizing",
       href: "/treatments/hair-revitalizing",
-    },
-    {
-      name: "Prescriptions treatments",
-      slug: "prescriptionhair",
-      href: "/treatments/prescriptionhair",
-    },
-  ];
-
-  const othersLinks = [
-    {
-      name: "Weight Loss modulators",
-      slug: "weightloss",
-      href: "/treatments/weightloss",
     },
   ];
 
@@ -366,12 +348,6 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                     label="Hair Enhancements"
                     section="HairEnhancements"
                     links={hairEnhancementsLinks}
-                    type="treatments"
-                  />
-                  <MobileDropdown
-                    label="Others"
-                    section="Others"
-                    links={othersLinks}
                     type="treatments"
                   />
                   <MobileDropdown
@@ -664,13 +640,6 @@ export default function MobileMenuDrawer({ isOpen, setIsOpen }) {
                             label="Hair Enhancements"
                             section="HairEnhancements"
                             links={hairEnhancementsLinks}
-                            type="treatments"
-                          />
-
-                          <DesktopDropdown
-                            label="Others"
-                            section="Others"
-                            links={othersLinks}
                             type="treatments"
                           />
                         </>

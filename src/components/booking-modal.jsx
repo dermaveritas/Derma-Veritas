@@ -508,12 +508,6 @@ export function BookingModal({
                       <SelectItem value="exo" className="pl-6">
                         EXO NAD
                       </SelectItem>
-                      <SelectItem
-                        value="prescription-skincare"
-                        className="pl-6"
-                      >
-                        Prescription treatment
-                      </SelectItem>
 
                       {/* Age Defying */}
                       <SelectItem
@@ -615,27 +609,6 @@ export function BookingModal({
                       </SelectItem>
                       <SelectItem value="revitalizing" className="pl-6">
                         Hair + revitalizing formula
-                      </SelectItem>
-                      <SelectItem value="prescription-hair" className="pl-6">
-                        Prescriptions treatments
-                      </SelectItem>
-
-                      {/* Others */}
-                      <SelectItem
-                        value="header-others"
-                        disabled
-                        className="font-bold text-gray-800 bg-gray-50 mt-2"
-                      >
-                        🧩 Others
-                      </SelectItem>
-                      <SelectItem value="weight-loss" className="pl-6">
-                        Weight Loss modulators
-                      </SelectItem>
-                      <SelectItem
-                        value="quad-laser-hair-removal"
-                        className="pl-6"
-                      >
-                        Quad Laser Hair Removal
                       </SelectItem>
                     </SelectContent>
                   </Select>

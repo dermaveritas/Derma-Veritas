@@ -990,11 +990,6 @@ export const treatmentCategories = {
         slug: "exo-nad",
         href: "/treatments/exo-nad",
       },
-      {
-        name: "Prescription treatment",
-        slug: "prescriptionskincare",
-        href: "/treatments/prescriptionskincare",
-      },
     ],
   },
   "age-defying": {
@@ -1079,19 +1074,9 @@ export const treatmentCategories = {
         href: "/treatments/hair-revitalizing",
       },
       {
-        name: "Prescriptions treatments",
-        slug: "prescriptionhair",
-        href: "/treatments/prescriptionhair",
-      },
-    ],
-  },
-  others: {
-    title: "Others",
-    treatments: [
-      {
-        name: "Weight Loss modulators",
-        slug: "weightloss",
-        href: "/treatments/weightloss",
+        name: "Hair + revitalizing formula",
+        slug: "hair-revitalizing",
+        href: "/treatments/hair-revitalizing",
       },
     ],
   },
